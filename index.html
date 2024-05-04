@@ -8,54 +8,86 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #2e2c3a;
-      color: #000000;
+      background-color: #2e2c3a !important;
+      color: #000000 !important;
+      overflow: hidden;
     }
 
     .box {
       width: 25%;
       margin: 0 auto;
       padding: 8px;
-      background-color: #5c5a75;
-      border: 2px solid #b4a5e0;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      background-color: #5c5a75 !important;
+      border: 2px solid #b4a5e0 !important;
+      border-radius: 15px !important;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+      overflow: hidden;
     }
 
     .container {
-      width: 92.5%;
+      width: 92.5% !important;
       margin: 20px auto;
       padding: 30px;
       border-radius: 12px;
-      background-color: #4c436f;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      background-color: #4c436f !important;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
       position: relative;
+      overflow: hidden;
     }
 
     .version-box {
       position: absolute;
-      top: 12px;
-      left: 12px;
-      background-color: #1fe0ba;
-      color: #262626;
-      border-radius: 8px;
-      padding: 6px 12px;
-      font-size: 14px;
-      font-weight: bold;
+      top: 25px;
+      left: 23px;
+      background-color: #775ed4;
+      color: #ffffff;
+      border-radius: 9px;
+      padding: 7px 13px;
+      font-size: 16px;
+
+      overflow: hidden;
     }
 
+    .status {
+      position: absolute;
+      top: 25px;
+      right: 23px;
+      background-color: #775ed4;
+      color: #ffffff;
+      border-radius: 9px;
+      padding: 7px 13px;
+      font-size: 16px;
+      overflow: hidden;
+    }
+    
+    .status-box {
+      position: absolute;
+      top: 36px;
+      right: 33px;
+      background-color: #00ff88;
+      color: #262626;
+      border-radius: 50px;
+      padding: 8px 8px;
+      font-size: 15px;
+      font-weight: bold;
+      overflow: hidden;
+      z-index: 10000;
+    }
+    
     h1 {
       font-size: 40px;
       color: #e6e6fa;
       text-align: center;
       margin-bottom: 0px;
       margin-top: 0px;
+      overflow: hidden;
     }
 
     p {
       font-size: 16px;
       color: #d3d3e6;
       text-align: center;
+      overflow: hidden;
     }
 
     .input-group {
@@ -63,15 +95,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
     }
 
     .input-group input[type="text"] {
       flex: 1;
       padding: 12px;
-      border: 3px solid #b4a5e0;
+      border: 3px solid #b4a5e0 !important;
       border-radius: 8px;
       background-color: #383352;
       color: #ffffff;
+      overflow: hidden;
+    }
+    
+     .input-group input[type="text"]:focus {
+      flex: 1;
+      padding: 12px;
+      border: 3px solid #b4a5e0 !important;
+      border-radius: 8px;
+      background-color: #383352;
+      color: #ffffff;
+      overflow: hidden;
     }
 
     .input-group button {
@@ -83,20 +127,23 @@
       cursor: pointer;
       transition: all 0.3s;
       font-size: 16px;
+      overflow: hidden;
     }
 
     .input-group button:hover {
       background-color: #6b56c8;
+      overflow: hidden;
     }
 
     .rendered-content {
-      border: 0px solid #b4a5e0;
-      padding: 25px;
-      background-color: #fff0ff;
-      border-radius: 10px;
-      overflow-x: auto;
-      margin-top: 20px;
-      color: #000000;
+      border: 0px solid #b4a5e0 !important;
+      padding: 25px !important;
+      background-color: #fff0ff !important;
+      border-radius: 10px !important;
+      overflow-x: auto !important;
+      margin-top: 20px !important;
+      color: #000000 !important;
+      overflow: hidden !important;
     }
 
 .popup {
@@ -139,6 +186,7 @@
       font-size: 20px;
       cursor: pointer;
       color: #e6e6fa;
+      overflow: hidden;
     }
 
     .blur-background {
@@ -151,10 +199,12 @@
       background-color: rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(10px);
       z-index: 999;
+      overflow: hidden;
     }
 
     .blur-background.active {
       display: block;
+      overflow: hidden;
     }
 
     table,
@@ -164,10 +214,12 @@
       border-collapse: collapse;
       padding: 8px;
       color: #ffffff;
+      overflow: hidden;
     }
 
     th {
       text-align: left;
+      overflow: hidden;
     }
 
     .loading-spinner {
@@ -179,6 +231,7 @@
       animation: spin 1s linear infinite;
       margin: 0 auto;
       margin-top: 20px;
+      overflow: hidden;
     }
 
     @keyframes spin {
@@ -201,20 +254,25 @@
       margin: 30px auto;
       transition: opacity 0.5s ease-in-out;
       color: white;
+      overflow: hidden;
     }
 
     .fade-out {
       opacity: 0;
+      overflow: hidden;
     }
 
     .fade-in {
       opacity: 1;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="version-box">Version 1.8</div>
+    <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟷.𝟾</div>
+    <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
+    <div class="status-box"></div>
     <div class="box">
       <h1>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h1>
     </div>

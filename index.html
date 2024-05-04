@@ -128,8 +128,22 @@
         max-height: 60%;
         overflow: auto;
         z-index: 1000;
-        color: #f5f5f5;
+        color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+      }
+
+      .popup-footer {
+        border-top: 1px solid #ffffff;
+        padding-top: 10px;
+        text-align: center;
       }
 
       .popup.active {
@@ -137,9 +151,6 @@
       }
 
       .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
         font-size: 20px;
         cursor: pointer;
         color: #e6e6fa;
@@ -164,10 +175,10 @@
       table,
       th,
       td {
-        border: 2px solid #b4a5e0;
+        border: 2.5px solid #ffffff;
         border-collapse: collapse;
         padding: 8px;
-        color: #e6e6fa;
+        color: #ffffff;
       }
 
       th {
@@ -236,109 +247,121 @@
       <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
     </div>
     <div id="popup" class="popup">
-      <span class="close" onclick="togglePopup('popup')">
-        <b>
+      <div class="popup-header">
+        <span>
+          <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗</b>
+        </span>
+        <span class="close" onclick="togglePopup('popup')">
           <b>✕</b>
-        </b>
-      </span>
-      <p>
-        <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b>
-        <br>
-        <br>NO LONGER DEPRECATED! CONSTANT UPDATES SCHEDULED! <br>
-        <br>
-        <b>
-          <span class="info">🛈</span>&nbsp[𝗜𝗡𝗙𝗢]&nbsp <span class="info">🛈</span>
-        </b>
-        <br>
-        <br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. find the project on GitHub <a href="https://github.com/maximusweeseman/local-webproxy">
-          <b>here</b>
-        </a>. I will probably not keep maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋 <br>
-        <br>
-        <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b>
-        <br>
-        <br>this works only on ChromeOS and Android. what the fuck <br>
-        <br>links still can't be followed in-render, and I'm not sure if I have the patience to fix it. Just find the link that you want to go to and put it in the URL box. <br>
-        <br>
-        <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟮] ⚠️</b>
-        <br>
-        <br>about blank cloaking has been added, if you're really that paranoid. <br>
-        <br>image support is working(?), but it's kind of iffy at the moment. <br>
-        <br>way, way faster now :D <br>
-        <b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️ </b>
-        <br>
-        <br> I said I'd stop updating this thing. I lied. It will remember links you previously went to and render them at <i>
-          <b>light speed. </i>
-        </b>
-        <br>
-        <br> ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️ </b>
-        <br>
-        <br>fuck you google <br>
-        <br> ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️ </b>
-        <br>
-        <br>bot protection bypassed. <br>
-        <br>auto https: ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️ </b>
-        <br>
-        <br>touchups & tooltips :D
-      </p>
+        </span>
+      </div>
+      <div class="popup-content">
+        <p>
+          <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b>
+          <br>
+          <br>NO LONGER DEPRECATED! CONSTANT UPDATES SCHEDULED! <br>
+          <br>
+          <b>
+            <span class="info">🛈</span>&nbsp[𝗜𝗡𝗙𝗢]&nbsp <span class="info">🛈</span>
+          </b>
+          <br>
+          <br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. Find the project on GitHub <a href="https://github.com/maximusweeseman/local-webproxy">
+            <b>here</b>
+          </a>. I will probably not keep maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋 <br>
+          <br>
+          <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b>
+          <br>
+          <br> This works only on ChromeOS and Android. what the fuck <br>
+          <br>links still can't be followed in-render, and I'm not sure if I have the patience to fix it. Just find the link that you want to go to and put it in the URL box. <br>
+          <br>
+          <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟮] ⚠️</b>
+          <br>
+          <br>about blank cloaking has been added, if you're really that paranoid. <br>
+          <br>image support is working(?), but it's kind of iffy at the moment. <br>
+          <br>way, way faster now :D <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️ </b>
+          <br>
+          <br> I said I'd stop updating this thing. I lied. It will remember links you previously went to and render them at <i>
+            <b>light speed. </i>
+          </b>
+          <br>
+          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️ </b>
+          <br>
+          <br> fuck you google <br>
+          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️ </b>
+          <br>
+          <br> bot protection bypassed. <br>
+          <br>auto https:// for all you lazy bums <br>
+          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️ </b>
+          <br>
+          <br>touchups & tooltips :D
+        </p>
+      </div>
     </div>
     <div id="specifications-popup" class="popup">
-      <span class="close" onclick="togglePopup('specifications-popup')">
-        <b>
+      <div class="popup-header">
+        <span>
+          <b>𝚂𝚙𝚎𝚌𝚒𝚏𝚒𝚌𝚊𝚝𝚒𝚘𝚗𝚜</b>
+        </span>
+        <span class="close" onclick="togglePopup('specifications-popup')">
           <b>✕</b>
-        </b>
-      </span>
-      <br>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Avg. Render Speed</th>
-          <th>Proxy?</th>
-          <th>Local File?</th>
-          <th>Img Support?</th>
-          <th>Backend Required?</th>
-        </tr>
-        <tr>
-          <td>
-            <b>DingusProxy</b>
-          </td>
-          <td>5 seconds</td>
-          <td>No</td>
-          <td>Yes</td>
-          <td>Yes</td>
-          <td>No</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Ultraviolet</b>
-          </td>
-          <td>4 seconds</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>Yes</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>
-            <b>TompHTTP
-          </td>
-          <td>10 seconds</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>No</td>
-          <td>Yes</td>
-        </tr>
-        <tr>
-          <td>
-            <b>Wisp
-          </td>
-          <td>7 seconds</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>Yes</td>
-          <td>Yes</td>
-        </tr>
-      </table>
+        </span>
+      </div>
+      <div class="popup-content">
+        <br>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Avg. Render Speed</th>
+            <th>Proxy?</th>
+            <th>Local File?</th>
+            <th>Img Support?</th>
+            <th>Backend Required?</th>
+          </tr>
+          <tr>
+            <td>
+              <b>DingusProxy</b>
+            </td>
+            <td>5 seconds</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Ultraviolet</b>
+            </td>
+            <td>4 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>TompHTTP</b>
+            </td>
+            <td>10 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Wisp</b>
+            </td>
+            <td>7 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+        </table>
+      </div>
+      <div class="popup-footer"></div>
     </div>
     <div id="blur-background" class="blur-background"></div>
     <script src="script.js"></script>

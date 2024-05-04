@@ -71,7 +71,7 @@
                     convertRelativeUrls(content, url);
 
                     content.querySelectorAll("a").forEach((link) => {
-                        link.addEventListener("click", function (event) {
+                        link.addEventListener("click", function(event) {
                             event.preventDefault();
                             const href = link.getAttribute("href");
                             if (href) {

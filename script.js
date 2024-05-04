@@ -39,7 +39,7 @@
 
                 messageContainer.classList.remove('fade-out');
                 messageContainer.classList.add('fade-in');
-            }, 500); // Transition delay
+            }, 500);
         }
 
         setInterval(changeMessage, 6500);

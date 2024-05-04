@@ -3,179 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
-<style>
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #2e2c3a;
-        color: #000000;
-    }
-
-    .container {
-        width: 90%;
-        margin: 30px auto;
-        padding: 30px;
-        border-radius: 12px;
-        background-color: #4c436f;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    }
-
-    h1 {
-        font-size: 30px;
-        color: #e6e6fa;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 16px;
-        color: #d3d3e6;
-        text-align: center;
-    }
-
-    .input-group {
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .input-group input[type="text"] {
-        flex: 1;
-        padding: 12px;
-        border: 2px solid #b4a5e0;
-        border-radius: 8px;
-        background-color: #383352;
-        color: #e6e6fa;
-    }
-
-    .input-group button {
-        padding: 12px 18px;
-        background-color: #886fe0;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        margin-left: 10px;
-        transition: all 0.3s;
-    }
-
-    .input-group button:hover {
-        background-color: #6b56c8;
-    }
-
- .rendered-content {
-    border: 2px solid #b4a5e0;
-    padding: 25px;
-    background-color: #fff0ff;
-    border-radius: 10px;
-    overflow-x: auto;
-    margin-top: 20px;
-    color: #000000; /* Dark text for contrast */
-}
-
-.rendered-content h1,
-.rendered-content h2,
-.rendered-content h3,
-.rendered-content h4,
-.rendered-content h5,
-.rendered-content h6,
-.rendered-content p,
-.rendered-content ul,
-.rendered-content ol,
-.rendered-content li,
-.rendered-content a,
-.rendered-content span {
-    color: #000000; /* Ensure all text in this section is black */
-}
-
-
-    .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(30, 25, 46, 0.95);
-        padding: 25px;
-        border-radius: 10px;
-        max-width: 70%;
-        max-height: 60%;
-        overflow: auto;
-        z-index: 1000;
-        color: #f5f5f5;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    }
-
-    .popup.active {
-        display: block;
-    }
-
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        color: #e6e6fa;
-    }
-
-    .blur-background {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(10px);
-        z-index: 999;
-    }
-
-    .blur-background.active {
-        display: block;
-    }
-
-    table,
-    th,
-    td {
-        border: 2px solid #b4a5e0;
-        border-collapse: collapse;
-        padding: 8px;
-        color: #e6e6fa;
-    }
-
-    th {
-        text-align: left;
-    }
-
-    .loading-spinner {
-        border: 4px solid #4c436f;
-        border-top: 4px solid #886fe0;
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        animation: spin 1s linear infinite;
-        margin: 0 auto;
-        margin-top: 20px;
-    }
-
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2c3a;
+            color: #000000;
         }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-</style>
 
+        .container {
+            width: 90%;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 12px;
+            background-color: #4c436f;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 30px;
+            color: #e6e6fa;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #d3d3e6;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-group input[type="text"] {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #b4a5e0;
+            border-radius: 8px;
+            background-color: #383352;
+            color: #e6e6fa;
+        }
+
+        .input-group button {
+            padding: 12px 18px;
+            background-color: #886fe0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: all 0.3s;
+        }
+
+        .input-group button:hover {
+            background-color: #6b56c8;
+        }
+
+        .rendered-content {
+            border: 2px solid #b4a5e0;
+            padding: 25px;
+            background-color: #fff0ff;
+            border-radius: 10px;
+            overflow-x: auto;
+            margin-top: 20px;
+            color: #000000; /* Dark text for contrast */
+        }
+
+        .rendered-content h1,
+        .rendered-content h2,
+        .rendered-content h3,
+        .rendered-content h4,
+        .rendered-content h5,
+        .rendered-content h6,
+        .rendered-content p,
+        .rendered-content ul,
+        .rendered-content ol,
+        .rendered-content li,
+        .rendered-content a,
+        .rendered-content span {
+            color: #000000; /* Ensure all text in this section is black */
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(30, 25, 46, 0.95);
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 70%;
+            max-height: 60%;
+            overflow: auto;
+            z-index: 1000;
+            color: #f5f5f5;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .popup.active {
+            display: block;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: #e6e6fa;
+        }
+
+        .blur-background {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+        }
+
+        .blur-background.active {
+            display: block;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid #b4a5e0;
+            border-collapse: collapse;
+            padding: 8px;
+            color: #e6e6fa;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        .loading-spinner {
+            border: 4px solid #4c436f;
+            border-top: 4px solid #886fe0;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                rotate(360deg);
+            }
+        }
+
+        /* Message rotator styles */
+        .message {
+            text-align: center;
+            padding: 10px;
+            font-size: 18px;
+            background-color: #4c436f;
+            border-radius: 8px;
+            width: 60%;
+            margin: 30px auto;
+            transition: opacity 0.5s ease-in-out;
+            color: white;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h1>
-        <p>𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚒𝚐𝚑𝚝 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</p><br>
+        <div id="message-container" class="message fade-in">𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚒𝚐𝚑𝚝 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</div>
+
+
         <div class="input-group">
             <input type="text" id="url" placeholder="Enter URL (https://)">
             <button onclick="renderWebsite()">Render</button>
@@ -186,12 +208,14 @@
         <div id="rendered-content" class="rendered-content"></div>
         <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
     </div>
+    
     <div id="popup" class="popup">
         <span class="close" onclick="togglePopup('popup')">〔 ✖ 〕</span>
-        <p>    <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b> <br> <br>NO LONGER DEPRACATED! CONSTANT UPDATES SCHEDULED!<br><br><b><span class="info">🛈</span>&nbsp[𝗜𝗡𝗙𝗢]&nbsp<span class="info">🛈</span></b><br><br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download this as an HTML file and use it completely locally. find the project on GitHub <a href="https://github.com/maximusweeseman/local-webproxy"><b>here</b></a>, or download it      I will probably not keep maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋<br> <br><b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b> <br> <br>this shit only works on ChromeOS and Android. what the fuck<br><br>links still can't be followed in-render, and I'm not sure if I have the patience to fix it. just find the link that you wanna go to and put it in the url box.<br><br><b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟮] ⚠️</b> <br> <br>about blank cloaking has been added, if ur really that paranoid<br><br>image support is working(?), but its kind of iffy at the moment.<br><br>way, way faster now :D<br><b><br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️</b> <br> <br>i said I'd stop updating this thing. i lied. it will remember links you previously went to and render them at <i><b>light speed.</b></i><br><br>
-  ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️</b> <br> <br>fuck you google<br><br>
-  ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️</b> <br> <br>down with google's bot protection<br> <br>auto https:// for all you lazy bums<br> <br>more speed upgrades<br> <br>image support! fuck yeah!<br> <br>error handling is on the menu</p><br><br>  ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️</b> <br> <br>touchups & tooltips :D</p>
+        <p>    <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b> <br> <br>NO LONGER DEPRECATED! CONSTANT UPDATES SCHEDULED!<br><br><b><span class="info">🛈</span>&nbsp[𝗜𝗡𝗙𝗢]&nbsp<span class="info">🛈</span></b><br><br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. find the project on GitHub <a href="https://github.com/maximusweeseman/local-webproxy"><b>here</b></a>. I will probably not keep maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋<br> <br><b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b> <br> <br>this works only on ChromeOS and Android. what the heck?<br><br>links still can't be followed in-render, and I'm not sure if I have the patience to fix it. Just find the link that you want to go to and put it in the URL box.<br><br><b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟮] ⚠️</b> <br> <br>about blank cloaking has been added, if you're really that paranoid.<br><br>image support is working(?), but it's kind of iffy at the moment.<br><br>way, way faster now :D<br><b><br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️</b> <br> <br> I said I'd stop updating this thing. I lied. It will remember links you previously went to and render them at <i><b>light speed.</b></i><br><br>
+  ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️</b> <br> <br>what a pain.<br><br>
+  ⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️</b> <br> <br>bot protection bypassed.<br> <br>auto https:// for all you lazy bums.<br> <br>more speed upgrades.<br> <br>image support! hooray!<br> <br>error handling added.</p><br><br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️</b> <br> <br>touchups & tooltips :D</p>
     </div>
+
     <div id="specifications-popup" class="popup">
         <span class="close" onclick="togglePopup('specifications-popup')">〔 ✖ 〕</span>
         <br>
@@ -238,7 +262,11 @@
             </tr>
         </table>
     </div>
+    
     <div id="blur-background" class="blur-background"></div>
-    <script src="script.js"></script>
+    
+    <script
+ src="script.js">
+    </script>
 </body>
 </html>

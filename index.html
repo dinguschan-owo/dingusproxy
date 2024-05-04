@@ -1,304 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #2e2c3a !important;
-      color: #000000 !important;
-      overflow: hidden;
-    }
-
-    .box {
-      width: 25%;
-      margin: 0 auto;
-      padding: 8px;
-      background-color: #5c5a75 !important;
-      border: 2px solid #b4a5e0 !important;
-      border-radius: 15px !important;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
-      overflow: hidden;
-    }
-
-    .container {
-      width: 92.5% !important;
-      margin: 20px auto;
-      padding: 30px;
-      border-radius: 12px;
-      background-color: #4c436f !important;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .version-box {
-      position: absolute;
-      top: 25px;
-      left: 23px;
-      background-color: #775ed4;
-      color: #ffffff;
-      border-radius: 9px;
-      padding: 7px 13px;
-      font-size: 16px;
-
-      overflow: hidden;
-    }
-
-    .status {
-      position: absolute;
-      top: 25px;
-      right: 23px;
-      background-color: #775ed4;
-      color: #ffffff;
-      border-radius: 9px;
-      padding: 7px 13px;
-      font-size: 16px;
-      overflow: hidden;
-    }
-    
-    .status-box {
-      position: absolute;
-      top: 36px;
-      right: 33px;
-      background-color: #00ff88;
-      color: #262626;
-      border-radius: 50px;
-      padding: 8px 8px;
-      font-size: 15px;
-      font-weight: bold;
-      overflow: hidden;
-      z-index: 1;
-    }
-    
-    h1 {
-      font-size: 40px;
-      color: #e6e6fa;
-      text-align: center;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      overflow: hidden;
-    }
-
-    p {
-      font-size: 16px;
-      color: #d3d3e6;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .input-group {
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-.input-group input[type="text"] {
-  flex: 1;
-  padding: 12px;
-  border: 3px solid #b4a5e0 !important;
-  border-radius: 8px;
-  background-color: #383352;
-  color: #ffffff;
-  overflow: hidden;
-}
-
-.input-group input[type="text"]::placeholder {
-  color: #a6a6a6;
-}
-
-.input-group input[type="text"]:focus::placeholder {
-  color: #383352;
-}
-
-.input-group input[type="text"]:focus {
-  border: 3px solid #b4a5e0 !important; 
-  border-radius: 8px;
-  background-color: #383352;*/
-  color: #ffffff; 
-  outline: none; 
-}
-
-
-    .input-group button {
-      padding: 10px 16px;
-      background-color: #886fe0;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-size: 16px;
-      overflow: hidden;
-    }
-
-    .input-group button:hover {
-      background-color: #6b56c8;
-      overflow: hidden;
-    }
-
-    .rendered-content {
-      border: 0px solid #b4a5e0 !important;
-      padding: 25px !important;
-      background-color: #fff0ff !important;
-      border-radius: 10px !important;
-      overflow-x: auto !important;
-      margin-top: 20px !important;
-      color: #000000 !important;
-      overflow: hidden !important;
-    }
-
-.popup {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: linear-gradient(135deg, #544171, #665582);
-  padding: 25px;
-  border-radius: 11.5px;
-  max-width: 70%;
-  max-height: 65%;
-  overflow: auto;
-  z-index: 1000;
-  color: #ffffff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-}
-
-
-    .popup-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ffffff;
-      padding-bottom: 10px;
-    }
-
-    .popup-footer {
-      border-top: 1px solid #ffffff;
-      padding-top: 10px;
-      text-align: center;
-    }
-
-    .popup.active {
-      display: block;
-    }
-
-    .close {
-      font-size: 20px;
-      cursor: pointer;
-      color: #e6e6fa;
-      overflow: hidden;
-    }
-
-    .blur-background {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(10px);
-      z-index: 999;
-      overflow: hidden;
-    }
-
-    .blur-background.active {
-      display: block;
-      overflow: hidden;
-    }
-
-    table,
-    th,
-    td {
-      border: 2.5px solid #ffffff;
-      border-collapse: collapse;
-      padding: 8px;
-      color: #ffffff;
-      overflow: hidden;
-    }
-
-    th {
-      text-align: left;
-      overflow: hidden;
-    }
-
-    .loading-spinner {
-      border: 4px solid #4c436f;
-      border-top: 4px solid #886fe0;
-      border-radius: 50%;
-      width: 35px;
-      height: 35px;
-      animation: spin 1s linear infinite;
-      margin: 0 auto;
-      margin-top: 20px;
-      overflow: hidden;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
+  <head>
+    <meta charset="UTF-8">
+    <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2e2c3a !important;
+        color: #000000 !important;
+        overflow: hidden;
       }
 
-      100% {
-        rotate(360deg);
+      a:link {
+        color: #66ff99;
+        background-color: transparent;
+        text-decoration: none;
       }
-    }
 
-    .message {
-      text-align: center;
-      padding: 10px;
-      font-size: 18px;
-      background-color: #4c436f;
-      border-radius: 8px;
-      width: 60%;
-      margin: 30px auto;
-      transition: opacity 0.5s ease-in-out;
-      color: white;
-      overflow: hidden;
-    }
+      a:visited {
+        color: #66ff99;
+        background-color: transparent;
+        text-decoration: none;
+      }
 
-    .fade-out {
-      opacity: 0;
-      overflow: hidden;
-    }
+      a:hover {
+        color: #33ff77;
+        background-color: transparent;
+        text-decoration: underline;
+      }
 
-    .fade-in {
-      opacity: 1;
-      overflow: hidden;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟷.𝟿</div>
-    <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
-    <div class="status-box"></div>
-    <div class="box">
-      <h1>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h1>
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      .box {
+        width: 25%;
+        margin: 0 auto;
+        padding: 8px;
+        background-color: #5c5a75 !important;
+        border: 2px solid #b4a5e0 !important;
+        border-radius: 15px !important;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3) !important;
+        overflow: hidden;
+      }
+
+      .container {
+        width: 92.5% !important;
+        margin: 20px auto;
+        padding: 30px;
+        border-radius: 12px;
+        background-color: #4c436f !important;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) !important;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .version-box {
+        position: absolute;
+        top: 25px;
+        left: 23px;
+        background-color: #775ed4;
+        color: #ffffff;
+        border-radius: 9px;
+        padding: 7px 13px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .status {
+        position: absolute;
+        top: 25px;
+        right: 23px;
+        background-color: #775ed4;
+        color: #ffffff;
+        border-radius: 9px;
+        padding: 7px 13px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .status-box {
+        position: absolute;
+        top: 36px;
+        right: 33px;
+        background-color: #00ff88;
+        color: #262626;
+        border-radius: 50px;
+        padding: 8px 8px;
+        font-size: 15px;
+        font-weight: bold;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      h1 {
+        font-size: 40px;
+        color: #e6e6fa;
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        overflow: hidden;
+      }
+
+      p {
+        font-size: 16px;
+        color: #d3d3e6;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .input-group input[type="text"] {
+        flex: 1;
+        padding: 12px;
+        border: 3px solid #b4a5e0 !important;
+        border-radius: 8px;
+        background-color: #383352;
+        color: #ffffff;
+        overflow: hidden;
+      }
+
+      .input-group input[type="text"]::placeholder {
+        color: #a6a6a6;
+      }
+
+      .input-group input[type="text"]:focus::placeholder {
+        color: #383352;
+      }
+
+      .input-group input[type="text"]:focus {
+        border: 3px solid #b4a5e0 !important;
+        border-radius: 8px;
+        background-color: #383352;
+        */ color: #ffffff;
+        outline: none;
+      }
+
+      .input-group button {
+        padding: 10px 16px;
+        background-color: #886fe0;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .input-group button:hover {
+        background-color: #6b56c8;
+        overflow: hidden;
+      }
+
+      .rendered-content {
+        border: 0px solid #b4a5e0 !important;
+        padding: 25px !important;
+        background-color: #fff0ff !important;
+        border-radius: 10px !important;
+        overflow-x: auto !important;
+        margin-top: 20px !important;
+        color: #000000 !important;
+        overflow: hidden !important;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #544171, #665582);
+        padding: 25px;
+        border-radius: 11.5px;
+        max-width: 70%;
+        max-height: 65%;
+        overflow: auto;
+        z-index: 1000;
+        color: #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+      }
+
+      .popup-footer {
+        border-top: 1px solid #ffffff;
+        padding-top: 10px;
+        text-align: center;
+      }
+
+      .popup.active {
+        display: block;
+      }
+
+      .close {
+        font-size: 20px;
+        cursor: pointer;
+        color: #e6e6fa;
+        overflow: hidden;
+      }
+
+      .blur-background {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        overflow: hidden;
+      }
+
+      .blur-background.active {
+        display: block;
+        overflow: hidden;
+      }
+
+      table,
+      th,
+      td {
+        border: 2.5px solid #ffffff;
+        border-collapse: collapse;
+        padding: 8px;
+        color: #ffffff;
+        overflow: hidden;
+      }
+
+      th {
+        text-align: left;
+        overflow: hidden;
+      }
+
+      .loading-spinner {
+        border: 4px solid #4c436f;
+        border-top: 4px solid #886fe0;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          rotate(360deg);
+        }
+      }
+
+      .message {
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+        background-color: #4c436f;
+        border-radius: 8px;
+        width: 60%;
+        margin: 30px auto;
+        transition: opacity 0.5s ease-in-out;
+        color: white;
+        overflow: hidden;
+      }
+
+      .fade-out {
+        opacity: 0;
+        overflow: hidden;
+      }
+
+      .fade-in {
+        opacity: 1;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟷.𝟿</div>
+      <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
+      <div class="status-box"></div>
+      <div class="box">
+        <h1>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h1>
+      </div>
+      <div id="message-container" class="message fade-in">𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</div>
+      <div class="input-group">
+        <button onclick="togglePopup('popup')">
+          <b>?</b>
+        </button>&nbsp&nbsp <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
+      </div>
+      <div id="rendered-content" class="rendered-content"></div>
+      <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
     </div>
-    <div id="message-container" class="message fade-in">𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</div>
-    <div class="input-group">
-      <button onclick="togglePopup('popup')"><b>?</b></button>&nbsp&nbsp
-      <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
-      <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp
-      <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp
-      <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
-    </div>
-    <div id="rendered-content" class="rendered-content"></div>
-    <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
-  </div>
-  <div id="popup" class="popup">
-    <div class="popup-header">
-      <span><b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝚌𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐</b></span>
-      <span class="close" onclick="togglePopup('popup')"><b>✕</b></span>
-    </div>
-    <div class="popup-content">
+    <div id="popup" class="popup">
+      <div class="popup-header">
+        <span>
+          <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝚌𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐</b>
+        </span>
+        <span class="close" onclick="togglePopup('popup')">
+          <b>✕</b>
+        </span>
+      </div>
+      <div class="popup-content">
         <p>
           <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b>
           <br>
@@ -321,54 +345,51 @@
           <br>
           <br>about blank cloaking has been added, if you're really that paranoid. <br>
           <br>image support is working(?), but it's kind of iffy at the moment. <br>
-          <br>way, way faster now :D <br><b>
+          <br>way, way faster now :D <br>
+          <b>
             <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️ </b>
           <br>
-          <br> Seperated JS from the HTML
-          <br>
+          <br> Seperated JS from the HTML <br>
           <br> I said I'd stop updating this thing. I lied. It will remember links you previously went to and render them at <i>
             <b>light speed. </i>
           </b>
-          <br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️ </b>
           <br>
-          <br> fuck you google <br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️ </b>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️ </b>
+          <br>
+          <br> fuck you google <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️ </b>
           <br>
           <br>bot protection bypassed. <br>
-          <br>auto https:// for all you lazy bums <br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️ </b>
+          <br>auto https:// for all you lazy bums <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️ </b>
           <br>
           <br>touchups & tooltips :D <br>
-          <br>had a sandwich (ham and cheese)<br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟳] ⚠️ </b>
+          <br>had a sandwich (ham and cheese) <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟳] ⚠️ </b>
           <br>
-          <br>version number in top right
+          <br>version number in top right <br>
+          <br>boxed the title <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟴] ⚠️ </b>
           <br>
-          <br>boxed the title <br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟴] ⚠️ </b>
+          <br>nvm, version number in top left <br>
+          <br>the blur is a little less... intrusive <br>
+          <br>dark mode coming soon? <br>
+          <br>added at least 7 new tooltips! and they rotate! (i'm too lazy to count them all, but i promise they're funny. i think) <br>
+          <br>learned to spell <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟵] ⚠️ </b>
           <br>
-          <br>nvm, version number in top left
-          <br>
-          <br>the blur is a little less... intrusive                   <br>
-          <br>dark mode coming soon?
-          <br>
-          <br>added at least 7 new tooltips! and they rotate! (i'm too lazy to count them all, but i promise they're funny. i think)
-          <br>
-          <br>learned to spell<br><b>
-          <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟵] ⚠️ </b>
-          <br>
-          <br>added status in top right. currently disfunctional, but ill make it work eventually
-          <br>
-          <br>fixed the ugly black line that surrounded the url bar when you focused on it. turns out i have no idea how css works<br>
-          <br>site is up! ur probably reading this on it right now!
-          <br>
-          <br>new specification
-          <br>
-          <br>learned to spell (again)
-          <br>
-          <br>fixed some leaking
-          <br>
+          <br>added status in top right. currently disfunctional, but ill make it work eventually <br>
+          <br>fixed the ugly black line that surrounded the url bar when you focused on it. turns out i have no idea how css works <br>
+          <br>site is up! ur probably reading this on it right now! <br>
+          <br>new specification <br>
+          <br>learned to spell (again) <br>
+          <br>fixed some leaking <br>
           <br>why is status on top of blur
         </p>
       </div>

@@ -126,6 +126,18 @@
         color: #ffffff;
         overflow: hidden;
       }
+      
+      .input-group input[type="text"]:focus {
+        flex: 1;
+        padding: 12px;
+        border: 3px solid #b4a5e0;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #383352, #4c436f);
+        color: #ffffff;
+        overflow: hidden;
+        outline:none;
+      }
+
 
       .input-group button {
         padding: 10px 16px;
@@ -137,10 +149,12 @@
         transition: all 0.3s;
         font-size: 16px;
         overflow: hidden;
+        outline: none;
       }
 
       .input-group button:hover {
         background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline:none;
       }
 
       .rendered-content {

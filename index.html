@@ -1,137 +1,528 @@
-        const messages = [
-            "𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣",
-            "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚊𝚑! 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
-            "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
-            "𝚄𝚗𝚋𝚕𝚘𝚌𝚔𝚊𝚋𝚕𝚎!",
-            "🙶𝙸𝚝'𝚜 𝚊 𝚏𝚎𝚊𝚝𝚞𝚛𝚎🙷",
-            "𝚏𝚒𝚗𝚐𝚎𝚛𝚜 𝚌𝚛𝚘𝚜𝚜𝚎𝚍",
-            "𝚗𝚘𝚝 𝚊 𝚙𝚛𝚘𝚡𝚢!",
-            "𝚞𝚗𝚍𝚎𝚛𝚜𝚝𝚊𝚗𝚍𝚊𝚋𝚕𝚎, 𝚑𝚊𝚟𝚎 𝚊 𝚗𝚒𝚌𝚎 𝚍𝚊𝚢",
-            "𝙸𝚝'𝚜 𝚊 𝚞𝚜𝚎𝚛 𝚎𝚛𝚛𝚘𝚛, 𝙸 𝚜𝚠𝚎𝚊𝚛",
-            "𝚙𝚊𝚗𝚒𝚌 𝚖𝚘𝚍𝚎",
-            "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
-            "𝙷𝚎𝚕𝚍 𝚝𝚘𝚐𝚎𝚝𝚑𝚎𝚛 𝚠𝚒𝚝𝚑 𝚍𝚞𝚌𝚔 𝚝𝚊𝚙𝚎",
-            "𝚝𝚢𝚙𝚘",
-            "𝚃𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚒𝚜 𝚘𝚙𝚎𝚗 𝚜𝚊𝚞𝚌𝚎!",
-            "𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝",
-            "𝚁𝚎𝚏𝚘𝚛𝚖𝚎𝚍 𝚜𝚔𝚒𝚍 :𝙳",
-            "𝚗𝚘𝚝 𝚊 𝚙𝚛𝚘𝚡𝚢!",
-            "𝚃𝚒𝚝𝚊𝚗𝚒𝚞𝚖 𝚙𝚕𝚎𝚊𝚜𝚎 𝚗𝚘𝚝𝚒𝚌𝚎 𝚖𝚎 :(",
-            "𝙰𝚖 𝙸 𝚌𝚘𝚘𝚔𝚒𝚗𝚐?",
-            "𝚒𝚜 𝚝𝚑𝚒𝚜 𝚝𝚑𝚒𝚗𝚐 𝚘𝚗?",
-            "𝚗𝚘𝚙𝚎, 𝚒𝚖 𝚌𝚘𝚘𝚔𝚎𝚍",
-            "𝚁𝚎𝚊𝚍 𝚝𝚑𝚎 𝚌𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐!",
-            "𝚆𝚑𝚊𝚝𝚜 𝚊 𝚙𝚛𝚘𝚡𝚢?",
-            "𝚒𝚜 𝚝𝚑𝚒𝚜 𝚝𝚑𝚒𝚗𝚐 𝚘𝚗?",
-            "𝚌𝚊𝚛𝚙𝚎 𝚍𝚒𝚎𝚖(?)",
-            "𝚘𝚗 𝚝𝚑𝚎 𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚊𝚕𝚕 𝚝𝚑𝚊𝚝",
-            "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
-            "𝙸 𝚗𝚎𝚎𝚍 𝚊𝚗 𝚎𝚡𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚝𝚘𝚛 𝚝𝚘 𝚏𝚒𝚡 𝚊𝚕𝚕 𝚝𝚑𝚎𝚜𝚎 𝙱𝚄𝙶𝚂",
-            "ツ",
-        ];
-        const messageContainer = document.getElementById('message-container');
-        function changeMessage() {
-            messageContainer.classList.remove('fade-in');
-            messageContainer.classList.add('fade-out');
-            setTimeout(() => {
-                const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-                messageContainer.textContent = randomMessage;
-                messageContainer.classList.remove('fade-out');
-                messageContainer.classList.add('fade-in');
-            }, 500);
-        }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, #2e2c3a, #383352);
+        color: #000000;
+      }
 
-        setInterval(changeMessage, 6000);
-
-function renderWebsite() {
-    const urlInput = document.getElementById("url");
-    let url = urlInput.value.trim();
-    if (!url.startsWith("http://") && !url.startsWith("https://")) {
-        url = "https://" + url;
-        urlInput.value = url;
+    .popup-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    const renderedContent = document.getElementById("rendered-content");
-    const loadingSpinner = document.getElementById("loading-spinner");
-
-    renderedContent.innerHTML = "";
-    loadingSpinner.style.display = "block";
-
-    fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then((data) => {
-            const contentDiv = document.createElement("div");
-            contentDiv.innerHTML = data;
-
-            fixRelativeUrls(contentDiv, url);
-
-            renderedContent.appendChild(contentDiv);
-            loadingSpinner.style.display = "none";
-        })
-        .catch((error) => {
-            renderedContent.innerHTML = `
-                <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
-            loadingSpinner.style.display = "none";
-        });
-}
-
-function fixRelativeUrls(content, baseUrl) {
-    content.querySelectorAll("a, img, video").forEach((el) => {
-        const attribute = el.tagName.toLowerCase() === "a" ? "href" : "src";
-        const relativeUrl = el.getAttribute(attribute);
-        if (relativeUrl && !relativeUrl.startsWith("http")) {
-            const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-            el.setAttribute(attribute, absoluteUrl);
-        }
-    });
-}
-
-function togglePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    const blurBackground = document.getElementById("blur-background");
-    popup.classList.toggle("active");
-    blurBackground.classList.toggle("active");
-}
-
-function openInBlankTab() {
-    const outerHTML = document.documentElement.outerHTML;
-    const newTab = window.open("about:blank");
-    newTab.document.write(outerHTML);
-    newTab.document.close();
-}
-
-document.getElementById('button1').addEventListener('click', function() {
-    var url = document.getElementById('url').value;
-    var apiUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
-    fetchContent(apiUrl);
-});
-
-document.getElementById('button2').addEventListener('click', function() {
-    var url = document.getElementById('url').value;
-    var apiUrl = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url);
-    fetchContent(apiUrl);
-});
-
-document.getElementById('button3').addEventListener('click', function() {
-    var url = document.getElementById('url').value;
-    var apiUrl = 'https://api.codetabs.com/v1/tmp/?quest=' + encodeURIComponent(url);
-    fetchContent(apiUrl);
-});
-
-  function togglePopup(popupId) {
-    const popup = document.getElementById(popupId);
-    popup.classList.toggle('active');
-
-    const blurBackground = document.getElementById('blur-background');
-    blurBackground.classList.toggle('active');
-
-    if (popup.classList.contains('active')) {
-      const alloriginsButton = document.querySelector('#' + popupId + ' button:first-child');
-      alloriginsButton.focus();
+      
+    .popup-content button {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #6b56c8;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        transition: background-color 0.3s;
+        outline: none;
     }
-  }
+
+      
+      
+    .popup-content button:active {
+        background-color: #25d49a;
+    }
+    
+      .popup-content button:focus {
+        background-color: #25d49a;
+    }
+      
+      a:link {
+        color: #66ff99;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #66ff99;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #33ff77;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+
+      .box {
+        width: 25%;
+        margin: 0 auto;
+        padding: 8px;
+        background: linear-gradient(135deg, #756fae, #6a63ab);
+        border: 2px solid #b4a5e0;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      .container {
+        width: 92.5%;
+        margin: 20px auto;
+        padding: 30px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #4c436f, #544171);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+
+      .version-box {
+        position: absolute;
+        top: 25px;
+        left: 23px;
+        background: linear-gradient(135deg, #775ed4, #886fe0);
+        color: #ffffff;
+        border-radius: 9px;
+        padding: 7px 13px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .status {
+        position: absolute;
+        top: 25px;
+        left: 157px;
+        background: linear-gradient(135deg, #775ed4, #886fe0);
+        color: #ffffff;
+        border-radius: 9px;
+        padding: 7px 13px;
+        font-size: 16px;
+        overflow: hidden;
+      }
+
+      .status-box {
+        position: absolute;
+        top: 36px;
+        left: 241px;
+        background: linear-gradient(135deg, #00ff88, #33ff99);
+        color: #262626;
+        border-radius: 50px;
+        padding: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      h11 {
+        font-size: 40px;
+        color: #e6e6fa;
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 16px;
+        color: #d3d3e6;
+        text-align: center;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .input-group input[type="text"] {
+        flex: 1;
+        padding: 12px;
+        border: 3px solid #b4a5e0;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #383352, #4c436f);
+        color: #ffffff;
+        overflow: hidden;
+      }
+      
+      .input-group input[type="text"]:focus {
+        flex: 1;
+        padding: 12px;
+        border: 3px solid #b4a5e0;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #383352, #4c436f);
+        color: #ffffff;
+        overflow: hidden;
+        outline:none;
+      }
+
+
+      .input-group button {
+        padding: 10px 16px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 16px;
+        overflow: hidden;
+        outline: none;
+      }
+
+      .input-group button:hover {
+        background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline:none;
+      }
+
+      .rendered-content {
+        border: 0px solid #b4a5e0;
+        padding: 25px;
+        background: linear-gradient(135deg, #fff0ff, #f0e6ff);
+        border-radius: 10px;
+        margin-top: 20px;
+        color: #000000;
+        overflow-x: auto;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(135deg, #544171, #665582);
+        padding: 25px;
+        border-radius: 11.5px;
+        max-width: 70%;
+        max-height: 65%;
+        overflow: auto;
+        z-index: 1000;
+        color: #ffffff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .popup-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ffffff;
+        padding-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .popup-footer {
+        border-top: 1px solid #ffffff;
+        padding-top: 10px;
+        text-align: center;
+      }
+
+      .popup.active {
+        display: block;
+      }
+
+      .close {
+        font-size: 20px;
+        cursor: pointer;
+        color: #e6e6fa;
+        overflow: hidden;
+      }
+
+      .blur-background {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        z-index: 999;
+        overflow: hidden;
+      }
+
+      .blur-background.active {
+        display: block;
+      }
+
+      table,
+      th,
+      td {
+        border: 2.5px solid #ffffff;
+        border-collapse: collapse;
+        padding: 8px;
+        color: #ffffff;
+        overflow: hidden;
+      }
+
+      th {
+        text-align: left;
+        overflow: hidden;
+      }
+
+      .loading-spinner {
+        border: 4px solid #4c436f;
+        border-top: 4px solid #886fe0;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .message {
+        text-align: center;
+        padding: 10px;
+        font-size: 18px;
+        background: linear-gradient(135deg, #4c436f, #544171);
+        border-radius: 8px;
+        width: 60%;
+        margin: 30px auto;
+        transition: opacity 0.5s ease-in-out;
+        color: #ffffff;
+        overflow: hidden;
+      }
+
+      .fade-out {
+        opacity: 0;
+      }
+
+      .fade-in {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟶</div>
+      <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
+      <div class="status-box"></div>
+      <div class="box">
+        <h11>&nbsp&nbsp𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h11>
+      </div>
+      <div id="message-container" class="message fade-in">𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</div>
+<div class="input-group">
+    <button onclick="togglePopup('settings-popup')">
+        𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜
+    </button>&nbsp&nbsp
+    <button onclick="togglePopup('popup')">
+        <b>&nbsp&nbsp？</b>
+    </button>&nbsp&nbsp
+    <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
+    <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
+    <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
+    <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
+</div>
+
+<div id="settings-popup" class="popup">
+    <div class="popup-header">
+        <span>
+            <b>𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜</b>
+        </span>
+        <span class="close" onclick="togglePopup('settings-popup')">
+            <b>✕</b>
+        </span>
+    </div><br>
+    <div class="popup-content">
+      <button onclick="handleButton1()" autofocus>𝚊𝚕𝚕𝚘𝚛𝚒𝚐𝚒𝚗𝚜</button>
+<button onclick="handleButton2()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚙𝚛𝚘𝚡𝚢</button>
+        <button onclick="handleButton3()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚝𝚖𝚙</button>
+    </div><br>
+    <div class="popup-footer"></div>
+</div>
+
+      <div id="rendered-content" class="rendered-content"></div>
+      <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
+    </div>
+    <div id="popup" class="popup">
+      <div class="popup-header">
+        <span>
+          <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝙲𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐</b>
+        </span>
+        <span class="close" onclick="togglePopup('popup')">
+          <b>✕</b>
+        </span>
+      </div>
+      <div class="popup-content">
+        <p>
+          <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b>
+          <br>
+          <br>NO LONGER DEPRECATED! CONSTANT UPDATES SCHEDULED FOR ALL YOU ADORING FANS! <br>
+          <br>
+          <b>
+            <span class="info">🛈</span>&nbsp[𝗜𝗡𝗙𝗢]&nbsp <span class="info">🛈</span>
+          </b>
+          <br>
+          <br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. Find the project on GitHub <a href="https://github.com/dinguschan-owo/dingusproxy">
+            <b>here</b>
+          </a>. I will probably stop maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋 <br>
+          <br>
+          <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b>
+          <br>
+          <br> This works only on ChromeOS and Android. what the fuck <br>
+          <br>links still can't be followed in-render, and I'm not sure if I have the patience to fix it. Just find the link that you want to go to and put it in the URL box. <br>
+          <br>
+          <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟮] ⚠️</b>
+          <br>
+          <br>about blank cloaking has been added, if you're really that paranoid. <br>
+          <br>image support is working(?), but it's kind of iffy at the moment. <br>
+          <br>way, way faster now :D <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟯] ⚠️ </b>
+          <br>
+          <br> Seperated the JS from the HTML, because its faster. i think. <br>
+          <br> I said I'd stop updating this thing. I lied. It will remember links you previously went to and render them at <i>
+            <b>light speed. </i>
+          </b>
+          <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟰] ⚠️ </b>
+          <br>
+          <br> fuck you google <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟱] ⚠️ </b>
+          <br>
+          <br>bot protection bypassed. <br>
+          <br>auto https:// for all you lazy bums <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟲] ⚠️ </b>
+          <br>
+          <br>touchups & tooltips :D <br>
+          <br>had a sandwich (ham and cheese) <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟳] ⚠️ </b>
+          <br>
+          <br>version number in top right <br>
+          <br>boxed the title <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟴] ⚠️ </b>
+          <br>
+          <br>nvm, version number in top left <br>
+          <br>the blur is a little less... intrusive <br>
+          <br>dark mode coming soon? <br>
+          <br>added at least 7 new tooltips! and they rotate! (i'm too lazy to count them all, but i promise they're funny. i think) <br>
+          <br>learned to spell <br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟵] ⚠️ </b>
+          <br>
+          <br>added status in top right. currently disfunctional, but ill make it work eventually <br>
+          <br>fixed the ugly black line that surrounded the url bar when you focused on it. turns out i have no idea how css works <br>
+          <br>site is up! ur probably reading this on it right now! <br>
+          <br>new specification <br>
+          <br>learned to spell (again) <br>
+          <br>fixed some leaking <br>
+          <br>why is status on top of blur<br>
+          <b>
+            <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟮.𝟬] ⚠️ </b>
+          <br>
+          <br>slower ;-; <br>
+          <br>mom can we get some nice gradients pretty please? we have nice gradients at home honey. the nice gradients at home: <br>
+          <br>status is UNDER blur now. nice<br>
+          <br>header colors dont interfere with render now, but the paragraph styles do. oops.<br>
+          <br>learned to spell (again) <br>
+          <br>haha more funny rotating words <br>
+          <br>MAJOR MAJOR SPEED UPDATES IM NOT LYING THIS TIME<br>
+          <br>you can now switch what CORS proxy service u wanna use codetabs proxy seems to be the fastest<br>
+          <br>FINALLY at version 2.0 :DDD
+        </p>
+      </div>
+    </div>
+    <div id="specifications-popup" class="popup">
+      <div class="popup-header">
+        <span>
+          <b>𝚂𝚙𝚎𝚌𝚒𝚏𝚒𝚌𝚊𝚝𝚒𝚘𝚗𝚜 (𝚝𝚎𝚜𝚝𝚎𝚍 𝚒𝚗 𝙲𝚑𝚛𝚘𝚖𝚎𝙾𝚂)</b>
+        </span>
+        <span class="close" onclick="togglePopup('specifications-popup')">
+          <b>✕</b>
+        </span>
+      </div>
+      <div class="popup-content">
+        <br>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Avg. Render Speed</th>
+            <th>Proxy?</th>
+            <th>Local File?</th>
+            <th>Img Support?</th>
+            <th>Backend Required?</th>
+            <th>Can it be blocked?</th>
+          </tr>
+          <tr>
+            <td>
+              <b>DingusProxy</b>
+            </td>
+            <td>5 seconds</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Ultraviolet</b>
+            </td>
+            <td>4 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>TompHTTP</b>
+            </td>
+            <td>10 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>Wisp</b>
+            </td>
+            <td>7 seconds</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+          </tr>
+        </table>
+      </div>
+      <div class="popup-footer"></div>
+    </div>
+    <div id="blur-background" class="blur-background"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

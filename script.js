@@ -41,7 +41,7 @@
             }, 500);
         }
 
-        setInterval(changeMessage, 8000);
+        setInterval(changeMessage, 6000);
 
 function renderWebsite() {
     const urlInput = document.getElementById("url");

@@ -12,6 +12,38 @@
         color: #000000;
       }
 
+    .popup-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+      
+    .popup-content button {
+        margin: 5px;
+        padding: 10px 20px;
+        background-color: #6b56c8;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        transition: background-color 0.3s;
+        outline: none;
+    }
+
+      
+      
+    .popup-content button:active {
+        background-color: #25d49a;
+    }
+    
+      .popup-content button:focus {
+        background-color: #25d49a;
+    }
+      
       a:link {
         color: #66ff99;
         background-color: transparent;
@@ -98,7 +130,7 @@
       h11 {
         font-size: 40px;
         color: #e6e6fa;
-        text-align: center !important;
+        text-align: center;
         margin-bottom: 0;
         margin-top: 0;
         font-weight: bold;
@@ -191,6 +223,7 @@
         align-items: center;
         border-bottom: 1px solid #ffffff;
         padding-bottom: 10px;
+        font-size: 18px;
       }
 
       .popup-footer {
@@ -217,7 +250,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.2);
         backdrop-filter: blur(10px);
         z-index: 999;
         overflow: hidden;
@@ -294,22 +327,43 @@
         <h11>&nbsp&nbsp𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h11>
       </div>
       <div id="message-container" class="message fade-in">𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣</div>
-      <div class="input-group">
-        <button onclick="togglePopup('popup')">
-          <b>&nbsp&nbsp？</b>
-        </button>&nbsp&nbsp
-        <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
-        <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
-        <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
-        <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
-      </div>
+<div class="input-group">
+    <button onclick="togglePopup('settings-popup')">
+        𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜
+    </button>&nbsp&nbsp
+    <button onclick="togglePopup('popup')">
+        <b>&nbsp&nbsp？</b>
+    </button>&nbsp&nbsp
+    <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
+    <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
+    <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
+    <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
+</div>
+
+<div id="settings-popup" class="popup">
+    <div class="popup-header">
+        <span>
+            <b>𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜</b>
+        </span>
+        <span class="close" onclick="togglePopup('settings-popup')">
+            <b>✕</b>
+        </span>
+    </div><br>
+    <div class="popup-content">
+      <button onclick="handleButton1()" autofocus>𝚊𝚕𝚕𝚘𝚛𝚒𝚐𝚒𝚗𝚜</button>
+<button onclick="handleButton2()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚙𝚛𝚘𝚡𝚢</button>
+        <button onclick="handleButton3()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚝𝚖𝚙</button>
+    </div><br>
+    <div class="popup-footer"></div>
+</div>
+
       <div id="rendered-content" class="rendered-content"></div>
       <div id="loading-spinner" class="loading-spinner" style="display: none;"></div>
     </div>
     <div id="popup" class="popup">
       <div class="popup-header">
         <span>
-          <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝚌𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐</b>
+          <b>𝙸𝚗𝚏𝚘𝚛𝚖𝚊𝚝𝚒𝚘𝚗 𝚊𝚗𝚍 𝙲𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐</b>
         </span>
         <span class="close" onclick="togglePopup('popup')">
           <b>✕</b>

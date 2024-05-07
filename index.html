@@ -8,8 +8,10 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
         padding: 0;
-        background: linear-gradient(135deg, #2e2c3a, #383352);
+        background: linear-gradient(135deg, #2e2c3a, #383352) !important;
         color: #000000;
+           height: 100%;
+   overflow-y: hidden;
       }
 
     .popup-content {
@@ -68,6 +70,8 @@
         text-decoration: underline;
       }
 
+      
+      
       .box {
         width: 25%;
         margin: 0 auto;
@@ -77,6 +81,7 @@
         border-radius: 15px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         overflow: hidden;
+        
       }
 
       .container {
@@ -87,6 +92,10 @@
         background: linear-gradient(135deg, #4c436f, #544171);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         position: relative;
+max-height: 100%; /* Set maximum height to 100% of viewport height */
+   height: 35%;
+   overflow-y: hidden;
+        transition: height 0.5s
       }
 
       .version-box {
@@ -148,6 +157,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+         transition: margin-top 0.5s;
       }
 
       .input-group input[type="text"] {
@@ -158,6 +168,7 @@
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
+         transition: margin-top 0.5s;
       }
       
       .input-group input[type="text"]:focus {
@@ -169,6 +180,7 @@
         color: #ffffff;
         overflow: hidden;
         outline:none;
+         transition: margin-top 0.5s;
       }
 
 
@@ -183,11 +195,13 @@
         font-size: 16px;
         overflow: hidden;
         outline: none;
+         transition: margin-top 0.5s;
       }
 
       .input-group button:hover {
         background: linear-gradient(135deg, #6b56c8, #775ed4);
         outline:none;
+         transition: margin-top 0.5s;
       }
 
       .rendered-content {
@@ -197,7 +211,10 @@
         border-radius: 10px;
         margin-top: 20px;
         color: #000000;
-        overflow-x: auto;
+max-height: 100%; /* Set maximum height to 100% of viewport height */
+        overflow: auto;
+         transition: margin-top 0.5s;
+        padding: 0px;
       }
 
       .popup {
@@ -320,6 +337,7 @@
   </head>
   <body>
     <div class="container">
+      
       <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟶</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
       <div class="status-box"></div>
@@ -335,7 +353,7 @@
         <b>&nbsp&nbsp？</b>
     </button>&nbsp&nbsp
     <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
-    <button onclick="renderWebsite()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
+       <button onclick="shrinkContainerAndRender()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
     <button onclick="openInBlankTab()">𝙾𝚙𝚎𝚗 𝚒𝚗 𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
     <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>
 </div>

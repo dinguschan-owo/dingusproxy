@@ -104,3 +104,34 @@ function openInBlankTab() {
     newTab.document.write(outerHTML);
     newTab.document.close();
 }
+
+document.getElementById('button1').addEventListener('click', function() {
+    var url = document.getElementById('url').value;
+    var apiUrl = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(url);
+    fetchContent(apiUrl);
+});
+
+document.getElementById('button2').addEventListener('click', function() {
+    var url = document.getElementById('url').value;
+    var apiUrl = 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url);
+    fetchContent(apiUrl);
+});
+
+document.getElementById('button3').addEventListener('click', function() {
+    var url = document.getElementById('url').value;
+    var apiUrl = 'https://api.codetabs.com/v1/tmp/?quest=' + encodeURIComponent(url);
+    fetchContent(apiUrl);
+});
+
+  function togglePopup(popupId) {
+    const popup = document.getElementById(popupId);
+    popup.classList.toggle('active');
+
+    const blurBackground = document.getElementById('blur-background');
+    blurBackground.classList.toggle('active');
+
+    if (popup.classList.contains('active')) {
+      const alloriginsButton = document.querySelector('#' + popupId + ' button:first-child');
+      alloriginsButton.focus();
+    }
+  }

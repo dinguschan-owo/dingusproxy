@@ -82,14 +82,12 @@ function renderWebsite() {
 }
 
 function fixRelativeUrls(content, baseUrl) {
-    // Fix relative URLs for anchor tags
     content.querySelectorAll("a").forEach((el) => {
         const relativeUrl = el.getAttribute("href");
         if (relativeUrl && !relativeUrl.startsWith("http")) {
             const absoluteUrl = new URL(relativeUrl, baseUrl).href;
             el.setAttribute("href", absoluteUrl);
         }
-        // Add event listener to each anchor element
         el.addEventListener("click", function(event) {
             event.preventDefault(); // Prevent default behavior
             const urlInput = document.getElementById("url");
@@ -97,36 +95,56 @@ function fixRelativeUrls(content, baseUrl) {
             renderWebsite(); // Trigger rendering with the new URL
         });
     });
-
-    // Fix relative URLs for image tags
     content.querySelectorAll("img").forEach((el) => {
-        fixImageSrc(el, baseUrl);
+        fixElementSrc(el, "src", baseUrl);
     });
-
-    // Fix relative URLs for picture tags
-    content.querySelectorAll("picture").forEach((el) => {
-        el.querySelectorAll("img").forEach((img) => {
-            fixImageSrc(img, baseUrl);
+    content.querySelectorAll("script").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("link").forEach((el) => {
+        fixElementSrc(el, "href", baseUrl);
+    });
+    content.querySelectorAll("iframe").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("video source, audio source").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("audio").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("video").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("object").forEach((el) => {
+        fixElementSrc(el, "data", baseUrl);
+        el.querySelectorAll("param").forEach((paramEl) => {
+            const relativeUrl = paramEl.getAttribute("value");
+            if (relativeUrl && !relativeUrl.startsWith("http")) {
+                const absoluteUrl = new URL(relativeUrl, baseUrl).href;
+                paramEl.setAttribute("value", absoluteUrl);
+            }
         });
     });
-
-    // Fix relative URLs for source tags inside picture tags
-    content.querySelectorAll("picture source").forEach((el) => {
-        const relativeSrcset = el.getAttribute("srcset");
-        if (relativeSrcset && !relativeSrcset.startsWith("http")) {
-            const absoluteSrcset = new URL(relativeSrcset, baseUrl).href;
-            el.setAttribute("srcset", absoluteSrcset);
-        }
+    content.querySelectorAll("audio source").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("video source").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+    content.querySelectorAll("track").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
     });
 }
 
-function fixImageSrc(el, baseUrl) {
-    const relativeUrl = el.getAttribute("src");
+function fixElementSrc(el, attributeName, baseUrl) {
+    const relativeUrl = el.getAttribute(attributeName);
     if (relativeUrl && !relativeUrl.startsWith("http")) {
         const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-        el.setAttribute("src", absoluteUrl);
+        el.setAttribute(attributeName, absoluteUrl);
     }
 }
+
 
 function togglePopup(popupId) {
     const popup = document.getElementById(popupId);

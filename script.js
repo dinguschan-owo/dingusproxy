@@ -82,12 +82,14 @@ function renderWebsite() {
 }
 
 function fixRelativeUrls(content, baseUrl) {
+
     content.querySelectorAll("a").forEach((el) => {
         const relativeUrl = el.getAttribute("href");
         if (relativeUrl && !relativeUrl.startsWith("http")) {
             const absoluteUrl = new URL(relativeUrl, baseUrl).href;
             el.setAttribute("href", absoluteUrl);
         }
+
         el.addEventListener("click", function(event) {
             event.preventDefault(); 
             const urlInput = document.getElementById("url");
@@ -95,13 +97,32 @@ function fixRelativeUrls(content, baseUrl) {
             renderWebsite(); 
         });
     });
+
     content.querySelectorAll("img").forEach((el) => {
-        const relativeUrl = el.getAttribute("src");
-        if (relativeUrl && !relativeUrl.startsWith("http")) {
-            const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-            el.setAttribute("src", absoluteUrl);
+        fixImageSrc(el, baseUrl);
+    });
+
+    content.querySelectorAll("picture").forEach((el) => {
+        el.querySelectorAll("img").forEach((img) => {
+            fixImageSrc(img, baseUrl);
+        });
+    });
+
+    content.querySelectorAll("picture source").forEach((el) => {
+        const relativeSrcset = el.getAttribute("srcset");
+        if (relativeSrcset && !relativeSrcset.startsWith("http")) {
+            const absoluteSrcset = new URL(relativeSrcset, baseUrl).href;
+            el.setAttribute("srcset", absoluteSrcset);
         }
     });
+}
+
+function fixImageSrc(el, baseUrl) {
+    const relativeUrl = el.getAttribute("src");
+    if (relativeUrl && !relativeUrl.startsWith("http")) {
+        const absoluteUrl = new URL(relativeUrl, baseUrl).href;
+        el.setAttribute("src", absoluteUrl);
+    }
 }
 
 function togglePopup(popupId) {

@@ -82,32 +82,35 @@ function renderWebsite() {
 }
 
 function fixRelativeUrls(content, baseUrl) {
-
+    // Fix relative URLs for anchor tags
     content.querySelectorAll("a").forEach((el) => {
         const relativeUrl = el.getAttribute("href");
         if (relativeUrl && !relativeUrl.startsWith("http")) {
             const absoluteUrl = new URL(relativeUrl, baseUrl).href;
             el.setAttribute("href", absoluteUrl);
         }
-
+        // Add event listener to each anchor element
         el.addEventListener("click", function(event) {
-            event.preventDefault(); 
+            event.preventDefault(); // Prevent default behavior
             const urlInput = document.getElementById("url");
-            urlInput.value = el.href; 
-            renderWebsite(); 
+            urlInput.value = el.href; // Set value of your designated URL input area
+            renderWebsite(); // Trigger rendering with the new URL
         });
     });
 
+    // Fix relative URLs for image tags
     content.querySelectorAll("img").forEach((el) => {
         fixImageSrc(el, baseUrl);
     });
 
+    // Fix relative URLs for picture tags
     content.querySelectorAll("picture").forEach((el) => {
         el.querySelectorAll("img").forEach((img) => {
             fixImageSrc(img, baseUrl);
         });
     });
 
+    // Fix relative URLs for source tags inside picture tags
     content.querySelectorAll("picture source").forEach((el) => {
         const relativeSrcset = el.getAttribute("srcset");
         if (relativeSrcset && !relativeSrcset.startsWith("http")) {
@@ -176,7 +179,7 @@ function shrinkContainerAndRender() {
     if (!containerResized) {
         var container = document.querySelector('.container');
         var currentHeight = container.offsetHeight;
-        var newHeight = currentHeight * 1.5;
+        var newHeight = currentHeight * 1.9;
         container.style.height = newHeight + 'px';
         containerResized = true;
 

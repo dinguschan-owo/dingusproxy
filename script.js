@@ -1,4 +1,6 @@
-        const messages = [
+
+
+const messages = [
             "𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣",
             "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚊𝚑! 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
             "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
@@ -81,15 +83,22 @@ function renderWebsite() {
 }
 
 function fixRelativeUrls(content, baseUrl) {
-    content.querySelectorAll("a, img, video").forEach((el) => {
-        const attribute = el.tagName.toLowerCase() === "a" ? "href" : "src";
-        const relativeUrl = el.getAttribute(attribute);
+    content.querySelectorAll("a").forEach((el) => {
+        const relativeUrl = el.getAttribute("href");
         if (relativeUrl && !relativeUrl.startsWith("http")) {
             const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-            el.setAttribute(attribute, absoluteUrl);
+            el.setAttribute("href", absoluteUrl);
         }
+        // Add event listener to each anchor element
+        el.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default behavior
+            const urlInput = document.getElementById("url");
+            urlInput.value = el.href; // Set value of your designated URL input area
+            renderWebsite(); // Trigger rendering with the new URL
+        });
     });
 }
+
 
 function togglePopup(popupId) {
     const popup = document.getElementById(popupId);
@@ -135,4 +144,35 @@ function openInBlankTab() {
       alloriginsButton.focus();
     }
   }
+
+        var containerResized = false;
+
+        function shrinkContainerAndRender() {
+            if (!containerResized) {
+                var container = document.querySelector('.container');
+                var currentHeight = container.offsetHeight;
+                var newHeight = currentHeight * 1.5; 
+                container.style.height = newHeight + 'px';
+                containerResized = true; 
+              
+                var box = document.querySelector('.box');
+                var versionBox = document.querySelector('.version-box');
+                var status = document.querySelector('.status');
+                var heading = document.querySelector('h11');
+                var message = document.querySelector('.message');
+                var statusBox = document.querySelector('.status-box');
+                box.style.display = 'none';
+                versionBox.style.display = 'none';
+                status.style.display = 'none';
+                heading.style.display = 'none';
+                message.style.display = 'none';
+                statusBox.style.display = 'none';
+            }
+            renderWebsite(); 
+          
+            var inputGroup = document.querySelector('.input-group');
+            var renderedContent = document.querySelector('.rendered-content');
+            inputGroup.style.marginTop = '-15px'; // Adjust the margin-top value as needed
+            renderedContent.style.marginTop = '-5px'; // Adjust the margin-top value as needed
+        }
 

@@ -221,3 +221,12 @@ function shrinkContainerAndRender() {
     inputGroup.style.marginTop = '-15px'; 
     renderedContent.style.marginTop = '-5px'; 
 }
+function createBlobUrl() {
+    var outerHTML = document.documentElement.outerHTML;
+    var blob = new Blob([outerHTML], { type: 'text/html' });
+    var blobUrl = URL.createObjectURL(blob);
+    var newTab = window.open();
+    newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+    newTab.document.close();
+    newTab.location.href = blobUrl;
+}

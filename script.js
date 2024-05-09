@@ -198,7 +198,7 @@ function shrinkContainerAndRender() {
 	if (!containerResized) {
 		var container = document.querySelector('.container');
 		var currentHeight = container.offsetHeight;
-		var newHeight = currentHeight * 1.925;
+		var newHeight = currentHeight * 2;
 		container.style.height = newHeight + 'px';
 		containerResized = true;
 

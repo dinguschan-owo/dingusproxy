@@ -12,6 +12,7 @@ const messages = [
     "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
     "𝙷𝚎𝚕𝚍 𝚝𝚘𝚐𝚎𝚝𝚑𝚎𝚛 𝚠𝚒𝚝𝚑 𝚍𝚞𝚌𝚔 𝚝𝚊𝚙𝚎",
     "𝚝𝚢𝚙𝚘",
+    "𝚌𝚑𝚎𝚌𝚔 𝚞𝚛 𝚠𝚎𝚋𝚌𝚊𝚖 <𝟹",
     "𝚃𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚒𝚜 𝚘𝚙𝚎𝚗 𝚜𝚊𝚞𝚌𝚎!",
     "𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝",
     "𝚁𝚎𝚏𝚘𝚛𝚖𝚎𝚍 𝚜𝚔𝚒𝚍 :𝙳",
@@ -89,10 +90,10 @@ function fixRelativeUrls(content, baseUrl) {
             el.setAttribute("href", absoluteUrl);
         }
         el.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent default behavior
+            event.preventDefault(); 
             const urlInput = document.getElementById("url");
-            urlInput.value = el.href; // Set value of your designated URL input area
-            renderWebsite(); // Trigger rendering with the new URL
+            urlInput.value = el.href; 
+            renderWebsite(); 
         });
     });
     content.querySelectorAll("img").forEach((el) => {

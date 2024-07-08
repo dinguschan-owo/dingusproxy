@@ -44,7 +44,7 @@ function changeMessage() {
 	}, 500);
 }
 
-setInterval(changeMessage, 6000);
+setInterval(changeMessage, 5000);
 
 function renderWebsite() {
 	const urlInput = document.getElementById("url");

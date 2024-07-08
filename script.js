@@ -55,6 +55,7 @@ function renderWebsite() {
 
 	const renderedContent = document.getElementById("rendered-content");
 	const loadingSpinner = document.getElementById("loading-spinner");
+  
 
 	renderedContent.innerHTML = "";
 	loadingSpinner.style.display = "block";
@@ -198,7 +199,7 @@ function shrinkContainerAndRender() {
 	if (!containerResized) {
 		var container = document.querySelector('.container');
 		var currentHeight = container.offsetHeight;
-		var newHeight = currentHeight * 1.925;
+		var newHeight = currentHeight * 1.9;
 		container.style.height = newHeight + 'px';
 		containerResized = true;
 
@@ -233,4 +234,8 @@ function createBlobUrl() {
 	newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
 	newTab.document.close();
 	newTab.location.href = blobUrl;
+}
+
+function openGit() {
+  window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');
 }

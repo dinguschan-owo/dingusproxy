@@ -2,8 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</title>
     <style>
+      
+      .git-button {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 44px;
+        height: 40px;
+        border: none;
+        border-radius: 9px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: 0;
+      }
+
+      .git-button:hover {
+        background: linear-gradient(135deg, #6b56c8, #775ed4);
+      }
+      
       body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
@@ -96,7 +121,7 @@ max-height: 100%;
       .version-box {
         position: absolute;
         top: 25px;
-        left: 23px;
+        left: 30px;
         background: linear-gradient(135deg, #775ed4, #886fe0);
         color: #ffffff;
         border-radius: 9px;
@@ -108,7 +133,7 @@ max-height: 100%;
       .status {
         position: absolute;
         top: 25px;
-        left: 157px;
+        left: 163px;
         background: linear-gradient(135deg, #775ed4, #886fe0);
         color: #ffffff;
         border-radius: 9px;
@@ -120,7 +145,7 @@ max-height: 100%;
       .status-box {
         position: absolute;
         top: 36px;
-        left: 241px;
+        left: 246px;
         background: linear-gradient(135deg, #00ff88, #33ff99);
         color: #262626;
         border-radius: 50px;
@@ -177,7 +202,19 @@ max-height: 100%;
         outline:none;
          transition: margin-top 0.5s;
       }
-
+      .que-button {
+        padding: 500px 16px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 19px;
+        overflow: hidden;
+        outline: none;
+         transition: margin-top 0.5s;
+      }
       .input-group button {
         padding: 10px 16px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
@@ -190,6 +227,7 @@ max-height: 100%;
         overflow: hidden;
         outline: none;
          transition: margin-top 0.5s;
+        z-index: 5;
       }
 
       .input-group button:hover {
@@ -335,6 +373,9 @@ max-height: 100%;
       <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟶</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
       <div class="status-box"></div>
+            <button class="git-button" onclick="openGit()">
+        <i class="fa-brands fa-github"></i>
+      </button>
       <div class="box">
         <h11>&nbsp&nbsp𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢</h11>
       </div>
@@ -344,8 +385,8 @@ max-height: 100%;
         P𝚛𝚘𝚡𝚢
     </button>&nbsp&nbsp
       <button onclick="togglePopup('specifications-popup')">𝚂𝚙𝚎𝚌𝚜</button>&nbsp&nbsp
-    <button onclick="togglePopup('popup')">
-        <b>&nbsp&nbsp？</b>
+    <button class="que-button" onclick="togglePopup('popup')">
+&nbsp&nbsp？
     </button>&nbsp&nbsp
     <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
        <button onclick="shrinkContainerAndRender()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 

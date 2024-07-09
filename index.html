@@ -23,10 +23,12 @@
         align-items: center;
         transition: background-color 0.3s ease;
         padding: 0;
+        outline: none;
       }
 
       .git-button:hover {
         background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline: none;
       }
       
       .background-box {
@@ -39,6 +41,7 @@
         z-index: -100;
         overflow-x: hidden;
         overflow-y: hidden;
+        outline: none;
       }
 
     .popup-content {
@@ -47,6 +50,7 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+      outline: none;
     }
 
     .popup-content button {
@@ -60,39 +64,18 @@
         font-size: 17px;
         transition: background-color 0.3s;
         outline: none;
+      outline: none;
     }
 
     .popup-content button:active {
         background-color: #22c38e;
+      outline: none;
     }
 
       .popup-content button:focus {
         background-color: #22c38e;
+        outline: none;
     }
-
-      a:link {
-        color: #66ff99;
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      a:visited {
-        color: #66ff99;
-        background-color: transparent;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: #33ff77;
-        background-color: transparent;
-        text-decoration: underline;
-      }
-
-      a:active {
-        color: yellow;
-        background-color: transparent;
-        text-decoration: underline;
-      }
 
       .box {
         width: 25%;
@@ -103,6 +86,7 @@
         border-radius: 15px;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
         overflow: hidden;
+        outline: none;
 
       }
 
@@ -112,12 +96,14 @@
         padding: 30px;
         border-radius: 12px;
         background: linear-gradient(135deg, #4c436f, #544171);
+        outline: none;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         position: relative;
 max-height: 100%; 
    height: 35%;
    overflow-y: hidden;
         transition: height 0.5s
+        
       }
 
       .version-box {
@@ -130,6 +116,7 @@ max-height: 100%;
         padding: 7px 13px;
         font-size: 16px;
         overflow: hidden;
+        outline: none;
       }
 
       .status {
@@ -141,6 +128,7 @@ max-height: 100%;
         border-radius: 9px;
         padding: 7px 13px;
         font-size: 16px;
+        outline: none;
         overflow: hidden;
       }
 
@@ -156,6 +144,7 @@ max-height: 100%;
         font-weight: bold;
         overflow: hidden;
         z-index: 1;
+        outline: none;
       }
 
       h11 {
@@ -165,12 +154,14 @@ max-height: 100%;
         margin-bottom: 0;
         margin-top: 0;
         font-weight: bold;
+        outline: none;
       }
 
       h9 {
         font-size: 16px;
         color: #ffffff;
         text-align: center; !important
+        outline: none;
       }
 
       .input-group {
@@ -180,6 +171,7 @@ max-height: 100%;
         justify-content: center;
         overflow: hidden;
          transition: margin-top 0.5s;
+        outline: none; !important
       }
 
       .input-group input[type="text"] {
@@ -191,6 +183,7 @@ max-height: 100%;
         color: #ffffff;
         overflow: hidden;
          transition: margin-top 0.5s;
+        outline: none; !important
       }
 
       .input-group input[type="text"]:focus {
@@ -201,9 +194,15 @@ max-height: 100%;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
-        outline:none;
+        outline: none; !important
+        
          transition: margin-top 0.5s;
       }
+      
+            .input-group input[type="text"]:active {
+        outline:none; !important
+      }
+      
       .que-button {
         padding: 500px 16px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
@@ -216,6 +215,7 @@ max-height: 100%;
         overflow: hidden;
         outline: none;
          transition: margin-top 0.5s;
+        
       }
       .input-group button {
         padding: 10px 16px;
@@ -234,7 +234,7 @@ max-height: 100%;
 
       .input-group button:hover {
         background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline:none;
+        outline: none;
          transition: margin-top 0.5s;
       }
 
@@ -245,10 +245,11 @@ max-height: 100%;
         border-radius: 10px;
         margin-top: 20px;
         color: #000000;
-max-height: 100%; 
+max-height: 91%; 
         overflow: auto;
          transition: margin-top 0.5s;
         padding: 0px;
+        outline: none;
       }
 
       .popup {
@@ -266,6 +267,7 @@ max-height: 100%;
         z-index: 1000;
         color: #ffffff;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        outline: none;
       }
 
       .popup-header {
@@ -275,16 +277,19 @@ max-height: 100%;
         border-bottom: 1px solid #ffffff;
         padding-bottom: 10px;
         font-size: 18px;
+        outline: none;
       }
 
       .popup-footer {
         border-top: 1px solid #ffffff;
         padding-top: 10px;
         text-align: center;
+        outline: none;
       }
 
       .popup.active {
         display: block;
+        outline: none;
       }
 
       .close {
@@ -292,6 +297,7 @@ max-height: 100%;
         cursor: pointer;
         color: #e6e6fa;
         overflow: hidden;
+        outline: none;
       }
 
       .blur-background {
@@ -305,10 +311,12 @@ max-height: 100%;
         backdrop-filter: blur(10px);
         z-index: 999;
         overflow: hidden;
+        outline: none;
       }
 
       .blur-background.active {
         display: block;
+        outline: none;
       }
 
       table,
@@ -319,11 +327,13 @@ max-height: 100%;
         padding: 8px;
         color: #ffffff;
         overflow: hidden;
+        outline: none;
       }
 
       th {
         text-align: left;
         overflow: hidden;
+        outline: none;
       }
 
       .loading-spinner {
@@ -335,6 +345,7 @@ max-height: 100%;
         animation: spin 1s linear infinite;
         margin: 0 auto;
         margin-top: 20px;
+        outline: none;
       }
 
       @keyframes spin {
@@ -358,6 +369,7 @@ max-height: 100%;
         transition: opacity 0.5s ease-in-out;
         color: #ffffff;
         overflow: hidden;
+        outline: none;
       }
 
       .fade-out {
@@ -373,7 +385,7 @@ max-height: 100%;
      <div class="background-box"></div>
     <div class="container">
 
-      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟸</div>
+      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟹</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp</div>
       <div class="status-box"></div>
             <button class="git-button" onclick="openGit()">
@@ -405,7 +417,7 @@ max-height: 100%;
         <span class="close" onclick="togglePopup('settings-popup')">
             <b>✕</b>
         </span>
-  </div><h9><b>👉&nbsp[𝗖𝗢𝗥𝗦 𝗣𝗿𝗼𝘅𝘆 𝗦𝗲𝗿𝘃𝗶𝗰𝗲]&nbsp👈</b></h9>
+  </div><br><h9><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp👉&nbsp[𝗖𝗢𝗥𝗦 𝗣𝗿𝗼𝘅𝘆 𝗦𝗲𝗿𝘃𝗶𝗰𝗲]&nbsp👈</b></h9><br><br>
     <div class="popup-content">
 <button class="proxy-button active" onclick="selectProxy('https://api.allorigins.win/raw?', this)">All Origins</button>
     <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/proxy?quest=', this)">Codetabs Proxy</button>
@@ -437,9 +449,8 @@ max-height: 100%;
             <span class="info">🛈</span>&nbsp&nbsp[𝗜𝗡𝗙𝗢]&nbsp <span class="info">🛈</span>
           </b>
           <br>
-          <br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. Find the project on GitHub <a href="https://github.com/dinguschan-owo/dingusproxy">
-            <b>here</b>
-          </a>. I will probably stop maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋 <br>
+          <br>hi! this is a local, client-side only web "proxy" that was created by dinguschan on Feb 28, 2024. please note that this is not an actual web proxy, as it doesnt route you through any external servers. it still functions perfectly fine to access network or extension blocked sites, and has <i>no</i> backend, so you can download it as an HTML file and use it completely locally. You can find the project files on the Github, which is linked in the top right corner of the proxy!
+I will probably stop maintaining this demonstration past update 1.2, so I strongly urge you to use a better method to do your internet tomfoolery. In the meantime, dinguschan out. 👋 <br>
           <br>
           <b>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟭.𝟭] ⚠️ </b>
           <br>
@@ -492,7 +503,7 @@ max-height: 100%;
           <br>added status in top right. currently disfunctional, but ill make it work eventually <br>
           <br>fixed the ugly black line that surrounded the url bar when you focused on it. turns out i have no idea how css works <br>
           <br>site is up! ur probably reading this on it right now! <br>
-          <br>new specification <br>
+          <br>new specification class <br><br>man i am hungry<br>
           <br>learned to spell (again) <br>
           <br>fixed some leaking <br>
                     <br>MAJOR MAJOR SPEED UPDATES IM NOT LYING THIS TIME<br>
@@ -517,7 +528,10 @@ max-height: 100%;
           <br>proxy switch fucked up man           <br> <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟮.𝟮] ⚠️ </b>
           <br>
           <br>!THIS SHIT DESERVES ITS OWN UPDATE!<br>
-          <br>I FUCKING FIXED THE PARAGRAPH STYLES LEAKAGE. <br><br>GANG I AM LITERALLY FUCKING HIM
+          <br>I FUCKING FIXED THE PARAGRAPH STYLES LEAKAGE. <br><br>GANG I AM 𝙇𝙄𝙏𝙀𝙍𝘼𝙇𝙇𝙔 FUCKING HIM!<br> <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟮.𝟯] ⚠️ </b>
+          <br>
+          <br>no body styles leaking anymore! <br>
+          <br>also fixed link color leakage, so probably like 85% sandboxed content now!<br><br>cooking so hard these days omg<br><br>carp and diem or something 🐋<br><br> outline: none;<br><br>new proxy? does it work?<br>
         </h9>
       </div>
     </div>

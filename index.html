@@ -8,10 +8,10 @@
       
       .git-button {
         position: absolute;
-        top: 20px;
+        top: 22px;
         right: 30px;
-        width: 44px;
-        height: 40px;
+        width: 42px;
+        height: 38px;
         border: none;
         border-radius: 9px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
@@ -29,15 +29,16 @@
         background: linear-gradient(135deg, #6b56c8, #775ed4);
       }
       
-      body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #2e2c3a, #383352) !important;
-        color: #000000;
-           height: 100%;
-   overflow-y: hidden;
+      .background-box {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 1000%;
+        height: 1000%;
+        background: linear-gradient(135deg, #2e2c3a, #383352);
+        z-index: -100;
         overflow-x: hidden;
+        overflow-y: hidden;
       }
 
     .popup-content {
@@ -369,6 +370,7 @@ max-height: 100%;
     </style>
   </head>
   <body>
+     <div class="background-box"></div>
     <div class="container">
 
       <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟸</div>
@@ -405,9 +407,10 @@ max-height: 100%;
         </span>
   </div><h9><b>👉&nbsp[𝗖𝗢𝗥𝗦 𝗣𝗿𝗼𝘅𝘆 𝗦𝗲𝗿𝘃𝗶𝗰𝗲]&nbsp👈</b></h9>
     <div class="popup-content">
-<button id="button1" onclick="handleButton1()" autofocus>𝚊𝚕𝚕𝚘𝚛𝚒𝚐𝚒𝚗𝚜</button>
-<button id="button2" onclick="handleButton2()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚙𝚛𝚘𝚡𝚢<br>(𝚁𝙴𝙲𝙾𝙼𝙼𝙴𝙽𝙳𝙴𝙳)</button>
-<button id="button3" onclick="handleButton3()">𝚌𝚘𝚍𝚎𝚝𝚊𝚋𝚜 𝚝𝚖𝚙</button>
+<button class="proxy-button active" onclick="selectProxy('https://api.allorigins.win/raw?', this)">All Origins</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/proxy?quest=', this)">Codetabs Proxy</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/tmp/?quest=', this)">Codetabs Tmp</button>
+    <button class="proxy-button" onclick="selectProxy('https://corsproxy.io/?', this)">CORSProxy.io</button>
 
     </div><br>
 </div>

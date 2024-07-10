@@ -240,3 +240,6 @@ function openGit() {
   window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');
 }
 
+function openWebs() {
+  window.open('https://dinguschan-owo.github.io/dingusproxy/', '_blank');
+}

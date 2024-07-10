@@ -209,12 +209,22 @@ function shrinkContainerAndRender() {
 		var heading = document.querySelector('h11');
 		var message = document.querySelector('.message');
 		var statusBox = document.querySelector('.status-box');
+		var renButton = document.querySelector('.ren-button');
+		var webButton = document.querySelector('.web-button');
+    var gitButton = document.querySelector('.git-button');
+    var holder = document.querySelector('.holder');
+    var h2Dv8e46q = document.querySelector('#h2Dv8e46q');
 		box.style.display = 'none';
 		versionBox.style.display = 'none';
 		status.style.display = 'none';
 		heading.style.display = 'none';
 		message.style.display = 'none';
 		statusBox.style.display = 'none';
+    renButton.style.display = 'none';
+    webButton.style.display = 'none';
+    gitButton.style.display = 'none';
+    holder.style.display = 'none';
+    h2Dv8e46q.style.display = 'none';
 	}
 	renderWebsite();
 

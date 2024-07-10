@@ -8,7 +8,7 @@ download the proxy as an html file so that you can use this as a local file, mak
 
 ### ***Usage Instructions***
 
-is there a brain in that head or is it just for decoration? just visit the website i linked, or download it from the page ur on _right now_, then open the html file and follow the conviently placed and beautifully styled on screen instructions. seriously dude, this shits so simple a kindergartner could do it.
+is there a brain in that head or is it just for decoration? just visit the website i linked, or download it from the page ur on _right now_, then open the html file and follow the conviently placed and beautifully styled on screen instructions. seriously dude, this shits so simple a kindergartner could do it. Also, if you find something isn't loading, hit the proxy button and switch to a different proxy. trust me.
 
 ### ***Update Schedule***
 

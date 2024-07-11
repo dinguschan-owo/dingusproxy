@@ -45,43 +45,66 @@ function changeMessage() {
 
 setInterval(changeMessage, 5000);
 
+// Using sessionStorage for client-side caching
 function renderWebsite() {
-	const urlInput = document.getElementById("url");
-	let url = urlInput.value.trim();
-	if (!url.startsWith("http://") && !url.startsWith("https://")) {
-		url = "https://" + url;
-		urlInput.value = url;
-	}
+    const urlInput = document.getElementById("url");
+    let url = urlInput.value.trim();
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+        urlInput.value = url;
+    }
 
-	const renderedContent = document.getElementById("rendered-content");
-	const loadingSpinner = document.getElementById("loading-spinner");
-  
+    const renderedContent = document.getElementById("rendered-content");
+    const loadingSpinner = document.getElementById("loading-spinner");
 
-	renderedContent.innerHTML = "";
-	loadingSpinner.style.display = "block";
+    const cachedContent = sessionStorage.getItem(url);
+    if (cachedContent) {
+        renderedContent.innerHTML = cachedContent;
+        loadingSpinner.style.display = "none";
+        return; // Exit early if content is cached
+    }
 
-	fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
-		.then((response) => {
-			if (!response.ok) {
-				throw new Error(`HTTP error! Status: ${response.status}`);
-			}
-			return response.text();
-		})
-		.then((data) => {
-			const contentDiv = document.createElement("div");
-			contentDiv.innerHTML = data;
+    renderedContent.innerHTML = "";
+    loadingSpinner.style.display = "block";
 
-			fixRelativeUrls(contentDiv, url);
-
-			renderedContent.appendChild(contentDiv);
-			loadingSpinner.style.display = "none";
-		})
-		.catch((error) => {
-			renderedContent.innerHTML = `
-                <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
-			loadingSpinner.style.display = "none";
-		});
+    fetchAndRender(url, renderedContent, loadingSpinner);
 }
+
+function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
+    fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then((data) => {
+            const contentDiv = document.createElement("div");
+            contentDiv.innerHTML = data;
+
+            fixRelativeUrls(contentDiv, url);
+
+            renderedContent.appendChild(contentDiv);
+            loadingSpinner.style.display = "none";
+
+            // Cache the fetched content
+            sessionStorage.setItem(url, data);
+        })
+        .catch((error) => {
+            if (retryCount > 0) {
+                // Retry mechanism with exponential backoff
+                const delay = 1000 * Math.pow(2, 3 - retryCount);
+                setTimeout(() => {
+                    fetchAndRender(url, renderedContent, loadingSpinner, retryCount - 1);
+                }, delay);
+            } else {
+                renderedContent.innerHTML = `
+                    <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
+                loadingSpinner.style.display = "none";
+            }
+        });
+}
+
 
 function fixRelativeUrls(content, baseUrl) {
 	content.querySelectorAll("a").forEach((el) => {

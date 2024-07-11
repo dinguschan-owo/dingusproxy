@@ -23,7 +23,7 @@
             background-color: #000; !important
             border: 1px solid #ccc;
             border-radius: 8px;
-                      outline: none;
+            outline: none;
         }
         .rename-button img {
             margin-right: 0px;
@@ -75,7 +75,33 @@
               z-index: 0;
       }
       
-#h2Dv8e46q{margin-top:3.125pc;}.G71h3Cw5j,[class~=w4mJ97ZbX]{position:fixed;}.G71h3Cw5j{top:-100px;}.G71h3Cw5j{left:-75pt;}.G71h3Cw5j{width:10000%;}.G71h3Cw5j{height:10000%;}.G71h3Cw5j{background-color:white;}.G71h3Cw5j{z-index:1.0E+183;}#h2Dv8e46q{font-size:.177083333in;}#h2Dv8e46q{color:white;}#h2Dv8e46q{position:absolute;}[class~=w4mJ97ZbX]{top:50%;}[class~=w4mJ97ZbX]{left:50%;}#h2Dv8e46q{top:-15.75pt;}#h2Dv8e46q{right:1.53125in;}[class~=w4mJ97ZbX]{transform:translate(-50%,-50%);}[class~=w4mJ97ZbX]{font-size:18pt;}[class~=w4mJ97ZbX]{color:red;}[class~=w4mJ97ZbX]{z-index:1.0E+208;}#h2Dv8e46q{z-index:1;}
+              #h2Dv8e46q {
+            margin-top: 50px;
+            font-size: 17px;
+            color: white;
+            position: absolute;
+            top: -21px;
+            right: 147px;
+                z-index: 1;
+        }
+        .G71h3Cw5j {
+            position: fixed;
+            top: -100px;
+            left: -100px;
+            width: 10000%;
+            height: 10000%;
+            background-color: white;
+            z-index: 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        }
+        .w4mJ97ZbX {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: red;
+            z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+        }
       
             .web-button {
         position: absolute;
@@ -347,7 +373,7 @@ max-height: 100%;
       .rendered-content {
         border: 0px solid #b4a5e0;
         padding: 25px;
-        background: linear-gradient(135deg, #fff0ff, #f0e6ff);
+        background: #fff;
         border-radius: 10px;
         margin-top: 20px;
         color: #000000;

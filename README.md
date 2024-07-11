@@ -12,4 +12,10 @@ is there a brain in that head or is it just for decoration? just visit the websi
 
 ### ***Update Schedule***
 
-fuck you there is no update schedule ill push updates whenever i fucking feel like it. i promise it'll get constantly updated though, because i love you guys (litrally nobody) :33 
+fuck you there is no update schedule ill push updates whenever i fucking feel like it. i promise it'll get constantly updated though, because i love you guys (litrally nobody) :33
+
+### ***Deploy this project***
+
+Vercel:
+ 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdinguschan-owo%2Fdingusproxy%2Ftree%2Fmain)

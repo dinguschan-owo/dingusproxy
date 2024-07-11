@@ -61,6 +61,7 @@ function renderWebsite() {
     if (cachedContent) {
         renderedContent.innerHTML = cachedContent;
         loadingSpinner.style.display = "none";
+        fixRelativeUrls(renderedContent, url);
         return; // Exit early if content is cached
     }
 
@@ -88,7 +89,7 @@ function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
             loadingSpinner.style.display = "none";
 
             // Cache the fetched content
-            sessionStorage.setItem(url, data);
+            sessionStorage.setItem(url, contentDiv.innerHTML);
         })
         .catch((error) => {
             if (retryCount > 0) {
@@ -104,6 +105,78 @@ function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
             }
         });
 }
+
+function fixRelativeUrls(content, baseUrl) {
+    content.querySelectorAll("a").forEach((el) => {
+        const relativeUrl = el.getAttribute("href");
+        if (relativeUrl && !relativeUrl.startsWith("http")) {
+            const absoluteUrl = new URL(relativeUrl, baseUrl).href;
+            el.setAttribute("href", absoluteUrl);
+        }
+        el.addEventListener("click", function(event) {
+            event.preventDefault();
+            const urlInput = document.getElementById("url");
+            urlInput.value = el.href;
+            renderWebsite();
+        });
+    });
+
+    content.querySelectorAll("img").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("script").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("link").forEach((el) => {
+        fixElementSrc(el, "href", baseUrl);
+    });
+
+    content.querySelectorAll("iframe").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("video source, audio source").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("audio").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("video").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+
+    content.querySelectorAll("object").forEach((el) => {
+        fixElementSrc(el, "data", baseUrl);
+        el.querySelectorAll("param").forEach((paramEl) => {
+            const relativeUrl = paramEl.getAttribute("value");
+            if (relativeUrl && !relativeUrl.startsWith("http")) {
+                const absoluteUrl = new URL(relativeUrl, baseUrl).href;
+                paramEl.setAttribute("value", absoluteUrl);
+            }
+        });
+    });
+
+    content.querySelectorAll("track").forEach((el) => {
+        fixElementSrc(el, "src", baseUrl);
+    });
+}
+
+function fixElementSrc(el, attributeName, baseUrl) {
+    const relativeUrl = el.getAttribute(attributeName);
+    if (relativeUrl && !relativeUrl.startsWith("http")) {
+        const absoluteUrl = new URL(relativeUrl, baseUrl).href;
+        el.setAttribute(attributeName, absoluteUrl);
+    }
+}
+
+// Event listeners for buttons (e.g., fetch content)
+document.getElementById('button1').addEventListener('click', renderWebsite);
+document.getElementById('button2').addEventListener('click', renderWebsite);
+document.getElementById('button3').addEventListener('click', renderWebsite);
 
 
 function fixRelativeUrls(content, baseUrl) {

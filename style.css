@@ -28,7 +28,7 @@
             align-items: center;
             background-color: #000; !important
             border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
         }
         .rename-button img {
@@ -360,7 +360,7 @@ max-height: 100%;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
         color: #ffffff;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
         transition: all 0.3s;
         font-size: 16px;

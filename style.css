@@ -368,7 +368,7 @@ max-height: 100%;
         outline: none;
          transition: margin-top 0.5s;
         z-index: 5;
-        margin: 1.6px;
+        margin: 1.0px;
       }
 
       .input-group button:hover {

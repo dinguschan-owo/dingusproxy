@@ -12,6 +12,7 @@
           border-radius: 8px;
           outline: none; !important
           border: 2px solid #fff;
+          margin-bottom: 5px;
         }
         .rename-button {
             padding: 0px 0px;

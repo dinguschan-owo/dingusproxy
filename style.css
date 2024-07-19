@@ -46,7 +46,7 @@
       .ren-button{
         position: absolute;
         top: 25px;
-        left: 283px;
+        left: 281.6px;
         width: 42px;
         height: 38px;
         border: none;
@@ -257,7 +257,7 @@ max-height: 100%;
       .status {
         position: absolute;
         top: 25px;
-        left: 163px;
+        left: 162px;
         background: linear-gradient(135deg, #775ed4, #886fe0);
         color: #ffffff;
         border-radius: 9px;
@@ -270,7 +270,7 @@ max-height: 100%;
       .status-box {
         position: absolute;
         top: 36px;
-        left: 246px;
+        left: 244px;
         background: linear-gradient(135deg, #00ff88, #33ff99);
         color: #262626;
         border-radius: 50px;

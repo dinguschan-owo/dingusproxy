@@ -5,8 +5,12 @@
                           border: 2px solid #fff;
         }
         .rename-input {
-            padding: 8px;
-            margin-right: 10px;
+            padding-right: 8px;
+            padding-right: 8px;
+            padding-top: 10px;
+            margin-top: 6px;
+            padding-bottom: 11px;
+            margin-right: 11px;
                       outline: none;
           width: 530px;
           border-radius: 8px;

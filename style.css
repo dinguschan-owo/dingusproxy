@@ -10,9 +10,9 @@
             padding-top: 10px;
             margin-top: 6px;
             padding-bottom: 11px;
-            margin-right: 6px;
+            margin-right: 5px;
                       outline: none;
-          width: 530px;
+          width: 523px;
           border-radius: 8px;
           outline: none; !important
           border: 2px solid #fff;
@@ -188,7 +188,7 @@
 
     .popup-content button {
         margin: 5px;
-        padding: 10px 20px;
+        padding: 10px 18px;
         background-color: #8366ea;
         color: #ffffff;
         border: none;

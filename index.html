@@ -55,6 +55,7 @@
 
 
     <!-- Buttons with favicons -->
+      
           <button class="rename-button" onclick="changeFavicon('https://edpuzzle.imgix.net/favicons/favicon-32.png')">
         <img src="https://edpuzzle.imgix.net/favicons/favicon-32.png" alt="Edpuzzle">
         
@@ -182,6 +183,28 @@
         <img src="https://static.canva.com/static/images/favicon.ico" alt="Canva">
         
     </button>
+    </div><br>
+</div>
+
+              
+              
+              
+<div id="settings-popup" class="popup">
+    <div class="popup-header">
+        <span>
+            <b>P𝚛𝚘𝚡𝚢</b>
+        </span>
+        <span class="close" onclick="togglePopup('settings-popup')">
+            <b>✕</b>
+        </span>
+  </div><br><h9><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp👉&nbsp[𝗖𝗢𝗥𝗦 𝗣𝗿𝗼𝘅𝘆 𝗦𝗲𝗿𝘃𝗶𝗰𝗲]&nbsp👈</b></h9><br><br>
+    <div class="popup-content">
+<button class="proxy-button active" onclick="selectProxy('https://api.allorigins.win/raw?', this)">All Origins</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/proxy?quest=', this)">Codetabs Proxy</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/tmp/?quest=', this)">Codetabs Tmp</button>
+    <button class="proxy-button" onclick="selectProxy('https://corsproxy.io/?', this)">CORSProxy.io</button>
+
+      
     </div><br>
 </div>
 
@@ -384,7 +407,8 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
       <div class="popup-footer"></div>
     </div>
     <div id="blur-background" class="blur-background"></div>
-    <script src="script.js"></script><script> 
+    <script src="script.js"></script>
+    <script> 
         function hashString(str) {
             let hash = 0, i, chr;
             for (i = 0; i < str.length; i++) {
@@ -468,7 +492,7 @@ functions on page load
             checkScript();
         };
 </script>
-  
+
       <script>
         function changeTitle() {
             var newTitle = document.getElementById('pageTitleInput').value;

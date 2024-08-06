@@ -351,3 +351,19 @@
   function openWebs() {
     window.open('https://dinguschan-owo.github.io/dingusproxy/', '_blank');
   }
+
+        function changeTitle() {
+            var newTitle = document.getElementById('pageTitleInput').value;
+            document.title = newTitle;
+        }
+
+        function changeFavicon(url) {
+            var favicon = document.querySelector('link[rel="icon"]');
+            if (!favicon) {
+                favicon = document.createElement('link');
+                favicon.setAttribute('rel', 'icon');
+                document.head.appendChild(favicon);
+            }
+            favicon.setAttribute('type', 'image/png');
+            favicon.setAttribute('href', url);
+        }

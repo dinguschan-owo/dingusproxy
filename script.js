@@ -336,13 +336,17 @@ var downloadButton = document.querySelector('#downloadButton');
     renderedContent.style.marginTop = '-5px';
   }
 
-function createBlobUrl() {
+  function createBlobUrl() {
     var outerHTML = document.documentElement.outerHTML;
-    var blob = new Blob([outerHTML], { type: 'text/html' });
+    var blob = new Blob([outerHTML], {
+      type: 'text/html'
+    });
     var blobUrl = URL.createObjectURL(blob);
-    window.location.href = blobUrl;
-}
-
+    var newTab = window.open();
+    newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+    newTab.document.close();
+    newTab.location.href = blobUrl;
+  }
 
   function openGit() {
     window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');

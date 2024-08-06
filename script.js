@@ -337,44 +337,10 @@ var downloadButton = document.querySelector('#downloadButton');
   }
 
 function createBlobUrl() {
-    // Get the current HTML document
-    let htmlContent = document.documentElement.outerHTML;
-
-    // Create a new document to modify
-    let tempDoc = document.implementation.createHTMLDocument();
-    tempDoc.documentElement.innerHTML = htmlContent;
-
-    // Inline CSS
-    Array.from(tempDoc.querySelectorAll('link[rel="stylesheet"]')).forEach(link => {
-        fetch(link.href)
-            .then(response => response.text())
-            .then(styleContent => {
-                let style = document.createElement('style');
-                style.textContent = styleContent;
-                link.parentNode.replaceChild(style, link);
-            });
-    });
-
-    // Inline JS
-    Array.from(tempDoc.querySelectorAll('script[src]')).forEach(script => {
-        fetch(script.src)
-            .then(response => response.text())
-            .then(jsContent => {
-                let inlineScript = document.createElement('script');
-                inlineScript.textContent = jsContent;
-                script.parentNode.replaceChild(inlineScript, script);
-            });
-    });
-
-    // Create a blob after inlining
-    setTimeout(() => {
-        let finalHtmlContent = tempDoc.documentElement.outerHTML;
-        let blob = new Blob([finalHtmlContent], { type: 'text/html' });
-        let blobUrl = URL.createObjectURL(blob);
-
-        // Open the blob URL in a new window
-        window.open(blobUrl);
-    }, 1000); // Delay to ensure resources are fetched and inlined
+    var outerHTML = document.documentElement.outerHTML;
+    var blob = new Blob([outerHTML], { type: 'text/html' });
+    var blobUrl = URL.createObjectURL(blob);
+    window.location.href = blobUrl;
 }
 
 

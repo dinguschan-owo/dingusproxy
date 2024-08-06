@@ -1,6 +1,6 @@
 ### ***Overview***
 
-this is the original dingusProxy, built entirely from scratch by dinguschan! this project will get constant updates, but dont even think about gettign a consistent update schedule. open an issue for any spelling mistakes you see, so that i can ignore, it mark it as closed, and tell you to get stuffed 👍 (ill get to fixing it right away :3)
+this is the original dingusProxy, built entirely from scratch by dinguschan! this project will get constant updates, but dont even think about gettign a consistent update schedule. open an issue for any spelling mistakes you see, so that i can ignore, it mark it as closed, and tell you to get stuffed 👍 (ill get to fixing it right away :3.) this project is also COMPLETELY open sause, no obfuscation or anything. feel free to fork and fix this project!
 
 for all the lil idiot middle schoolers who searched "school proxy github" on their 200 dollar school chromebook, this thing is what you want. spyware and filters can't touch it. yes, its currently kinda shit, but again, constant updates. trust me, this thing better than any other "uNbLoCkAbLe LoCaL wEb PrOxY" on the internet, straight fire fr. host this on Netlify, Heroku, Vercel, or whatever happens to not be blocked. Copy and paste into Codepen, Replit, or any WYSIWYG HTML editor on the internet for quick access. you can also just download it keep it as a local file, if you want :3.
 

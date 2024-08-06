@@ -10,13 +10,14 @@
   <body>
      <div class="background-box"></div>
     <div class="container">
+    <button id="downloadButton"><i class="fa-solid fa-download"></i></button>
     <div id="h2Dv8e46q">𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!</div>
             <div class="holder"></div>
       <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟹</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp&nbsp </div>
-      <div class="status-box"></div><button class="ren-button" onclick="togglePopup('other-popup')"><i class="fa-solid fa-gear"></i>
+      <div class="status-box"></div><button class="ren-button" onclick="togglePopup('other-popup')"><i class="fa-solid fa-gear"></i></button>
             <button class="git-button" onclick="openGit()">
-        <i class="fa-brands fa-github"></i>            <button class="web-button" onclick="openWebs()">
+              <i class="fa-brands fa-github"></i></button>            <button class="web-button" onclick="openWebs()">
 <i class="fa-solid fa-globe"></i>
       </button>
       <div class="box">
@@ -501,6 +502,26 @@ window.onload = function() {
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
+    </script>
+    
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', function() {
+            const htmlContent = document.documentElement.outerHTML;
+
+            const blob = new Blob([htmlContent], { type: 'text/html' });
+
+            const url = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢.html'; 
+            document.body.appendChild(a);
+
+            a.click();
+
+          URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        });
     </script>
   </body>
 </html>

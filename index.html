@@ -55,6 +55,7 @@
 
 
     <!-- Buttons with favicons -->
+      
           <button class="rename-button" onclick="changeFavicon('https://edpuzzle.imgix.net/favicons/favicon-32.png')">
         <img src="https://edpuzzle.imgix.net/favicons/favicon-32.png" alt="Edpuzzle">
         
@@ -182,6 +183,28 @@
         <img src="https://static.canva.com/static/images/favicon.ico" alt="Canva">
         
     </button>
+    </div><br>
+</div>
+
+              
+              
+              
+<div id="settings-popup" class="popup">
+    <div class="popup-header">
+        <span>
+            <b>P𝚛𝚘𝚡𝚢</b>
+        </span>
+        <span class="close" onclick="togglePopup('settings-popup')">
+            <b>✕</b>
+        </span>
+  </div><br><h9><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp👉&nbsp[𝗖𝗢𝗥𝗦 𝗣𝗿𝗼𝘅𝘆 𝗦𝗲𝗿𝘃𝗶𝗰𝗲]&nbsp👈</b></h9><br><br>
+    <div class="popup-content">
+<button class="proxy-button active" onclick="selectProxy('https://api.allorigins.win/raw?', this)">All Origins</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/proxy?quest=', this)">Codetabs Proxy</button>
+    <button class="proxy-button" onclick="selectProxy('https://api.codetabs.com/v1/tmp/?quest=', this)">Codetabs Tmp</button>
+    <button class="proxy-button" onclick="selectProxy('https://corsproxy.io/?', this)">CORSProxy.io</button>
+
+      
     </div><br>
 </div>
 
@@ -384,89 +407,82 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
       <div class="popup-footer"></div>
     </div>
     <div id="blur-background" class="blur-background"></div>
-    <script src="script.js"></script><script> 
-        function hashString(str) {
-            let hash = 0, i, chr;
-            for (i = 0; i < str.length; i++) {
-                chr = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + chr;
-                hash |= 0;
-            }
-            return hash;
+    <script src="script.js"></script>
+    <script> 
+function hashString(str) {
+    let hash = 0, i, chr;
+    for (i = 0; i < str.length; i++) {
+        chr = str.charCodeAt(i);  // Get the Unicode value of each character
+        hash = ((hash << 5) - hash) + chr;  // Update hash with bitwise operations
+        hash |= 0;  // Ensure hash is a 32-bit integer
+    }
+    return hash;  // Return the final hash value
+}
+
+const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";  // Original credits text
+const originalHash = hashString(originalCredits);  // Hash of the original credits
+
+const scriptContent = `
+    function hashString(str) {
+        let hash = 0, i, chr;
+        for (i = 0; i < str.length; i++) {
+            chr = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + chr;
+            hash |= 0; 
         }
+        return hash;
+    }
 
-        const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";
-        const originalHash = hashString(originalCredits);
-        
-        const scriptContent = `
-            function hashString(str) {
-                let hash = 0, i, chr;
-                for (i = 0; i < str.length; i++) {
-                    chr = str.charCodeAt(i);
-                    hash = ((hash << 5) - hash) + chr;
-                    hash |= 0; // Convert to 32bit integer
-                }
-                return hash;
-            }
-
-            const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";
-            const originalHash = hashString(originalCredits);
-            
-changed
-            function checkCredits() {
-                const creditsElement = document.getElementById('h2Dv8e46q');
-                if (hashString(creditsElement.innerText) !== originalHash) {
-
-                    document.body.innerHTML = "";
-                    document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to credit modification.</div>';
-                } else {
-
-                    console.log('Credits are intact. JavaScript is running normally.');
-                }
-            }
-
-modified
-            function checkScript() {
-                const scriptElement = document.currentScript;
-                if (scriptElement.text !== scriptContent) {
-                    // Stop further script execution
-                    document.body.innerHTML = "";
-                    document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to script modification.</div>';
-                }
-            }
-
-functions on page load
-            window.onload = function() {
-                checkCredits();
-                checkScript();
-            };
-        `;
-
-        function checkScript() {
-            const scriptElement = document.currentScript;
-            if (scriptElement.text !== scriptContent) {
-
-                document.body.innerHTML = "";
-                document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to script modification.</div>';
-            }
+    const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";
+    const originalHash = hashString(originalCredits);
+    
+    function checkCredits() {
+        const creditsElement = document.getElementById('h2Dv8e46q');
+        if (hashString(creditsElement.innerText) !== originalHash) {
+            document.body.innerHTML = "";
+            document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to credit modification.</div>';
+        } else {
+            console.log('Credits are intact. JavaScript is running normally.');
         }
+    }
 
-        function checkCredits() {
-            const creditsElement = document.getElementById('h2Dv8e46q');
-            if (hashString(creditsElement.innerText) !== originalHash) {
-
-                document.body.innerHTML = "";
-                document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">Error: 𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐏𝐫𝐨𝐱𝐲 𝐕𝐞𝐫𝐬𝐢𝐨𝐧, leading to 𝐌𝐚𝐣𝐨𝐫 𝐑𝐮𝐧𝐭𝐢𝐦𝐞 𝐄𝐫𝐫𝐨𝐫. Please visit the official GitHub page and download the latest version at https://github.com/dinguschan-owo/dingusproxy</div>';
-            } else {
-
-                console.log('running normally :D');
-            }
+    function checkScript() {
+        const scriptElement = document.currentScript;
+        if (scriptElement.text !== scriptContent) {
+            document.body.innerHTML = "";
+            document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to script modification.</div>';
         }
+    }
 
-        window.onload = function() {
-            checkCredits();
-            checkScript();
-        };
+    window.onload = function() {
+        checkCredits();
+        checkScript();
+    };
+`;
+
+function checkScript() {
+    const scriptElement = document.currentScript;
+    if (scriptElement.text !== scriptContent) {
+        document.body.innerHTML = "";
+        document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to script modification.</div>';
+    }
+}
+
+function checkCredits() {
+    const creditsElement = document.getElementById('h2Dv8e46q');
+    if (hashString(creditsElement.innerText) !== originalHash) {
+        document.body.innerHTML = "";
+        document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">Error: 𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐏𝐫𝐨𝐱𝐲 𝐕𝐞𝐫𝐬𝐢𝐨𝐧, leading to 𝐌𝐚𝐣𝐨𝐫 𝐑𝐮𝐧𝐭𝐢𝐦𝐞 𝐄𝐫𝐫𝐨𝐫. Please visit the official GitHub page and download the latest version at https://github.com/dinguschan-owo/dingusproxy</div>';
+    } else {
+        console.log('running normally :D');
+    }
+}
+
+window.onload = function() {
+    checkCredits();
+    checkScript();
+};
+
 </script>
   
       <script>

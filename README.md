@@ -10,7 +10,7 @@ download the proxy as an html file so that you can use this as a local file, mak
 
 hit the "Code" button on this repo, then download the .ZIP and extract all, then open the .HTML file to use the project. apparently that was too complicated for some people so you can  also visit https://dinguschan-owo.github.io/dingusproxy/ and click the download button to get the pure HTML file, without a .ZIP file. from there just the file to use, its really simple.
 
-## ***`𝚄𝚜𝚊𝚐𝚎 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗`***
+## ***`𝚄𝚜𝚊𝚐𝚎 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜`***
 
 is there a brain in that head or is it just for decoration? just visit the website i linked, or download it from the page ur on _right now_, then open the html file and follow the conviently placed and beautifully styled on screen instructions. seriously dude, this shits so simple a kindergartner could do it. Also, if you find something isn't loading, hit the "proxy" button and switch to a different proxy. thatl fix it, trust me (i wrote this shit so i know what im talkign about.) one last note, downloading it as a file works the best, then the offical github page, then the cloaked versions (both "about:blank" and "blob:" work about the same), then finally the Vercel page. Vercel has problems loading external CDNs which i use, namely FontAwesome, so expect some visual issues (itl be kinda ugly but will still function the same) if you use the secondary link or host it urself.  
 

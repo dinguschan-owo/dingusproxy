@@ -367,4 +367,3 @@
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-

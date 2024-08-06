@@ -336,17 +336,25 @@ var downloadButton = document.querySelector('#downloadButton');
     renderedContent.style.marginTop = '-5px';
   }
 
-  function createBlobUrl() {
-    var outerHTML = document.documentElement.outerHTML;
-    var blob = new Blob([outerHTML], {
-      type: 'text/html'
-    });
-    var blobUrl = URL.createObjectURL(blob);
-    var newTab = window.open();
-    newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
-    newTab.document.close();
-    newTab.location.href = blobUrl;
-  }
+// script.js
+document.getElementById('blobButton').addEventListener('click', function() {
+    const blobUrl = createBlobUrl();
+    window.open(blobUrl);
+});
+
+function createBlobUrl() {
+    // Get the current HTML document as a string
+    let htmlContent = document.documentElement.outerHTML;
+    
+    // Create a blob from the HTML string
+    let blob = new Blob([htmlContent], { type: 'text/html' });
+    
+    // Create a blob URL
+    let blobUrl = URL.createObjectURL(blob);
+    
+    return blobUrl;
+}
+
 
   function openGit() {
     window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');

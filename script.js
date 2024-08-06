@@ -312,6 +312,8 @@
       var gitButton = document.querySelector('.git-button');
       var holder = document.querySelector('.holder');
       var h2Dv8e46q = document.querySelector('#h2Dv8e46q');
+var linkButton = document.querySelector('.link-button');
+var downloadButton = document.querySelector('#downloadButton');
       box.style.display = 'none';
       versionBox.style.display = 'none';
       status.style.display = 'none';
@@ -323,6 +325,8 @@
       gitButton.style.display = 'none';
       holder.style.display = 'none';
       h2Dv8e46q.style.display = 'none';
+      linkButton.style.display = 'none';
+      downloadButton.style.display = 'none';
     }
     renderWebsite();
 
@@ -367,4 +371,3 @@
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-

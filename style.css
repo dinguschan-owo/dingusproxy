@@ -1,4 +1,58 @@
-      
+        .link-button {
+        position: absolute;
+        top: 25px;
+        right: 348px;
+        width: 40px;
+        height: 38px;
+        border: none;
+        border-radius: 9px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: 0;
+        outline: none;
+                    outline: none;
+        z-index: 1;
+        }
+
+        .link-button:hover {
+        background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline: none;
+}
+
+
+#downloadButton {
+        position: absolute;
+        top: 25px;
+        left: 335px;
+        width: 42px;
+        height: 38px;
+        border: none;
+        border-radius: 9px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: 0;
+        outline: none;
+                    outline: none;
+        z-index: 1;
+        }
+
+        #downloadButton:hover {
+        background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline: none;
+}
+
               .rename-label, .rename-input, .rename-button {
             font-size: 16px;
             outline: none;
@@ -67,7 +121,7 @@
       
             .holder {
         position: absolute;
-        top: 22.499999px;
+        top: 25px;
         right: 138px;
         background: linear-gradient(135deg, #775ed4, #886fe0);
         color: #ffffff;
@@ -82,7 +136,7 @@
       }
       
               #h2Dv8e46q {
-            margin-top: 50px;
+            margin-top: 52.5px;
             font-size: 17px;
             color: white;
             position: absolute;
@@ -97,7 +151,7 @@
             width: 10000%;
             height: 10000%;
             background-color: white;
-            z-index: 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+            z-index: 2147483647;
         }
         .w4mJ97ZbX {
             position: fixed;
@@ -106,12 +160,12 @@
             transform: translate(-50%, -50%);
             font-size: 24px;
             color: red;
-            z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+            z-index: 2147483647;
         }
       
             .web-button {
         position: absolute;
-        top: 22px;
+        top: 25px;
         right: 84px;
         width: 42px;
         height: 38px;
@@ -136,7 +190,7 @@
       
       .git-button {
         position: absolute;
-        top: 22px;
+        top: 25px;
         right: 30px;
         width: 42px;
         height: 38px;
@@ -307,7 +361,7 @@ max-height: 100%;
         overflow: hidden;
          transition: margin-top 0.5s;
         outline: none; !important
-                z-index: 10;
+                z-index: 100;
       }
 
       .input-group input[type="text"] {
@@ -320,7 +374,8 @@ max-height: 100%;
         overflow: hidden;
          transition: margin-top 0.5s;
         outline: none; !important
-        z-index: 10;
+        z-index: 100;
+        margin-top: 7px;
       }
 
       .input-group input[type="text"]:focus {
@@ -332,17 +387,17 @@ max-height: 100%;
         color: #ffffff;
         overflow: hidden;
         outline: none; !important
-                z-index: 10;
+                z-index: 100;
          transition: margin-top 0.5s;
       }
       
             .input-group input[type="text"]:active {
         outline:none; !important
-                      z-index: 10;
+                      z-index: 100;
       }
       
       .que-button {
-        padding: 500px 16px;
+        padding: 500px 1px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
         color: #ffffff;
         border: none;
@@ -369,6 +424,7 @@ max-height: 100%;
          transition: margin-top 0.5s;
         z-index: 5;
         margin: 1.0px;
+        margin-top: 7px;
       }
 
       .input-group button:hover {

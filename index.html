@@ -16,6 +16,7 @@
       <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟹</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp&nbsp </div>
       <div class="status-box"></div><button class="ren-button" onclick="togglePopup('other-popup')"><i class="fa-solid fa-gear"></i></button>
+      <button class="link-button" onclick="togglePopup('link-popup')"><i class="fa-solid fa-link"></i></button>
             <button class="git-button" onclick="openGit()">
               <i class="fa-brands fa-github"></i></button>            <button class="web-button" onclick="openWebs()">
 <i class="fa-solid fa-globe"></i>
@@ -41,153 +42,46 @@
             
               
               
-<div id="other-popup" class="popup">
+<div id="link-popup" class="popup">
     <div class="popup-header">
         <span>
-            <b>𝙾𝚝𝚑𝚎𝚛 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜</b>
+            <b>𝚅𝚎𝚛𝚒𝚏𝚒𝚎𝚍 𝙰𝚕𝚝𝚎𝚛𝚗𝚊𝚝𝚎 𝙻𝚒𝚗𝚔𝚜</b>
         </span>
-        <span class="close" onclick="togglePopup('other-popup')">
+        <span class="close" onclick="togglePopup('link-popup')">
             <b>✕</b>
         </span>
   </div><br>
-    <div class="popup-content">
-    <input type="text" id="pageTitleInput" placeholder="  Enter new page title :D" class="rename-input">
-    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button>
-
-
-    <!-- Buttons with favicons -->
-      
-          <button class="rename-button" onclick="changeFavicon('https://edpuzzle.imgix.net/favicons/favicon-32.png')">
-        <img src="https://edpuzzle.imgix.net/favicons/favicon-32.png" alt="Edpuzzle">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://www.google.com/favicon.ico')">
-        <img src="https://www.google.com/favicon.ico" alt="Google">
-        
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x128.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x128.png" alt="PDF File">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://www.ixl.com/favicon.ico')">
-        <img src="https://www.ixl.com/favicon.ico" alt="IXL">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/classroom/favicon.png')">
-        <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom">
-        
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://www.clever.com/favicon.ico')">
-        <img src="https://www.clever.com/favicon.ico" alt="Clever">
-        
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x64.png" alt="Google Sheets">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png" alt="Google Docs">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_2_form_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_2_form_x64.png" alt="Google Forms">
-        
-    </button>
-    
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_drawing_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_drawing_x64.png" alt="Google Drawings">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico')">
-        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail"></button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="Google Slides">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_folder_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_folder_x64.png" alt="File">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x64.png" alt="Word">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_excel_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_excel_x64.png" alt="Excel">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_powerpoint_x64.png')">
-        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_powerpoint_x64.png" alt="Powerpoint">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://canvas.uchicago.edu/favicon.ico')">
-        <img src="https://canvas.uchicago.edu/favicon.ico" alt="Canvas">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png')">
-        <img src="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png" alt="Chrome New Tab">
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://www.netflix.com/favicon.ico')">
-        <img src="https://www.netflix.com/favicon.ico" alt="Netflix">
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://open.spotify.com/favicon.ico')">
-        <img src="https://open.spotify.com/favicon.ico" alt="Spotify">
-        
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png')">
-        <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive">
-        
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://www.khanacademy.org/favicon.ico')">
-        <img src="https://www.khanacademy.org/favicon.ico" alt="Khan Academy">
-    </button>
-
-    <button class="rename-button" onclick="changeFavicon('https://quizlet.com/favicon.ico')">
-        <img src="https://quizlet.com/favicon.ico" alt="Quizlet">
-    </button>
-
-                <button class="rename-button" onclick="changeFavicon('https://logosandtypes.com/wp-content/uploads/2020/07/powerschool.svg')">
-        <img src="https://logosandtypes.com/wp-content/uploads/2020/07/powerschool.svg" alt="Powerschool">
-        
-    <button class="rename-button" onclick="changeFavicon('https://www.nationalgeographic.com/favicon.ico')">
-        <img src="https://www.nationalgeographic.com/favicon.ico" alt="National Geographic">
-        
-    </button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://kahoot.it/favicon.ico')">
-        <img src="https://kahoot.it/favicon.ico" alt="Kahoot"></button>
-      
-    <button class="rename-button" onclick="changeFavicon('https://www.w3schools.com/favicon.ico')">
-        <img src="https://www.w3schools.com/favicon.ico" alt="W3 Schools"></button>
-      
-                <button class="rename-button" onclick="changeFavicon('https://static.canva.com/static/images/favicon.ico')">
-        <img src="https://static.canva.com/static/images/favicon.ico" alt="Canva">
-        
-    </button>
-    </div><br>
-</div>
-
-              
+      <div class="popup-content">
+        <br>
+        <table>
+          <tr>
+            <th>Link</th>
+            <th>Version</th>
+            <th>Hoster</th>
+            <th>Status</th>
+            <th>Forked?</th>
+          </tr>
+          <tr>
+            <td>
+              <b>https://dingusproxy.vercel.app/</b>
+            </td>
+            <td>5 seconds</td>
+            <td>dinguschan-owo</td>
+            <td>Green</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>
+              <b>https://yee-dee.vercel.app/</b>
+            </td>
+            <td>5 seconds</td>
+            <td>Project516</td>
+            <td>Green</td>
+            <td>Yes</td>
+          </tr>
+        </table>
+      </div><br>
+</div>              
               
               
 <div id="settings-popup" class="popup">
@@ -335,6 +229,11 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
           <br>
           <br>no body styles leaking anymore! <br>
           <br>also fixed link color leakage, so probably like 85% sandboxed content now!<br><br>cooking so hard these days omg<br><br>carp and diem or something 🐋<br><br> outline: none;<br><br>new proxy? does it work?<br>
+    
+    <br>⚠️ [𝗨𝗣𝗗𝗔𝗧𝗘 𝟮.𝟰] ⚠️ </b>
+          <br>
+          <br>MAJOR UPDATE!!<br>
+          <br>easy access download button for the mega skids who don't know what a .ZIP file is<br><br>alternate links if one gets blocked!<br><br>those buttons better get outta my way<br><br>why won't stuff sandbox :(<br>
         </h9>
       </div>
     </div>
@@ -407,21 +306,172 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
       </div>
       <div class="popup-footer"></div>
     </div>
+
+
+
+<div id="other-popup" class="popup">
+    <div class="popup-header">
+        <span>
+            <b>𝙾𝚝𝚑𝚎𝚛 𝚂𝚎𝚝𝚝𝚒𝚗𝚐𝚜</b>
+        </span>
+        <span class="close" onclick="togglePopup('other-popup')">
+            <b>✕</b>
+        </span>
+  </div><br>
+    <div class="popup-content">
+    <input type="text" id="pageTitleInput" placeholder="  Enter new page title :D" class="rename-input">
+    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button>
+
+
+    <!-- Buttons with favicons -->
+      
+          <button class="rename-button" onclick="changeFavicon('https://edpuzzle.imgix.net/favicons/favicon-32.png')">
+        <img src="https://edpuzzle.imgix.net/favicons/favicon-32.png" alt="Edpuzzle">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://www.google.com/favicon.ico')">
+        <img src="https://www.google.com/favicon.ico" alt="Google">
+        
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x128.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_3_pdf_x128.png" alt="PDF File">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://www.ixl.com/favicon.ico')">
+        <img src="https://www.ixl.com/favicon.ico" alt="IXL">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/classroom/favicon.png')">
+        <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="Google Classroom">
+        
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://www.clever.com/favicon.ico')">
+        <img src="https://www.clever.com/favicon.ico" alt="Clever">
+        
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_spreadsheet_x64.png" alt="Google Sheets">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_document_x64.png" alt="Google Docs">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_2_form_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_2_form_x64.png" alt="Google Forms">
+        
+    </button>
+    
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_drawing_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_drawing_x64.png" alt="Google Drawings">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico')">
+        <img src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="Gmail"></button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_presentation_x64.png" alt="Google Slides">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_folder_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_folder_x64.png" alt="File">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_word_x64.png" alt="Word">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_excel_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_excel_x64.png" alt="Excel">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_powerpoint_x64.png')">
+        <img src="https://ssl.gstatic.com/docs/doclist/images/mediatype/icon_1_powerpoint_x64.png" alt="Powerpoint">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://canvas.uchicago.edu/favicon.ico')">
+        <img src="https://canvas.uchicago.edu/favicon.ico" alt="Canvas">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png')">
+        <img src="https://raw.githubusercontent.com/chromium/chromium/main/chrome/app/theme/default_200_percent/common/favicon_ntp.png" alt="Chrome New Tab">
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://www.netflix.com/favicon.ico')">
+        <img src="https://www.netflix.com/favicon.ico" alt="Netflix">
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://open.spotify.com/favicon.ico')">
+        <img src="https://open.spotify.com/favicon.ico" alt="Spotify">
+        
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png')">
+        <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="Google Drive">
+        
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://www.khanacademy.org/favicon.ico')">
+        <img src="https://www.khanacademy.org/favicon.ico" alt="Khan Academy">
+    </button>
+
+    <button class="rename-button" onclick="changeFavicon('https://quizlet.com/favicon.ico')">
+        <img src="https://quizlet.com/favicon.ico" alt="Quizlet">
+    </button>
+
+                <button class="rename-button" onclick="changeFavicon('https://logosandtypes.com/wp-content/uploads/2020/07/powerschool.svg')">
+        <img src="https://logosandtypes.com/wp-content/uploads/2020/07/powerschool.svg" alt="Powerschool">
+        
+    <button class="rename-button" onclick="changeFavicon('https://www.nationalgeographic.com/favicon.ico')">
+        <img src="https://www.nationalgeographic.com/favicon.ico" alt="National Geographic">
+        
+    </button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://kahoot.it/favicon.ico')">
+        <img src="https://kahoot.it/favicon.ico" alt="Kahoot"></button>
+      
+    <button class="rename-button" onclick="changeFavicon('https://www.w3schools.com/favicon.ico')">
+        <img src="https://www.w3schools.com/favicon.ico" alt="W3 Schools"></button>
+      
+                <button class="rename-button" onclick="changeFavicon('https://static.canva.com/static/images/favicon.ico')">
+        <img src="https://static.canva.com/static/images/favicon.ico" alt="Canva">
+        
+    </button>
+    </div><br>
+</div>
+  
+  
+
     <div id="blur-background" class="blur-background"></div>
     <script src="script.js"></script>
     <script> 
 function hashString(str) {
     let hash = 0, i, chr;
     for (i = 0; i < str.length; i++) {
-        chr = str.charCodeAt(i);  // Get the Unicode value of each character
-        hash = ((hash << 5) - hash) + chr;  // Update hash with bitwise operations
-        hash |= 0;  // Ensure hash is a 32-bit integer
+        chr = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + chr;  
+        hash |= 0;
     }
-    return hash;  // Return the final hash value
+    return hash; 
 }
 
-const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";  // Original credits text
-const originalHash = hashString(originalCredits);  // Hash of the original credits
+const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";  
+const originalHash = hashString(originalCredits); 
 
 const scriptContent = `
     function hashString(str) {

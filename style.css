@@ -1,4 +1,30 @@
-      
+        #downloadButton {
+        position: absolute;
+        top: 25px;
+        left: 334.4px;
+        width: 42px;
+        height: 38px;
+        border: none;
+        border-radius: 9px;
+        background: linear-gradient(135deg, #886fe0, #6b56c8);
+        color: #f0f0f0;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+        padding: 0;
+        outline: none;
+                    outline: none;
+        z-index: 1;
+        }
+
+        #downloadButton:hover {
+        background: linear-gradient(135deg, #6b56c8, #775ed4);
+        outline: none;
+}
+
               .rename-label, .rename-input, .rename-button {
             font-size: 16px;
             outline: none;
@@ -97,7 +123,7 @@
             width: 10000%;
             height: 10000%;
             background-color: white;
-            z-index: 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+            z-index: 2147483647;
         }
         .w4mJ97ZbX {
             position: fixed;
@@ -106,7 +132,7 @@
             transform: translate(-50%, -50%);
             font-size: 24px;
             color: red;
-            z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+            z-index: 2147483647;
         }
       
             .web-button {

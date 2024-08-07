@@ -8,7 +8,9 @@ download the proxy as an html file so that you can use this as a local file, mak
 
 ## ***`‎‎‎𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜`***
 
-hit the "Code" button on this repo, then download the .ZIP and extract all, then open the .HTML file to use the project. apparently that was too complicated for some people so you can  also visit https://dinguschan-owo.github.io/dingusproxy/ and click the download button to get the pure HTML file, without a .ZIP file. from there just the file to use, its really simple.
+Go to the website and hit the download button!
+
+(Its also on this repo is a super hiden place)
 
 ## ***`𝚄𝚜𝚊𝚐𝚎 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜`***
 

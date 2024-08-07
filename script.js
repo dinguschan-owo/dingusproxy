@@ -108,19 +108,39 @@ function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
 function displayInShadowDOM(renderedContent, htmlContent) {
     // Create a shadow root
     const shadowRoot = renderedContent.attachShadow({ mode: 'open' });
-    
+
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Styles to ensure content stays within the rendered-content div */
+        :host {
+            display: block;
+            overflow: auto;
+            max-width: 100%;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+
+        :host > * {
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+            box-sizing: border-box;
+        }
+    `;
+
+    // Insert the fetched HTML content into the shadow DOM
+    shadowRoot.innerHTML = htmlContent;
+
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+}
+
     // Create a style element to encapsulate the styles
     const style = document.createElement('style');
     style.textContent = `
         /* Add any global styles needed for the shadow DOM here */
     `;
-    
-    // Insert the fetched HTML content into the shadow DOM
-    shadowRoot.innerHTML = htmlContent;
-    
-    // Append the style element to the shadow root
-    shadowRoot.appendChild(style);
-}
 
 // Event listeners for buttons (e.g., fetch content)
 document.getElementById('button1').addEventListener('click', renderWebsite);

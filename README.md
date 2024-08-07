@@ -20,11 +20,7 @@ fuck you there is no update schedule ill push updates whenever i fucking feel li
 
 ## ***`𝙰𝚕𝚝𝚎𝚛𝚗𝚊𝚝𝚎 𝚕𝚒𝚗𝚔𝚜`***
 
-> [https://dinguschan-owo.github.io/dingusproxy/](https://dinguschan-owo.github.io/dingusproxy/)
-> 
-> [https://dingusproxy.vercel.app/](https://dingusproxy.vercel.app/)
-> 
-> [https://yee-dee.vercel.app/](https://yee-dee.vercel.app/)                                         ☑️
+Check the website! :)
 
 ## ***`𝙳𝚎𝚙𝚕𝚘𝚢 𝚝𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝`***
 

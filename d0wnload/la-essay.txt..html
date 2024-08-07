@@ -13,7 +13,7 @@
     <button id="downloadButton"><i class="fa-solid fa-download"></i></button>
     <div id="h2Dv8e46q">𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!</div>
             <div class="holder"></div>
-      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟹</div>
+      <div class="version-box">𝚅𝚎𝚛𝚜𝚒𝚘𝚗 𝟸.𝟺</div>
       <div class="status">𝚂𝚝𝚊𝚝𝚞𝚜:&nbsp&nbsp&nbsp&nbsp&nbsp </div>
       <div class="status-box"></div><button class="ren-button" onclick="togglePopup('other-popup')"><i class="fa-solid fa-gear"></i></button>
       <button class="link-button" onclick="togglePopup('link-popup')"><i class="fa-solid fa-link"></i></button>
@@ -33,7 +33,7 @@
     <button class="que-button" onclick="togglePopup('popup')">
 &nbsp&nbsp？
     </button>&nbsp&nbsp
-    <input type="text" id="url" placeholder="Enter URL (https://)">&nbsp&nbsp
+    <input type="text" id="url" placeholder="𝙴𝚗𝚝𝚎𝚛 𝚄𝚁𝙻 (𝚑𝚝𝚝𝚙𝚜://)">&nbsp&nbsp
        <button onclick="shrinkContainerAndRender()">𝚁𝚎𝚗𝚍𝚎𝚛</button>&nbsp&nbsp 
     <button onclick="openInBlankTab()">𝚊𝚋𝚘𝚞𝚝:𝚋𝚕𝚊𝚗𝚔</button>&nbsp&nbsp 
   <button onclick="createBlobUrl()">𝚋𝚕𝚘𝚋:</button>
@@ -65,7 +65,16 @@
             <td>
               <b>https://dingusproxy.vercel.app/</b>
             </td>
-            <td>5 seconds</td>
+            <td>2.4</td>
+            <td>dinguschan-owo</td>
+            <td>Green</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>
+              <b>https://dinguschan-owo.github.io/dingusproxy/</b>
+            </td>
+            <td>2.4</td>
             <td>dinguschan-owo</td>
             <td>Green</td>
             <td>No</td>
@@ -74,7 +83,25 @@
             <td>
               <b>https://yee-dee.vercel.app/</b>
             </td>
-            <td>5 seconds</td>
+            <td>2.4</td>
+            <td>Project516</td>
+            <td>Green</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>https://yeedee.vercel.app/</b>
+            </td>
+            <td>2.4</td>
+            <td>Project516</td>
+            <td>Green</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>
+              <b>https://yee-eta.vercel.app/</b>
+            </td>
+            <td>2.4</td>
             <td>Project516</td>
             <td>Green</td>
             <td>Yes</td>
@@ -319,8 +346,8 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
         </span>
   </div><br>
     <div class="popup-content">
-    <input type="text" id="pageTitleInput" placeholder="  Enter new page title :D" class="rename-input">
-    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button>
+    <input type="text" id="pageTitleInput" placeholder="𝙴𝚗𝚝𝚎𝚛 𝚗𝚎𝚠 𝚙𝚊𝚐𝚎 𝚝𝚒𝚝𝚕𝚎 :D" class="rename-input">
+    <button class="rename-button" onclick="changeTitle()">𝚂𝚊𝚟𝚎</button><br><br>
 
 
     <!-- Buttons with favicons -->
@@ -556,36 +583,40 @@ window.onload = function() {
     
     <script>
         document.getElementById('downloadButton').addEventListener('click', function() {
-            const htmlContent = document.documentElement.outerHTML;
-
-            const blob = new Blob([htmlContent], { type: 'text/html' });
+    fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
+        .then(response => response.text())
+        .then(data => {
+            const blob = new Blob([data], { type: 'text/html' });
 
             const url = URL.createObjectURL(blob);
 
             const a = document.createElement('a');
             a.href = url;
-            a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢.html'; 
+            a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html'; 
             document.body.appendChild(a);
 
             a.click();
 
-          URL.revokeObjectURL(url);
+            URL.revokeObjectURL(url);
             document.body.removeChild(a);
-        });
+        })
+        .catch(error => console.error('Error fetching the file:', error));
+});
+
     </script>
     <style>
-              .link-button {
+              .link-button { 
         position: absolute;
         top: 25px;
         right: 348px;
         width: 40px;
-        height: 38px;
+        height: 36px;
         border: none;
         border-radius: 9px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
         color: #f0f0f0;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -635,20 +666,23 @@ window.onload = function() {
                           border: 2px solid #fff;
         }
         .rename-input {
-            padding-right: 8px;
-            padding-right: 8px;
-            padding-top: 10px;
-            margin-top: 6px;
-            padding-bottom: 11px;
+padding: 10px 12px 10px 12px; 
+          width: 520px !important; 
+          border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
             margin-right: 5px;
                       outline: none;
           width: 523px;
           border-radius: 8px;
-          outline: none; !important
-          border: 2px solid #fff;
-          margin-bottom: 5px;
+          outline: none !important; 
+          margin-bottom: 0px;
           background-color: #fff;
+          color: #bfbfbf;
         }
+
+        .rename-input:focus::placeholder {
+          opacity: 0.1; 
+        }
+
         .rename-button {
             padding: 0px 0px;
             margin: 5px;
@@ -656,7 +690,7 @@ window.onload = function() {
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            background-color: #000; !important
+            background-color: #000; 
             border: 1px solid #ccc;
             border-radius: 9px;
             outline: none;
@@ -802,9 +836,9 @@ window.onload = function() {
         height: 1000%;
         background: linear-gradient(135deg, #2e2c3a, #383352);
         z-index: -100;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        outline: none;
+        overflow-x: hidden !important; 
+        overflow-y: hidden !important;
+        outline: none !important;
       }
 
     .popup-content {
@@ -925,50 +959,68 @@ max-height: 100%;
       h9 {
         font-size: 16px;
         color: #ffffff;
-        text-align: center; !important
+        text-align: center !important; 
         outline: none;
       }
 
       .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
+                margin-bottom: 20px;
       }
 
       .input-group input[type="text"] {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
         z-index: 100;
         margin-top: 7px;
+        font-size: 16px;
+        margin-bottom: 1px;
       }
+
+::placeholder {
+  color: #bfbfbf;
+  opacity: 1; /* Firefox */
+}
+
+      .input-group input[type="text"]:focus::placeholder {
+  opacity: .1; /* Firefox */
+                padding-top: 20px !important;
+                        padding-bottom: 20px !important;
+        height: 50px !important;
+        font-size: 15px;
+}
+
+
 
       .input-group input[type="text"]:focus {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
          transition: margin-top 0.5s;
       }
       
             .input-group input[type="text"]:active {
-        outline:none; !important
+        outline:none !important; 
                       z-index: 100;
       }
       
@@ -1202,30 +1254,85 @@ max-height: 91%;
   setInterval(changeMessage, 5000);
 
   // Using sessionStorage for client-side caching
-  function renderWebsite() {
-      const urlInput = document.getElementById("url");
-      let url = urlInput.value.trim();
-      if (!url.startsWith("http://") && !url.startsWith("https://")) {
-          url = "https://" + url;
-          urlInput.value = url;
-      }
+// Function to render the website content within a Shadow DOM
+function renderWebsite() {
+    const urlInput = document.getElementById("url");
+    let url = urlInput.value.trim();
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+        urlInput.value = url;
+    }
 
-      const renderedContent = document.getElementById("rendered-content");
-      const loadingSpinner = document.getElementById("loading-spinner");
+    const renderedContent = document.getElementById("rendered-content");
+    const loadingSpinner = document.getElementById("loading-spinner");
 
-      const cachedContent = sessionStorage.getItem(url);
-      if (cachedContent) {
-          renderedContent.innerHTML = cachedContent;
-          loadingSpinner.style.display = "none";
-          fixRelativeUrls(renderedContent, url);
-          return; // Exit early if content is cached
-      }
+    const cachedContent = sessionStorage.getItem(url);
+    if (cachedContent) {
+        displayInShadowDOM(renderedContent, cachedContent);
+        loadingSpinner.style.display = "none";
+        return; // Exit early if content is cached
+    }
 
-      renderedContent.innerHTML = "";
-      loadingSpinner.style.display = "block";
+    renderedContent.innerHTML = "";
+    loadingSpinner.style.display = "block";
 
-      fetchAndRender(url, renderedContent, loadingSpinner);
-  }
+    fetchAndRender(url, renderedContent, loadingSpinner);
+}
+
+// Function to fetch content and render it in a Shadow DOM
+function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
+    fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then((data) => {
+            // Cache the fetched content
+            sessionStorage.setItem(url, data);
+
+            // Render the content in a Shadow DOM
+            displayInShadowDOM(renderedContent, data);
+            loadingSpinner.style.display = "none";
+        })
+        .catch((error) => {
+            if (retryCount > 0) {
+                const delay = 1000 * Math.pow(2, 3 - retryCount);
+                setTimeout(() => {
+                    fetchAndRender(url, renderedContent, loadingSpinner, retryCount - 1);
+                }, delay);
+            } else {
+                renderedContent.innerHTML = `
+                    <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
+                loadingSpinner.style.display = "none";
+            }
+        });
+}
+
+// Function to create a Shadow DOM and insert the content
+function displayInShadowDOM(renderedContent, htmlContent) {
+    // Create a shadow root
+    const shadowRoot = renderedContent.attachShadow({ mode: 'open' });
+    
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Add any global styles needed for the shadow DOM here */
+    `;
+    
+    // Insert the fetched HTML content into the shadow DOM
+    shadowRoot.innerHTML = htmlContent;
+    
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+}
+
+// Event listeners for buttons (e.g., fetch content)
+document.getElementById('button1').addEventListener('click', renderWebsite);
+document.getElementById('button2').addEventListener('click', renderWebsite);
+document.getElementById('button3').addEventListener('click', renderWebsite);
+
 
   function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
       fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
@@ -1525,7 +1632,6 @@ var downloadButton = document.querySelector('#downloadButton');
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-
     </script>
   </body>
 </html>

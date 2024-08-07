@@ -1,15 +1,15 @@
-        .link-button {
+        .link-button { 
         position: absolute;
         top: 25px;
         right: 348px;
         width: 40px;
-        height: 38px;
+        height: 36px;
         border: none;
         border-radius: 9px;
         background: linear-gradient(135deg, #886fe0, #6b56c8);
         color: #f0f0f0;
         cursor: pointer;
-        font-size: 22px;
+        font-size: 18px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,20 +59,23 @@
                           border: 2px solid #fff;
         }
         .rename-input {
-            padding-right: 8px;
-            padding-right: 8px;
-            padding-top: 10px;
-            margin-top: 6px;
-            padding-bottom: 11px;
+padding: 10px 12px 10px 12px; 
+          width: 520px !important; 
+          border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
             margin-right: 5px;
                       outline: none;
           width: 523px;
           border-radius: 8px;
-          outline: none; !important
-          border: 2px solid #fff;
-          margin-bottom: 5px;
+          outline: none !important; 
+          margin-bottom: 0px;
           background-color: #fff;
+          color: #bfbfbf;
         }
+
+        .rename-input:focus::placeholder {
+          opacity: 0.1; 
+        }
+
         .rename-button {
             padding: 0px 0px;
             margin: 5px;
@@ -80,7 +83,7 @@
             cursor: pointer;
             display: inline-flex;
             align-items: center;
-            background-color: #000; !important
+            background-color: #000; 
             border: 1px solid #ccc;
             border-radius: 9px;
             outline: none;
@@ -226,9 +229,9 @@
         height: 1000%;
         background: linear-gradient(135deg, #2e2c3a, #383352);
         z-index: -100;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        outline: none;
+        overflow-x: hidden !important; 
+        overflow-y: hidden !important;
+        outline: none !important;
       }
 
     .popup-content {
@@ -349,50 +352,68 @@ max-height: 100%;
       h9 {
         font-size: 16px;
         color: #ffffff;
-        text-align: center; !important
+        text-align: center !important; 
         outline: none;
       }
 
       .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
+                margin-bottom: 20px;
       }
 
       .input-group input[type="text"] {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
          transition: margin-top 0.5s;
-        outline: none; !important
+        outline: none !important; 
         z-index: 100;
         margin-top: 7px;
+        font-size: 16px;
+        margin-bottom: 1px;
       }
+
+::placeholder {
+  color: #bfbfbf;
+  opacity: 1; /* Firefox */
+}
+
+      .input-group input[type="text"]:focus::placeholder {
+  opacity: .1; /* Firefox */
+                padding-top: 20px !important;
+                        padding-bottom: 20px !important;
+        height: 50px !important;
+        font-size: 15px;
+}
+
+
 
       .input-group input[type="text"]:focus {
         flex: 1;
-        padding: 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
         color: #ffffff;
         overflow: hidden;
-        outline: none; !important
+        outline: none !important; 
                 z-index: 100;
          transition: margin-top 0.5s;
       }
       
             .input-group input[type="text"]:active {
-        outline:none; !important
+        outline:none !important; 
                       z-index: 100;
       }
       

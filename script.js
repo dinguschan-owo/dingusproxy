@@ -48,30 +48,85 @@
   setInterval(changeMessage, 5000);
 
   // Using sessionStorage for client-side caching
-  function renderWebsite() {
-      const urlInput = document.getElementById("url");
-      let url = urlInput.value.trim();
-      if (!url.startsWith("http://") && !url.startsWith("https://")) {
-          url = "https://" + url;
-          urlInput.value = url;
-      }
+// Function to render the website content within a Shadow DOM
+function renderWebsite() {
+    const urlInput = document.getElementById("url");
+    let url = urlInput.value.trim();
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        url = "https://" + url;
+        urlInput.value = url;
+    }
 
-      const renderedContent = document.getElementById("rendered-content");
-      const loadingSpinner = document.getElementById("loading-spinner");
+    const renderedContent = document.getElementById("rendered-content");
+    const loadingSpinner = document.getElementById("loading-spinner");
 
-      const cachedContent = sessionStorage.getItem(url);
-      if (cachedContent) {
-          renderedContent.innerHTML = cachedContent;
-          loadingSpinner.style.display = "none";
-          fixRelativeUrls(renderedContent, url);
-          return; // Exit early if content is cached
-      }
+    const cachedContent = sessionStorage.getItem(url);
+    if (cachedContent) {
+        displayInShadowDOM(renderedContent, cachedContent);
+        loadingSpinner.style.display = "none";
+        return; // Exit early if content is cached
+    }
 
-      renderedContent.innerHTML = "";
-      loadingSpinner.style.display = "block";
+    renderedContent.innerHTML = "";
+    loadingSpinner.style.display = "block";
 
-      fetchAndRender(url, renderedContent, loadingSpinner);
-  }
+    fetchAndRender(url, renderedContent, loadingSpinner);
+}
+
+// Function to fetch content and render it in a Shadow DOM
+function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
+    fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then((data) => {
+            // Cache the fetched content
+            sessionStorage.setItem(url, data);
+
+            // Render the content in a Shadow DOM
+            displayInShadowDOM(renderedContent, data);
+            loadingSpinner.style.display = "none";
+        })
+        .catch((error) => {
+            if (retryCount > 0) {
+                const delay = 1000 * Math.pow(2, 3 - retryCount);
+                setTimeout(() => {
+                    fetchAndRender(url, renderedContent, loadingSpinner, retryCount - 1);
+                }, delay);
+            } else {
+                renderedContent.innerHTML = `
+                    <p style="color: red;">Error: Failed to load website content. ${error.message}</p>`;
+                loadingSpinner.style.display = "none";
+            }
+        });
+}
+
+// Function to create a Shadow DOM and insert the content
+function displayInShadowDOM(renderedContent, htmlContent) {
+    // Create a shadow root
+    const shadowRoot = renderedContent.attachShadow({ mode: 'open' });
+    
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Add any global styles needed for the shadow DOM here */
+    `;
+    
+    // Insert the fetched HTML content into the shadow DOM
+    shadowRoot.innerHTML = htmlContent;
+    
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+}
+
+// Event listeners for buttons (e.g., fetch content)
+document.getElementById('button1').addEventListener('click', renderWebsite);
+document.getElementById('button2').addEventListener('click', renderWebsite);
+document.getElementById('button3').addEventListener('click', renderWebsite);
+
 
   function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
       fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent(url))

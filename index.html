@@ -583,7 +583,7 @@ window.onload = function() {
     
     <script>
         document.getElementById('downloadButton').addEventListener('click', function() {
-    fetch('/res/DingusProxyOffline.html')
+    fetch('/Offline-File/DingusProxyOffline.html')
         .then(response => response.text())
         .then(data => {
             const blob = new Blob([data], { type: 'text/html' });

@@ -583,7 +583,7 @@ window.onload = function() {
     
     <script>
         document.getElementById('downloadButton').addEventListener('click', function() {
-    fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
+    fetch('/res/DingusProxyOffline.html')
         .then(response => response.text())
         .then(data => {
             const blob = new Blob([data], { type: 'text/html' });
@@ -604,607 +604,605 @@ window.onload = function() {
 });
 
     </script>
-    <style>
-              .link-button { 
-        position: absolute;
-        top: 25px;
-        right: 348px;
-        width: 40px;
-        height: 36px;
-        border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #f0f0f0;
-        cursor: pointer;
-        font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-        padding: 0;
-        outline: none;
-                    outline: none;
-        z-index: 1;
-        }
+    <style>        .link-button {
+      position: absolute;
+      top: 25px;
+      right: 348px;
+      width: 40px;
+      height: 36px;
+      border: none;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #f0f0f0;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      padding: 0;
+      outline: none;
+                  outline: none;
+      z-index: 1;
+      }
 
-        .link-button:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
+      .link-button:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
 }
 
 
 #downloadButton {
-        position: absolute;
-        top: 25px;
-        left: 335px;
-        width: 42px;
-        height: 38px;
-        border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #f0f0f0;
-        cursor: pointer;
-        font-size: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-        padding: 0;
-        outline: none;
-                    outline: none;
-        z-index: 1;
-        }
+      position: absolute;
+      top: 25px;
+      left: 335px;
+      width: 42px;
+      height: 38px;
+      border: none;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #f0f0f0;
+      cursor: pointer;
+      font-size: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      padding: 0;
+      outline: none;
+                  outline: none;
+      z-index: 1;
+      }
 
-        #downloadButton:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
+      #downloadButton:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
 }
 
-              .rename-label, .rename-input, .rename-button {
-            font-size: 16px;
-            outline: none;
-                          border: 2px solid #fff;
-        }
-        .rename-input {
+            .rename-label, .rename-input, .rename-button {
+          font-size: 16px;
+          outline: none;
+                        border: 2px solid #fff;
+      }
+      .rename-input {
 padding: 10px 12px 10px 12px; 
-          width: 520px !important; 
-          border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
-            margin-right: 5px;
-                      outline: none;
-          width: 523px;
-          border-radius: 8px;
-          outline: none !important; 
-          margin-bottom: 0px;
-          background-color: #fff;
-          color: #bfbfbf;
-        }
-
-        .rename-input:focus::placeholder {
-          opacity: 0.1; 
-        }
-
-        .rename-button {
-            padding: 0px 0px;
-            margin: 5px;
-            border: none;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            background-color: #000; 
-            border: 1px solid #ccc;
-            border-radius: 9px;
-            outline: none;
-        }
-        .rename-button img {
-            margin-right: 0px;
-            width: 26px;
-            height: 26px;
-                      outline: none;
-          background-color: #fff;
-          padding: 7px 8px;
-          border-radius: 10px;
-            
-        }
-
-      
-      .ren-button{
-        position: absolute;
-        top: 25px;
-        left: 281px;
-        width: 42px;
-        height: 38px;
-        border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #f0f0f0;
-        cursor: pointer;
-        font-size: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-        padding: 0;
-        outline: none;
+        width: 520px !important; 
+        border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
+          margin-right: 5px;
                     outline: none;
-        z-index: 1;
-      }
-      
-            .holder {
-        position: absolute;
-        top: 25px;
-        right: 138px;
-        background: linear-gradient(135deg, #775ed4, #886fe0);
-        color: #ffffff;
-        border-radius: 9px;
-        padding: 7px 13px;
-        font-size: 16px;
-        overflow: hidden;
-        outline: none;
-        width: 172px;
-              height: 24px;
-              z-index: 0;
-      }
-      
-              #h2Dv8e46q {
-            margin-top: 52.5px;
-            font-size: 17px;
-            color: white;
-            position: absolute;
-            top: -21px;
-            right: 147px;
-                z-index: 1;
-        }
-        .G71h3Cw5j {
-            position: fixed;
-            top: -100px;
-            left: -100px;
-            width: 10000%;
-            height: 10000%;
-            background-color: white;
-            z-index: 2147483647;
-        }
-        .w4mJ97ZbX {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 24px;
-            color: red;
-            z-index: 2147483647;
-        }
-      
-            .web-button {
-        position: absolute;
-        top: 25px;
-        right: 84px;
-        width: 42px;
-        height: 38px;
-        border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #f0f0f0;
-        cursor: pointer;
-        font-size: 24px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-        padding: 0;
-        outline: none;
-      }
-
-      .web-button:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
-      }
-      
-      .git-button {
-        position: absolute;
-        top: 25px;
-        right: 30px;
-        width: 42px;
-        height: 38px;
-        border: none;
-        border-radius: 9px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #f0f0f0;
-        cursor: pointer;
-        font-size: 26px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: background-color 0.3s ease;
-        padding: 0;
-        outline: none;
-      }
-
-      .git-button:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
-      }
-      
-            .ren-button:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
-      }
-      
-      .background-box {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 1000%;
-        height: 1000%;
-        background: linear-gradient(135deg, #2e2c3a, #383352);
-        z-index: -100;
-        overflow-x: hidden !important; 
-        overflow-y: hidden !important;
-        outline: none !important;
-      }
-
-    .popup-content {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-      outline: none;
-    }
-
-    .popup-content button {
-        margin: 5px;
-        padding: 10px 18px;
-        background-color: #8366ea;
-        color: #ffffff;
-        border: none;
-        border-radius: 9px;
-        cursor: pointer;
-        font-size: 17px;
-        transition: background-color 0.3s;
-        outline: none;
-      outline: none;
-    }
-
-    .popup-content button:active {
-        background-color: #26d99d;
-      outline: none;
-    }
-
-      .popup-content button:focus {
-        background-color: #26d99d;
-        outline: none;
-    }
-      
-      
-
-      .box {
-        width: 25%;
-        margin: 0 auto;
-        padding: 8px;
-        background: linear-gradient(135deg, #756fae, #6a63ab);
-        border: 2px solid #b4a5e0;
-        border-radius: 15px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-        overflow: hidden;
-        outline: none;
-
-      }
-
-      .container {
-        width: 92.5%;
-        margin: 20px auto;
-        padding: 30px;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #4c436f, #544171);
-        outline: none;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-        position: relative;
-max-height: 100%; 
-   height: 35%;
-   overflow-y: hidden;
-        transition: height 0.5s
-        
-      }
-
-      .version-box {
-        position: absolute;
-        top: 25px;
-        left: 30px;
-        background: linear-gradient(135deg, #775ed4, #886fe0);
-        color: #ffffff;
-        border-radius: 9px;
-        padding: 7px 13px;
-        font-size: 16px;
-        overflow: hidden;
-        outline: none;
-      }
-
-      .status {
-        position: absolute;
-        top: 25px;
-        left: 162px;
-        background: linear-gradient(135deg, #775ed4, #886fe0);
-        color: #ffffff;
-        border-radius: 9px;
-        padding: 7px 13px;
-        font-size: 16px;
-        outline: none;
-        overflow: hidden;
-      }
-
-      .status-box {
-        position: absolute;
-        top: 36px;
-        left: 244px;
-        background: linear-gradient(135deg, #00ff88, #33ff99);
-        color: #262626;
-        border-radius: 50px;
-        padding: 8px;
-        font-size: 15px;
-        font-weight: bold;
-        overflow: hidden;
-        z-index: 1;
-        outline: none;
-      }
-
-      h11 {
-        font-size: 40px;
-        color: #e6e6fa;
-        text-align: center;
-        margin-bottom: 0;
-        margin-top: 0;
-        font-weight: bold;
-        outline: none;
-      }
-
-      h9 {
-        font-size: 16px;
-        color: #ffffff;
-        text-align: center !important; 
-        outline: none;
-      }
-
-      .input-group {
-        margin-bottom: 0px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-         transition: margin-top 0.5s;
-        outline: none !important; 
-                z-index: 100;
-                margin-bottom: 20px;
-      }
-
-      .input-group input[type="text"] {
-        flex: 1;
-        padding: 10px 12px;
-        border: 3px solid #b4a5e0;
+        width: 523px;
         border-radius: 8px;
-        background: linear-gradient(135deg, #383352, #4c436f);
-        color: #ffffff;
-        overflow: hidden;
-         transition: margin-top 0.5s;
         outline: none !important; 
-        z-index: 100;
-        margin-top: 7px;
-        font-size: 16px;
-        margin-bottom: 1px;
+        margin-bottom: 0px;
+        background-color: #fff;
+        color: #bfbfbf;
       }
+
+      .rename-input:focus::placeholder {
+        opacity: 0.1; 
+      }
+
+      .rename-button {
+          padding: 0px 0px;
+          margin: 5px;
+          border: none;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          background-color: #000; 
+          border: 1px solid #ccc;
+          border-radius: 9px;
+          outline: none;
+      }
+      .rename-button img {
+          margin-right: 0px;
+          width: 26px;
+          height: 26px;
+                    outline: none;
+        background-color: #fff;
+        padding: 7px 8px;
+        border-radius: 10px;
+          
+      }
+
+    
+    .ren-button{
+      position: absolute;
+      top: 25px;
+      left: 281px;
+      width: 42px;
+      height: 38px;
+      border: none;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #f0f0f0;
+      cursor: pointer;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      padding: 0;
+      outline: none;
+                  outline: none;
+      z-index: 1;
+    }
+    
+          .holder {
+      position: absolute;
+      top: 25px;
+      right: 138px;
+      background: linear-gradient(135deg, #775ed4, #886fe0);
+      color: #ffffff;
+      border-radius: 9px;
+      padding: 7px 13px;
+      font-size: 16px;
+      overflow: hidden;
+      outline: none;
+      width: 172px;
+            height: 24px;
+            z-index: 0;
+    }
+    
+            #h2Dv8e46q {
+          margin-top: 52.5px;
+          font-size: 17px;
+          color: white;
+          position: absolute;
+          top: -21px;
+          right: 147px;
+              z-index: 1;
+      }
+      .G71h3Cw5j {
+          position: fixed;
+          top: -100px;
+          left: -100px;
+          width: 10000%;
+          height: 10000%;
+          background-color: white;
+          z-index: 2147483647;
+      }
+      .w4mJ97ZbX {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 24px;
+          color: red;
+          z-index: 2147483647;
+      }
+    
+          .web-button {
+      position: absolute;
+      top: 25px;
+      right: 84px;
+      width: 42px;
+      height: 38px;
+      border: none;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #f0f0f0;
+      cursor: pointer;
+      font-size: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      padding: 0;
+      outline: none;
+    }
+
+    .web-button:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
+    }
+    
+    .git-button {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      width: 42px;
+      height: 38px;
+      border: none;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #f0f0f0;
+      cursor: pointer;
+      font-size: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s ease;
+      padding: 0;
+      outline: none;
+    }
+
+    .git-button:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
+    }
+    
+          .ren-button:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
+    }
+    
+    .background-box {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 1000%;
+      height: 1000%;
+      background: linear-gradient(135deg, #2e2c3a, #383352);
+      z-index: -100;
+      overflow-x: hidden !important; 
+      overflow-y: hidden !important;
+      outline: none !important;
+    }
+
+  .popup-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    outline: none;
+  }
+
+  .popup-content button {
+      margin: 5px;
+      padding: 10px 18px;
+      background-color: #8366ea;
+      color: #ffffff;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 17px;
+      transition: background-color 0.3s;
+      outline: none;
+    outline: none;
+  }
+
+  .popup-content button:active {
+      background-color: #26d99d;
+    outline: none;
+  }
+
+    .popup-content button:focus {
+      background-color: #26d99d;
+      outline: none;
+  }
+    
+    
+
+    .box {
+      width: 25%;
+      margin: 0 auto;
+      padding: 8px;
+      background: linear-gradient(135deg, #756fae, #6a63ab);
+      border: 2px solid #b4a5e0;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      outline: none;
+
+    }
+
+    .container {
+      width: 92.5%;
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #4c436f, #544171);
+      outline: none;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      position: relative;
+max-height: 100%; 
+ height: 35%;
+ overflow-y: hidden;
+      transition: height 0.5s
+      
+    }
+
+    .version-box {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      background: linear-gradient(135deg, #775ed4, #886fe0);
+      color: #ffffff;
+      border-radius: 9px;
+      padding: 7px 13px;
+      font-size: 16px;
+      overflow: hidden;
+      outline: none;
+    }
+
+    .status {
+      position: absolute;
+      top: 25px;
+      left: 162px;
+      background: linear-gradient(135deg, #775ed4, #886fe0);
+      color: #ffffff;
+      border-radius: 9px;
+      padding: 7px 13px;
+      font-size: 16px;
+      outline: none;
+      overflow: hidden;
+    }
+
+    .status-box {
+      position: absolute;
+      top: 36px;
+      left: 244px;
+      background: linear-gradient(135deg, #00ff88, #33ff99);
+      color: #262626;
+      border-radius: 50px;
+      padding: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      overflow: hidden;
+      z-index: 1;
+      outline: none;
+    }
+
+    h11 {
+      font-size: 40px;
+      color: #e6e6fa;
+      text-align: center;
+      margin-bottom: 0;
+      margin-top: 0;
+      font-weight: bold;
+      outline: none;
+    }
+
+    h9 {
+      font-size: 16px;
+      color: #ffffff;
+      text-align: center !important; 
+      outline: none;
+    }
+
+    .input-group {
+      margin-bottom: 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+       transition: margin-top 0.5s;
+      outline: none !important; 
+              z-index: 100;
+              margin-bottom: 20px;
+    }
+
+    .input-group input[type="text"] {
+      flex: 1;
+      padding: 10px 12px;
+      border: 3px solid #b4a5e0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #383352, #4c436f);
+      color: #ffffff;
+      overflow: hidden;
+       transition: margin-top 0.5s;
+      outline: none !important; 
+      z-index: 100;
+      margin-top: 7px;
+      font-size: 16px;
+      margin-bottom: 1px;
+    }
 
 ::placeholder {
-  color: #bfbfbf;
-  opacity: 1; /* Firefox */
+color: #bfbfbf;
+opacity: 1; /* Firefox */
 }
 
-      .input-group input[type="text"]:focus::placeholder {
-  opacity: .1; /* Firefox */
-                padding-top: 20px !important;
-                        padding-bottom: 20px !important;
-        height: 50px !important;
-        font-size: 15px;
+    .input-group input[type="text"]:focus::placeholder {
+opacity: .1; /* Firefox */
+              padding-top: 20px !important;
+                      padding-bottom: 20px !important;
+      height: 50px !important;
+      font-size: 15px;
 }
 
 
 
-      .input-group input[type="text"]:focus {
-        flex: 1;
-        padding: 10px 12px;
-        border: 3px solid #b4a5e0;
-        border-radius: 8px;
-        background: linear-gradient(135deg, #383352, #4c436f);
-        color: #ffffff;
-        overflow: hidden;
-        outline: none !important; 
-                z-index: 100;
-         transition: margin-top 0.5s;
-      }
+    .input-group input[type="text"]:focus {
+      flex: 1;
+      padding: 10px 12px;
+      border: 3px solid #b4a5e0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #383352, #4c436f);
+      color: #ffffff;
+      overflow: hidden;
+      outline: none !important; 
+              z-index: 100;
+       transition: margin-top 0.5s;
+    }
+    
+          .input-group input[type="text"]:active {
+      outline:none !important; 
+                    z-index: 100;
+    }
+    
+    .que-button {
+      padding: 500px 1px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 19px;
+      overflow: hidden;
+      outline: none;
+       transition: margin-top 0.5s;
       
-            .input-group input[type="text"]:active {
-        outline:none !important; 
-                      z-index: 100;
-      }
-      
-      .que-button {
-        padding: 500px 1px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #ffffff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-size: 19px;
-        overflow: hidden;
-        outline: none;
-         transition: margin-top 0.5s;
-        
-      }
-      .input-group button {
-        padding: 10px 16px;
-        background: linear-gradient(135deg, #886fe0, #6b56c8);
-        color: #ffffff;
-        border: none;
-        border-radius: 9px;
-        cursor: pointer;
-        transition: all 0.3s;
-        font-size: 16px;
-        overflow: hidden;
-        outline: none;
-         transition: margin-top 0.5s;
-        z-index: 5;
-        margin: 1.0px;
-        margin-top: 7px;
-      }
+    }
+    .input-group button {
+      padding: 10px 16px;
+      background: linear-gradient(135deg, #886fe0, #6b56c8);
+      color: #ffffff;
+      border: none;
+      border-radius: 9px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 16px;
+      overflow: hidden;
+      outline: none;
+       transition: margin-top 0.5s;
+      z-index: 5;
+      margin: 1.0px;
+      margin-top: 7px;
+    }
 
-      .input-group button:hover {
-        background: linear-gradient(135deg, #6b56c8, #775ed4);
-        outline: none;
-         transition: margin-top 0.5s;
-      }
+    .input-group button:hover {
+      background: linear-gradient(135deg, #6b56c8, #775ed4);
+      outline: none;
+       transition: margin-top 0.5s;
+    }
 
-      .rendered-content {
-        border: 0px solid #b4a5e0;
-        padding: 25px;
-        background: #fff;
-        border-radius: 10px;
-        margin-top: 20px;
-        color: #000000;
+    .rendered-content {
+      border: 0px solid #b4a5e0;
+      padding: 25px;
+      background: #fff;
+      border-radius: 10px;
+      margin-top: 20px;
+      color: #000000;
 max-height: 91%; 
-        overflow: auto;
-         transition: margin-top 0.5s;
-        padding: 0px;
-        outline: none;
+      overflow: auto;
+       transition: margin-top 0.5s;
+      padding: 0px;
+      outline: none;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: linear-gradient(135deg, #544171, #665582);
+      padding: 25px;
+      border-radius: 11.5px;
+      max-width: 70%;
+      max-height: 65%;
+      overflow: auto;
+      z-index: 1000;
+      color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+      outline: none;
+    }
+
+    .popup-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 10px;
+      font-size: 18px;
+      outline: none;
+    }
+
+    .popup-footer {
+      border-top: 1px solid #ffffff;
+      padding-top: 10px;
+      text-align: center;
+      outline: none;
+    }
+
+    .popup.active {
+      display: block;
+      outline: none;
+    }
+
+    .close {
+      font-size: 20px;
+      cursor: pointer;
+      color: #e6e6fa;
+      overflow: hidden;
+      outline: none;
+    }
+
+    .blur-background {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2px);
+      z-index: 999;
+      overflow: hidden;
+      outline: none;
+    }
+
+    .blur-background.active {
+      display: block;
+      outline: none;
+    }
+
+    table,
+    th,
+    td {
+      border: 2.5px solid #ffffff;
+      border-collapse: collapse;
+      padding: 8px;
+      color: #ffffff;
+      overflow: hidden;
+      outline: none;
+    }
+
+    th {
+      text-align: left;
+      overflow: hidden;
+      outline: none;
+    }
+
+    .loading-spinner {
+      border: 4px solid #4c436f;
+      border-top: 4px solid #886fe0;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+      margin-top: 20px;
+      outline: none;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
 
-      .popup {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: linear-gradient(135deg, #544171, #665582);
-        padding: 25px;
-        border-radius: 11.5px;
-        max-width: 70%;
-        max-height: 65%;
-        overflow: auto;
-        z-index: 1000;
-        color: #ffffff;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-        outline: none;
+      100% {
+        transform: rotate(360deg);
       }
+    }
 
-      .popup-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #ffffff;
-        padding-bottom: 10px;
-        font-size: 18px;
-        outline: none;
-      }
+    .message {
+      text-align: center;
+      padding: 10px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #4c436f, #544171);
+      border-radius: 8px;
+      width: 60%;
+      margin: 30px auto;
+      transition: opacity 0.5s ease-in-out;
+      color: #ffffff;
+      overflow: hidden;
+      outline: none;
+    }
 
-      .popup-footer {
-        border-top: 1px solid #ffffff;
-        padding-top: 10px;
-        text-align: center;
-        outline: none;
-      }
+    .fade-out {
+      opacity: 0;
+    }
 
-      .popup.active {
-        display: block;
-        outline: none;
-      }
-
-      .close {
-        font-size: 20px;
-        cursor: pointer;
-        color: #e6e6fa;
-        overflow: hidden;
-        outline: none;
-      }
-
-      .blur-background {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(2px);
-        z-index: 999;
-        overflow: hidden;
-        outline: none;
-      }
-
-      .blur-background.active {
-        display: block;
-        outline: none;
-      }
-
-      table,
-      th,
-      td {
-        border: 2.5px solid #ffffff;
-        border-collapse: collapse;
-        padding: 8px;
-        color: #ffffff;
-        overflow: hidden;
-        outline: none;
-      }
-
-      th {
-        text-align: left;
-        overflow: hidden;
-        outline: none;
-      }
-
-      .loading-spinner {
-        border: 4px solid #4c436f;
-        border-top: 4px solid #886fe0;
-        border-radius: 50%;
-        width: 35px;
-        height: 35px;
-        animation: spin 1s linear infinite;
-        margin: 0 auto;
-        margin-top: 20px;
-        outline: none;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      .message {
-        text-align: center;
-        padding: 10px;
-        font-size: 18px;
-        background: linear-gradient(135deg, #4c436f, #544171);
-        border-radius: 8px;
-        width: 60%;
-        margin: 30px auto;
-        transition: opacity 0.5s ease-in-out;
-        color: #ffffff;
-        overflow: hidden;
-        outline: none;
-      }
-
-      .fade-out {
-        opacity: 0;
-      }
-
-      .fade-in {
-        opacity: 1;
-      }
-    </style>
-    <script>
-      
+    .fade-in {
+      opacity: 1;
+    }
+</style>
+<script>
   const messages = [
     "𝙱𝚎 𝚙𝚊𝚝𝚒𝚎𝚗𝚝, 𝚕𝚘𝚊𝚍𝚒𝚗𝚐 𝚝𝚒𝚖𝚎𝚜 𝚖𝚊𝚢 𝚝𝚊𝚔𝚎 𝚞𝚙 𝚝𝚘 𝟸𝟶 𝚜𝚎𝚌𝚘𝚗𝚍𝚜 🫣",
     "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
@@ -1236,7 +1234,8 @@ max-height: 91%;
     "𝚘𝚗 𝚝𝚑𝚎 𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚊𝚕𝚕 𝚝𝚑𝚊𝚝",
     "𝙸 𝚗𝚎𝚎𝚍 𝚊𝚗 𝚎𝚡𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚝𝚘𝚛 𝚝𝚘 𝚏𝚒𝚡 𝚊𝚕𝚕 𝚝𝚑𝚎𝚜𝚎 𝙱𝚄𝙶𝚂",
     "ツ",
-    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳"
+    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳",
+    "Offline!"
   ];
   const messageContainer = document.getElementById('message-container');
 
@@ -1314,19 +1313,39 @@ function fetchAndRender(url, renderedContent, loadingSpinner, retryCount = 3) {
 function displayInShadowDOM(renderedContent, htmlContent) {
     // Create a shadow root
     const shadowRoot = renderedContent.attachShadow({ mode: 'open' });
-    
+
+    // Create a style element to encapsulate the styles
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Styles to ensure content stays within the rendered-content div */
+        :host {
+            display: block;
+            overflow: auto;
+            max-width: 100%;
+            max-height: 100%;
+            box-sizing: border-box;
+        }
+
+        :host > * {
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+            box-sizing: border-box;
+        }
+    `;
+
+    // Insert the fetched HTML content into the shadow DOM
+    shadowRoot.innerHTML = htmlContent;
+
+    // Append the style element to the shadow root
+    shadowRoot.appendChild(style);
+}
+
     // Create a style element to encapsulate the styles
     const style = document.createElement('style');
     style.textContent = `
         /* Add any global styles needed for the shadow DOM here */
     `;
-    
-    // Insert the fetched HTML content into the shadow DOM
-    shadowRoot.innerHTML = htmlContent;
-    
-    // Append the style element to the shadow root
-    shadowRoot.appendChild(style);
-}
 
 // Event listeners for buttons (e.g., fetch content)
 document.getElementById('button1').addEventListener('click', renderWebsite);
@@ -1441,70 +1460,6 @@ document.getElementById('button3').addEventListener('click', renderWebsite);
   document.getElementById('button2').addEventListener('click', renderWebsite);
   document.getElementById('button3').addEventListener('click', renderWebsite);
 
-
-  function fixRelativeUrls(content, baseUrl) {
-    content.querySelectorAll("a").forEach((el) => {
-      const relativeUrl = el.getAttribute("href");
-      if (relativeUrl && !relativeUrl.startsWith("http")) {
-        const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-        el.setAttribute("href", absoluteUrl);
-      }
-      el.addEventListener("click", function(event) {
-        event.preventDefault();
-        const urlInput = document.getElementById("url");
-        urlInput.value = el.href;
-        renderWebsite();
-      });
-    });
-    content.querySelectorAll("img").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("script").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("link").forEach((el) => {
-      fixElementSrc(el, "href", baseUrl);
-    });
-    content.querySelectorAll("iframe").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video source, audio source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("audio").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("object").forEach((el) => {
-      fixElementSrc(el, "data", baseUrl);
-      el.querySelectorAll("param").forEach((paramEl) => {
-        const relativeUrl = paramEl.getAttribute("value");
-        if (relativeUrl && !relativeUrl.startsWith("http")) {
-          const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-          paramEl.setAttribute("value", absoluteUrl);
-        }
-      });
-    });
-    content.querySelectorAll("audio source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("video source").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-    content.querySelectorAll("track").forEach((el) => {
-      fixElementSrc(el, "src", baseUrl);
-    });
-  }
-
-  function fixElementSrc(el, attributeName, baseUrl) {
-    const relativeUrl = el.getAttribute(attributeName);
-    if (relativeUrl && !relativeUrl.startsWith("http")) {
-      const absoluteUrl = new URL(relativeUrl, baseUrl).href;
-      el.setAttribute(attributeName, absoluteUrl);
-    }
-  }
 
 
   function togglePopup(popupId) {
@@ -1632,6 +1587,6 @@ var downloadButton = document.querySelector('#downloadButton');
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
-    </script>
+</script>
   </body>
 </html>

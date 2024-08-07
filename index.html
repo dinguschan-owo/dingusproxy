@@ -582,25 +582,45 @@ window.onload = function() {
     </script>
     
     <script>
-        document.getElementById('downloadButton').addEventListener('click', function() {
+document.getElementById('downloadButton').addEventListener('click', function() {
+    // Try fetching locally
     fetch('/Offline-File/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
-        .then(response => response.text())
-        .then(data => {
-            const blob = new Blob([data], { type: 'text/html' });
-
-            const url = URL.createObjectURL(blob);
-
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html'; 
-            document.body.appendChild(a);
-
-            a.click();
-
-            URL.revokeObjectURL(url);
-            document.body.removeChild(a);
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch from local server');
+            }
+            return response.text();
         })
-        .catch(error => console.error('Error fetching the file:', error));
+        .then(data => downloadFile(data))
+        .catch(error => {
+            console.error('Error with local file:', error);
+            // If local fetch fails, try the backup URL
+            return fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch from GitHub');
+                    }
+                    return response.text();
+                })
+                .then(data => downloadFile(data))
+                .catch(error => console.error('Error with backup file:', error));
+        });
+
+    function downloadFile(data) {
+        const blob = new Blob([data], { type: 'text/html' });
+
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html';
+        document.body.appendChild(a);
+
+        a.click();
+
+        URL.revokeObjectURL(url);
+        document.body.removeChild(a);
+    }
 });
 
     </script>

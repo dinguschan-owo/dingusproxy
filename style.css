@@ -59,20 +59,22 @@
                           border: 2px solid #fff;
         }
         .rename-input {
-            padding-right: 8px;
-            padding-right: 8px;
-            padding-top: 10px;
-            margin-top: 6px;
-            padding-bottom: 11px;
+padding: 10px 12px 10px 12px; /* Merged padding values */width: 10px; 
+          border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
             margin-right: 5px;
                       outline: none;
           width: 523px;
           border-radius: 8px;
           outline: none !important; 
-          border: 2px solid #fff;
-          margin-bottom: 5px;
+          margin-bottom: 0px;
           background-color: #fff;
+          color: #bfbfbf;
         }
+
+        .rename-input:focus::placeholder {
+          opacity: 0.1; 
+        }
+
         .rename-button {
             padding: 0px 0px;
             margin: 5px;
@@ -367,7 +369,7 @@ max-height: 100%;
 
       .input-group input[type="text"] {
         flex: 1;
-        padding: 9px 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);
@@ -377,7 +379,7 @@ max-height: 100%;
         outline: none !important; 
         z-index: 100;
         margin-top: 7px;
-        font-size: 16.6px;
+        font-size: 16px;
         margin-bottom: 1px;
       }
 
@@ -387,15 +389,18 @@ max-height: 100%;
 }
 
       .input-group input[type="text"]:focus::placeholder {
-  color: #ccc;
   opacity: .1; /* Firefox */
+                padding-top: 20px !important;
+                        padding-bottom: 20px !important;
+        height: 50px !important;
+        font-size: 15px;
 }
 
 
 
       .input-group input[type="text"]:focus {
         flex: 1;
-        padding: 9px 12px;
+        padding: 10px 12px;
         border: 3px solid #b4a5e0;
         border-radius: 8px;
         background: linear-gradient(135deg, #383352, #4c436f);

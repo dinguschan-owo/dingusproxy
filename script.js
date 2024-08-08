@@ -63,6 +63,16 @@ function renderWebsite() {
     const renderedContent = document.getElementById("rendered-content");
     const loadingSpinner = document.getElementById("loading-spinner");
 
+  
+  
+    // you found an easter egg :DDD
+    if (url === "https://dinguschan-owo.github.io/dingusproxy/") {
+        url = "https://www.warnerbros.com/movies/inception";
+        urlInput.value = url;
+    }
+
+
+  
     const cachedContent = sessionStorage.getItem(url);
     if (cachedContent) {
         displayInShadowDOM(renderedContent, cachedContent);

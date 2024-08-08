@@ -4,16 +4,16 @@
     "𝚑𝚒, 𝚢𝚎𝚜, 𝚒𝚍 𝚕𝚒𝚔𝚎 𝚝𝚘 𝚑𝚊𝚟𝚎 𝚞𝚑𝚑... 𝚊 𝚞𝚑𝚖... 𝚠𝚑𝚊𝚝 𝚊𝚋𝚘𝚞𝚝 𝚊 𝚞𝚑𝚑𝚑𝚑𝚑𝚑𝚑",
     "𝚄𝚗𝚋𝚕𝚘𝚌𝚔𝚊𝚋𝚕𝚎!",
     "🙶𝙸𝚝'𝚜 𝚊 𝚏𝚎𝚊𝚝𝚞𝚛𝚎🙷",
-    "𝙼𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
+    "𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
     "𝚏𝚒𝚗𝚐𝚎𝚛𝚜 𝚌𝚛𝚘𝚜𝚜𝚎𝚍",
     "𝚗𝚘𝚝 𝚊 𝚙𝚛𝚘𝚡𝚢!",
     "𝚞𝚗𝚍𝚎𝚛𝚜𝚝𝚊𝚗𝚍𝚊𝚋𝚕𝚎, 𝚑𝚊𝚟𝚎 𝚊 𝚗𝚒𝚌𝚎 𝚍𝚊𝚢",
     "𝙸𝚝'𝚜 𝚊 𝚞𝚜𝚎𝚛 𝚎𝚛𝚛𝚘𝚛, 𝙸 𝚜𝚠𝚎𝚊𝚛",
     "𝚙𝚊𝚗𝚒𝚌 𝚖𝚘𝚍𝚎",
-    "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
+    "𝚖𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗",
     "𝚑𝚎𝚕𝚍 𝚝𝚘𝚐𝚎𝚝𝚑𝚎𝚛 𝚠𝚒𝚝𝚑 𝚍𝚞𝚌𝚔 𝚝𝚊𝚙𝚎 𝚊𝚗𝚍 𝚙𝚛𝚊𝚢𝚎𝚛𝚜",
     "𝚝𝚢𝚙𝚘",
-    "𝙼𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
+    "𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
     "𝚌𝚑𝚎𝚌𝚔 𝚞𝚛 𝚠𝚎𝚋𝚌𝚊𝚖 <𝟹",
     "𝚃𝚑𝚒𝚜 𝚙𝚛𝚘𝚓𝚎𝚌𝚝 𝚒𝚜 𝚘𝚙𝚎𝚗 𝚜𝚊𝚞𝚜𝚎!",
     "𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝 𝚜𝚑𝚒𝚝",
@@ -28,7 +28,7 @@
     "𝚁𝚎𝚊𝚍 𝚝𝚑𝚎 𝚌𝚑𝚊𝚗𝚐𝚎𝚕𝚘𝚐!",
     "𝚆𝚑𝚊𝚝𝚜 𝚊 𝚙𝚛𝚘𝚡𝚢?",
     "𝚒𝚜 𝚝𝚑𝚒𝚜 𝚝𝚑𝚒𝚗𝚐 𝚘𝚗?",
-    "𝙼𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
+    "𝚖𝚊𝚍𝚎 𝚠𝚒𝚝𝚑 @𝙿𝚛𝚘𝚓𝚎𝚌𝚝𝟻𝟷𝟼!",
     "𝚌𝚊𝚛𝚙 𝚊𝚗𝚍 𝚍𝚒𝚎𝚖 𝚘𝚛 𝚜𝚘𝚖𝚎𝚝𝚑𝚒𝚗𝚐",
     "𝚘𝚗 𝚝𝚑𝚎 𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚊𝚕𝚕 𝚝𝚑𝚊𝚝",
     "𝙸 𝚗𝚎𝚎𝚍 𝚊𝚗 𝚎𝚡𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚝𝚘𝚛 𝚝𝚘 𝚏𝚒𝚡 𝚊𝚕𝚕 𝚝𝚑𝚎𝚜𝚎 𝙱𝚄𝙶𝚂",
@@ -63,6 +63,16 @@ function renderWebsite() {
     const renderedContent = document.getElementById("rendered-content");
     const loadingSpinner = document.getElementById("loading-spinner");
 
+  
+  
+    // you found an easter egg :DDD
+    if (url === "https://dinguschan-owo.github.io/dingusproxy/") {
+        url = "https://www.warnerbros.com/movies/inception";
+        urlInput.value = url;
+    }
+
+
+  
     const cachedContent = sessionStorage.getItem(url);
     if (cachedContent) {
         displayInShadowDOM(renderedContent, cachedContent);
@@ -350,17 +360,47 @@ var downloadButton = document.querySelector('#downloadButton');
     renderedContent.style.marginTop = '-5px';
   }
 
-  function createBlobUrl() {
+function createBlobUrl() {
+  function fetchAndCreateBlobUrl(url, fallback) {
+    fetch(url)
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error('Network response was not ok.');
+        }
+      })
+      .then(content => {
+        var blob = new Blob([content], { type: 'text/html' });
+        var blobUrl = URL.createObjectURL(blob);
+        var newTab = window.open();
+        newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+        newTab.document.close();
+        newTab.location.href = blobUrl;
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+        fallback();
+      });
+  }
+
+  function fallbackToCurrentDocument() {
     var outerHTML = document.documentElement.outerHTML;
-    var blob = new Blob([outerHTML], {
-      type: 'text/html'
-    });
+    var blob = new Blob([outerHTML], { type: 'text/html' });
     var blobUrl = URL.createObjectURL(blob);
     var newTab = window.open();
     newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
     newTab.document.close();
     newTab.location.href = blobUrl;
   }
+
+  //try and create a blob first from the file, then from the offline repo, then from the page itself
+  
+  fetchAndCreateBlobUrl('/Offline-File/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html', function() {
+    fetchAndCreateBlobUrl('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html', fallbackToCurrentDocument);
+  });
+}
+
 
   function openGit() {
     window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');

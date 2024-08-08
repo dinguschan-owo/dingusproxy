@@ -8,9 +8,7 @@ download the proxy as an html file so that you can use this as a local file, mak
 
 ## ***`‎‎‎𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜`***
 
-Go to the website and hit the download button!
-
-(Its also on this repo is a super hiden place)
+litereally just hit the "Code" button on this repo, download the .ZIP and extract all, nd open the .HTML file to use the project. if 3 whole steps is too complicated for your little monkey brain you can also just visit the website and hit the download button. If ur a github pro, you can also find the file hidden somewhere in the repo!
 
 ## ***`𝚄𝚜𝚊𝚐𝚎 𝙸𝚗𝚜𝚝𝚛𝚞𝚌𝚝𝚒𝚘𝚗𝚜`***
 

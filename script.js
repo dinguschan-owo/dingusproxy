@@ -360,17 +360,47 @@ var downloadButton = document.querySelector('#downloadButton');
     renderedContent.style.marginTop = '-5px';
   }
 
-  function createBlobUrl() {
+function createBlobUrl() {
+  function fetchAndCreateBlobUrl(url, fallback) {
+    fetch(url)
+      .then(response => {
+        if (response.ok) {
+          return response.text();
+        } else {
+          throw new Error('Network response was not ok.');
+        }
+      })
+      .then(content => {
+        var blob = new Blob([content], { type: 'text/html' });
+        var blobUrl = URL.createObjectURL(blob);
+        var newTab = window.open();
+        newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
+        newTab.document.close();
+        newTab.location.href = blobUrl;
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+        fallback();
+      });
+  }
+
+  function fallbackToCurrentDocument() {
     var outerHTML = document.documentElement.outerHTML;
-    var blob = new Blob([outerHTML], {
-      type: 'text/html'
-    });
+    var blob = new Blob([outerHTML], { type: 'text/html' });
     var blobUrl = URL.createObjectURL(blob);
     var newTab = window.open();
     newTab.document.write('<!DOCTYPE html><html><head><title>Page Content</title></head><body></body></html>');
     newTab.document.close();
     newTab.location.href = blobUrl;
   }
+
+  //try and create a blob first from the file, then from the offline repo, then from the page itself
+  
+  fetchAndCreateBlobUrl('/Offline-File/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html', function() {
+    fetchAndCreateBlobUrl('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html', fallbackToCurrentDocument);
+  });
+}
+
 
   function openGit() {
     window.open('https://github.com/dinguschan-owo/dingusproxy', '_blank');

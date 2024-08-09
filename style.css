@@ -60,7 +60,7 @@
         }
         .rename-input {
 padding: 10px 12px 10px 12px; 
-          width: 520px !important; 
+          max-width: 524px !important; 
           border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
             margin-right: 5px;
                       outline: none;

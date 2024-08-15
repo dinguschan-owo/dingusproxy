@@ -763,7 +763,7 @@ max-height: 91%;
       </div>
       <div class="popup-content">
         <h9><br>
-          <b>🛑 THX FOR DOWNLOADING!!! 🛑</b>
+          <b>🛑 [𝗜𝗠𝗣𝗢𝗥𝗧𝗔𝗡𝗧] 🛑</b>
           <br>
           <br>NO LONGER DEPRECATED! CONSTANT UPDATES SCHEDULED FOR ALL YOU ADORING FANS! <br>
           <br>
@@ -1116,9 +1116,7 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
     "𝚘𝚗 𝚝𝚑𝚎 𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚊𝚕𝚕 𝚝𝚑𝚊𝚝",
     "𝙸 𝚗𝚎𝚎𝚍 𝚊𝚗 𝚎𝚡𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚝𝚘𝚛 𝚝𝚘 𝚏𝚒𝚡 𝚊𝚕𝚕 𝚝𝚑𝚎𝚜𝚎 𝙱𝚄𝙶𝚂",
     "ツ",
-    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳",
-    "Nice file system!",
-    "Hello World!"
+    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳"
   ];
   const messageContainer = document.getElementById('message-container');
 
@@ -1569,26 +1567,26 @@ window.onload = function() {
     <script>
 document.getElementById('downloadButton').addEventListener('click', function() {
     // Try fetching locally
-    fetch('https://git.eaglercraft.rip/eaglercraft/eaglercraft-builds/branch/main/EaglercraftX_1.8_Offline_en_US.html')
+    fetch('/Offline-File/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
         .then(response => {
             if (!response.ok) {
-                throw new Error('Failed to fetch from yourmom');
+                throw new Error('Failed to fetch from local server');
             }
             return response.text();
         })
         .then(data => downloadFile(data))
         .catch(error => {
-            console.error('Error with men file:', error);
+            console.error('Error with local file:', error);
             // If local fetch fails, try the backup URL
-            return fetch('https://git.eaglercraft.rip/eaglercraft/eaglercraft-builds/branch/main/EaglercraftX_1.8_Offline_Signed_Client.html')
+            return fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('Error - ligma detected in file');
+                        throw new Error('Failed to fetch from GitHub');
                     }
                     return response.text();
                 })
                 .then(data => downloadFile(data))
-                .catch(error => console.error('Error with hmm:', error));
+                .catch(error => console.error('Error with backup file:', error));
         });
 
     function downloadFile(data) {
@@ -1598,7 +1596,7 @@ document.getElementById('downloadButton').addEventListener('click', function() {
 
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'yee.html';
+        a.download = '𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html';
         document.body.appendChild(a);
 
         a.click();

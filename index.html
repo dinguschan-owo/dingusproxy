@@ -595,7 +595,7 @@ document.getElementById('downloadButton').addEventListener('click', function() {
         .catch(error => {
             console.error('Error with local file:', error);
             // If local fetch fails, try the backup URL
-            return fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
+            return fetch('https://raw.githubusercontent.com/dinguschan-owo/DingusProxy-Offline/main/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.htmlhttps://raw.githubusercontent.com/dinguschan-owo/dingusproxy/main/Offline-File/𝙳𝚒𝚗𝚐𝚞𝚜𝙿𝚛𝚘𝚡𝚢𝙾𝚏𝚏𝚕𝚒𝚗𝚎.html')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Failed to fetch from GitHub');

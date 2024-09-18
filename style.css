@@ -1,4 +1,4 @@
-        .link-button {
+        .a1a1a1a1a1 {
         position: absolute;
         top: 25.3px;
         right: 348px;
@@ -20,7 +20,7 @@
         z-index: 1;
         }
 
-        .link-button:hover {
+        .a1a1a1a1a1:hover {
         background: linear-gradient(135deg, #6b56c8, #775ed4);
         outline: none;
 }
@@ -53,12 +53,12 @@
         outline: none;
 }
 
-              .rename-label, .rename-input, .rename-button {
+              .rename-label, .b1b1b1b1b1, .rename-button {
             font-size: 16px;
             outline: none;
                           border: 2px solid #fff;
         }
-        .rename-input {
+        .b1b1b1b1b1 {
 padding: 10px 12px 10px 12px; 
           max-width: 524px !important; 
           border: 3px solid #b4a5e0 !important; border-radius: 8px; background: linear-gradient(135deg, #383352, #4c436f);
@@ -72,7 +72,7 @@ padding: 10px 12px 10px 12px;
           color: #bfbfbf;
         }
 
-        .rename-input:focus::placeholder {
+        .b1b1b1b1b1:focus::placeholder {
           opacity: 0.1; 
         }
 

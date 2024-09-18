@@ -392,7 +392,7 @@ document.getElementById('button3').addEventListener('click', renderWebsite);
       var gitButton = document.querySelector('.git-button');
       var holder = document.querySelector('.holder');
       var h2Dv8e46q = document.querySelector('#h2Dv8e46q');
-var linkButton = document.querySelector('.link-button');
+var a1a1a1a1a1 = document.querySelector('.a1a1a1a1a1');
 var downloadButton = document.querySelector('#downloadButton');
       box.style.display = 'none';
       versionBox.style.display = 'none';
@@ -405,7 +405,7 @@ var downloadButton = document.querySelector('#downloadButton');
       gitButton.style.display = 'none';
       holder.style.display = 'none';
       h2Dv8e46q.style.display = 'none';
-      linkButton.style.display = 'none';
+      a1a1a1a1a1.style.display = 'none';
       downloadButton.style.display = 'none';
     }
     renderWebsite();
@@ -451,3 +451,5 @@ var downloadButton = document.querySelector('#downloadButton');
             favicon.setAttribute('type', 'image/png');
             favicon.setAttribute('href', url);
         }
+
+

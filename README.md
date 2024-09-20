@@ -6,7 +6,7 @@ for all the lil idiot middle schoolers who searched "school proxy github" on the
 
 download the proxy as an html file so that you can use this as a local file, making it unblockable, and better than any 3rd-rate half-baked blacklisted and blockable actual web proxy. _bite me titanium_. it has no history, no cache, no cookies, nothing. it won't leave a trace in your browser, and just rename the file something like "(skid)'s summer homework" if you think someones gonna snoop through your files. it has tons upon tons of options and settings, plus extra cloaking if you think your admin is fuckign Kevin Mitnick lookign or something. Switch your proxy type, read the changelog, compare stats with other well known true proxies, go nuts. i have a website for it too by the way, so check it out at https://dinguschan-owo.github.io/dingusproxy/. you can also check out the backup (its the same) at https://dingusproxy.vercel.app/ , and if either of those get blocked use the dataurl at the bottom of this readme or just host it yourself with the link at the bottom of this README. alternate verified links can be found on the website in the button with the chain link icon
 
-### ***`License`***
+## ***`License`***
 
 do whatever the hell you want with this code, just dont take credit. me and @project516 worked hard on this :(
 

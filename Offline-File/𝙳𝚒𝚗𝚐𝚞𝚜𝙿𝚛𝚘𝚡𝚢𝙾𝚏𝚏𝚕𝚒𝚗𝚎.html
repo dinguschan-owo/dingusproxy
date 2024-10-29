@@ -489,80 +489,7 @@ I will probably stop maintaining this demonstration past update 1.2, so I strong
     <div id="blur-background" class="blur-background"></div>
     <script src="script.js"></script>
     <script> 
-function hashString(str) {
-    let hash = 0, i, chr;
-    for (i = 0; i < str.length; i++) {
-        chr = str.charCodeAt(i);
-        hash = ((hash << 5) - hash) + chr;  
-        hash |= 0;
-    }
-    return hash; 
-}
-
-const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";  
-const originalHash = hashString(originalCredits); 
-
-const scriptContent = `
-    function hashString(str) {
-        let hash = 0, i, chr;
-        for (i = 0; i < str.length; i++) {
-            chr = str.charCodeAt(i);
-            hash = ((hash << 5) - hash) + chr;
-            hash |= 0; 
-        }
-        return hash;
-    }
-
-    const originalCredits = "𝙼𝚊𝚍𝚎 𝚋𝚢 𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!";
-    const originalHash = hashString(originalCredits);
-    
-    function checkCredits() {
-        const creditsElement = document.getElementById('h2Dv8e46q');
-        if (hashString(creditsElement.innerText) !== originalHash) {
-            document.body.innerHTML = "";
-            document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">JavaScript functionality has been disabled due to credit modification.</div>';
-        } else {
-            console.log('Logic intact. JavaScript is running normally.');
-        }
-    }
-
-    function checkScript() {
-        const scriptElement = document.currentScript;
-        if (scriptElement.text !== scriptContent) {
-            document.body.innerHTML = "";
-            document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">Error: [𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐏𝐫𝐨𝐱𝐲 𝐕𝐞𝐫𝐬𝐢𝐨𝐧], leading to a [𝐌𝐚𝐣𝐨𝐫 𝐑𝐮𝐧𝐭𝐢𝐦𝐞 𝐄𝐫𝐫𝐨𝐫]. Please visit the official GitHub page and download the latest version at https://github.com/dinguschan-owo/dingusproxy</div>';
-        }
-    }
-
-    window.onload = function() {
-        checkCredits();
-        checkScript();
-    };
-`;
-
-function checkScript() {
-    const scriptElement = document.currentScript;
-    if (scriptElement.text !== scriptContent) {
-        document.body.innerHTML = "";
-        document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">Error: [𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐏𝐫𝐨𝐱𝐲 𝐕𝐞𝐫𝐬𝐢𝐨𝐧], leading to a [𝐌𝐚𝐣𝐨𝐫 𝐑𝐮𝐧𝐭𝐢𝐦𝐞 𝐄𝐫𝐫𝐨𝐫]. Please visit the official GitHub page and download the latest version at https://github.com/dinguschan-owo/dingusproxy</div>';
-    }
-}
-
-function checkCredits() {
-    const creditsElement = document.getElementById('h2Dv8e46q');
-    if (hashString(creditsElement.innerText) !== originalHash) {
-        document.body.innerHTML = "";
-        document.body.innerHTML = '<div class="G71h3Cw5j"></div><div class="w4mJ97ZbX">Error: [𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝 𝐏𝐫𝐨𝐱𝐲 𝐕𝐞𝐫𝐬𝐢𝐨𝐧], leading to a [𝐌𝐚𝐣𝐨𝐫 𝐑𝐮𝐧𝐭𝐢𝐦𝐞 𝐄𝐫𝐫𝐨𝐫]. Please visit the official GitHub page and download the latest version at https://github.com/dinguschan-owo/dingusproxy</div>';
-    } else {
-        console.log('running normally :D');
-    }
-}
-
-window.onload = function() {
-    checkCredits();
-    checkScript();
-};
-
+const _0x323f3f=_0x4bb3;(function(_0x48d883,_0x1caca3){const _0x13ca97=_0x4bb3,_0x5b3a20=_0x48d883();while(!![]){try{const _0x1d75d8=-parseInt(_0x13ca97(0x19f))/(-0x2f5*0x3+0x2392+-0x86*0x33)*(parseInt(_0x13ca97(0x1d1))/(-0xef*-0x1+-0xb1d*0x1+0xa30))+-parseInt(_0x13ca97(0x1bb))/(-0x1b11+0xe4d+-0x1*-0xcc7)+-parseInt(_0x13ca97(0x19a))/(0xabd*-0x1+0x169*-0x19+0x1701*0x2)+parseInt(_0x13ca97(0x1ca))/(-0x72*-0x39+-0x1646+-0x317*0x1)*(-parseInt(_0x13ca97(0x1d2))/(0x1d94+-0x399*-0x1+0x3af*-0x9))+-parseInt(_0x13ca97(0x1cf))/(-0x2092+0x25*0xd6+0x1ab)+parseInt(_0x13ca97(0x1bf))/(-0x61*-0x2b+-0x5*-0x382+-0x21cd)+-parseInt(_0x13ca97(0x1c4))/(-0x17e9+0x3a*-0x26+0xada*0x3)*(-parseInt(_0x13ca97(0x1bd))/(-0x1c42*-0x1+0x2*-0xf4+0xd28*-0x2));if(_0x1d75d8===_0x1caca3)break;else _0x5b3a20['push'](_0x5b3a20['shift']());}catch(_0x5c3450){_0x5b3a20['push'](_0x5b3a20['shift']());}}}(_0xa083,-0x76ec1+0x356e9*0x4+0x2085d*0x1));function hashString(_0x3185b6){const _0x546db3=_0x4bb3,_0x2543e8=(function(){const _0x2a482f=_0x4bb3;if(_0x2a482f(0x1c8)!==_0x2a482f(0x1a4)){let _0x3255ae=!![];return function(_0x235c6f,_0x266346){if('rppZc'!=='rppZc')_0x256ecf=_0x5a3fe4;else{const _0x1ee177=_0x3255ae?function(){const _0x48b8cb=_0x4bb3;if(_0x48b8cb(0x1a0)===_0x48b8cb(0x1cb))_0x59e581(),_0x22b0b5();else{if(_0x266346){if(_0x48b8cb(0x1c3)===_0x48b8cb(0x1c3)){const _0x28b9c8=_0x266346[_0x48b8cb(0x1b8)](_0x235c6f,arguments);return _0x266346=null,_0x28b9c8;}else{let _0x276b22;try{const _0x5a2a00=_0x547acf(_0x48b8cb(0x1c5)+_0x48b8cb(0x1a6)+');');_0x276b22=_0x5a2a00();}catch(_0x1ac359){_0x276b22=_0x214d89;}const _0x22fa6e=_0x276b22['console']=_0x276b22[_0x48b8cb(0x1b7)]||{},_0x50df4d=[_0x48b8cb(0x1a8),_0x48b8cb(0x1a1),_0x48b8cb(0x1bc),_0x48b8cb(0x1be),_0x48b8cb(0x1c6),_0x48b8cb(0x19b),_0x48b8cb(0x1ab)];for(let _0x13660d=0xa92*-0x3+-0x50*0x7d+0x1*0x46c6;_0x13660d<_0x50df4d[_0x48b8cb(0x1c9)];_0x13660d++){const _0x55fbcf=_0x558a26[_0x48b8cb(0x1ce)][_0x48b8cb(0x1c1)][_0x48b8cb(0x1b4)](_0x50b0eb),_0x217dd5=_0x50df4d[_0x13660d],_0x2f53a7=_0x22fa6e[_0x217dd5]||_0x55fbcf;_0x55fbcf[_0x48b8cb(0x1a3)]=_0x102b2f[_0x48b8cb(0x1b4)](_0x25d6d9),_0x55fbcf[_0x48b8cb(0x19e)]=_0x2f53a7[_0x48b8cb(0x19e)][_0x48b8cb(0x1b4)](_0x2f53a7),_0x22fa6e[_0x217dd5]=_0x55fbcf;}}}}}:function(){};return _0x3255ae=![],_0x1ee177;}};}else{const _0x6dc9c6=_0xf46b72[_0x2a482f(0x1b8)](_0x29ef08,arguments);return _0x450750=null,_0x6dc9c6;}}()),_0x2fc170=_0x2543e8(this,function(){const _0xf8e4fc=_0x4bb3;if(_0xf8e4fc(0x1aa)!==_0xf8e4fc(0x1aa)){const _0x293964=_0x53dffc?function(){if(_0x3c7640){const _0x58d1e8=_0x2d4908['apply'](_0x176c00,arguments);return _0x147ba3=null,_0x58d1e8;}}:function(){};return _0x3d7944=![],_0x293964;}else return _0x2fc170[_0xf8e4fc(0x19e)]()[_0xf8e4fc(0x1af)](_0xf8e4fc(0x1b2))[_0xf8e4fc(0x19e)]()['constructor'](_0x2fc170)[_0xf8e4fc(0x1af)]('(((.+)+)+)+$');});_0x2fc170();const _0xef7090=(function(){const _0x4af497=_0x4bb3;if(_0x4af497(0x19d)!==_0x4af497(0x1a9)){let _0x2bfdbc=!![];return function(_0x53cf23,_0x565379){const _0x204c03=_0x4af497;if(_0x204c03(0x1a2)!==_0x204c03(0x1a7)){const _0x50d53f=_0x2bfdbc?function(){const _0xbefff=_0x204c03;if('gscut'!=='ARVjU'){if(_0x565379){if('IBMVC'!==_0xbefff(0x1d0))_0x5a2f67[_0xbefff(0x1a8)]('running\x20normally\x20:D');else{const _0xcc0f37=_0x565379[_0xbefff(0x1b8)](_0x53cf23,arguments);return _0x565379=null,_0xcc0f37;}}}else{if(_0x72fbaf){const _0x14157f=_0x26f7f8[_0xbefff(0x1b8)](_0x294af9,arguments);return _0xd19daf=null,_0x14157f;}}}:function(){};return _0x2bfdbc=![],_0x50d53f;}else return _0x2994d5[_0x204c03(0x19e)]()[_0x204c03(0x1af)]('(((.+)+)+)+$')[_0x204c03(0x19e)]()[_0x204c03(0x1ce)](_0x29c339)[_0x204c03(0x1af)](_0x204c03(0x1b2));};}else{const _0x36aef9=_0x4257f2[_0x4af497(0x1b5)];_0x36aef9[_0x4af497(0x1cc)]!==_0x7acea5&&(_0x3f613a[_0x4af497(0x1b1)][_0x4af497(0x1a5)]='',_0x15302b[_0x4af497(0x1b1)][_0x4af497(0x1a5)]=_0x4af497(0x1ac));}}()),_0x444f5b=_0xef7090(this,function(){const _0x49477a=_0x4bb3;if(_0x49477a(0x1d5)===_0x49477a(0x1d5)){let _0x569177;try{if('HyhTb'===_0x49477a(0x1d4)){const _0x2a68ca=Function(_0x49477a(0x1c5)+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x569177=_0x2a68ca();}else _0x54d8d0['body']['innerHTML']='',_0x3f0c7e[_0x49477a(0x1b1)][_0x49477a(0x1a5)]=_0x49477a(0x1ac);}catch(_0x32e337){if('COoug'!=='COoug'){if(_0x3f7412){const _0x112138=_0x392ec9[_0x49477a(0x1b8)](_0x13e443,arguments);return _0x20dfa5=null,_0x112138;}}else _0x569177=window;}const _0x18a671=_0x569177[_0x49477a(0x1b7)]=_0x569177['console']||{},_0x557a73=[_0x49477a(0x1a8),_0x49477a(0x1a1),_0x49477a(0x1bc),'error',_0x49477a(0x1c6),_0x49477a(0x19b),_0x49477a(0x1ab)];for(let _0x18e92b=0x1da9+-0x7*-0x137+-0x262a;_0x18e92b<_0x557a73[_0x49477a(0x1c9)];_0x18e92b++){if(_0x49477a(0x1c7)===_0x49477a(0x1c7)){const _0x5dfad7=_0xef7090[_0x49477a(0x1ce)]['prototype']['bind'](_0xef7090),_0x159ca7=_0x557a73[_0x18e92b],_0x43e238=_0x18a671[_0x159ca7]||_0x5dfad7;_0x5dfad7[_0x49477a(0x1a3)]=_0xef7090[_0x49477a(0x1b4)](_0xef7090),_0x5dfad7[_0x49477a(0x19e)]=_0x43e238[_0x49477a(0x19e)][_0x49477a(0x1b4)](_0x43e238),_0x18a671[_0x159ca7]=_0x5dfad7;}else{const _0x335c06=_0x424c45[_0x49477a(0x1b8)](_0x194607,arguments);return _0x58fa78=null,_0x335c06;}}}else{const _0x52859c=_0x510cb7?function(){const _0x5a6020=_0x49477a;if(_0x415da4){const _0x1e248f=_0x4e2e48[_0x5a6020(0x1b8)](_0x21217b,arguments);return _0x263fd1=null,_0x1e248f;}}:function(){};return _0x1d187d=![],_0x52859c;}});_0x444f5b();let _0x22f2f5=-0xb*0x32f+0x6d*-0x1d+0x2f5e,_0x48e764,_0x5f0817;for(_0x48e764=-0x1d4c*0x1+0xb*-0xa7+0x2479;_0x48e764<_0x3185b6[_0x546db3(0x1c9)];_0x48e764++){_0x546db3(0x1b6)!==_0x546db3(0x1b6)?(_0x4f7217[_0x546db3(0x1b1)][_0x546db3(0x1a5)]='',_0x4d6eca[_0x546db3(0x1b1)][_0x546db3(0x1a5)]=_0x546db3(0x1ac)):(_0x5f0817=_0x3185b6['charCodeAt'](_0x48e764),_0x22f2f5=(_0x22f2f5<<-0x15*0x29+0x2*0x839+0x98*-0x16)-_0x22f2f5+_0x5f0817,_0x22f2f5|=0x1*0x1e53+0x3*-0x5ab+-0xd52);}return _0x22f2f5;}function _0xa083(){const _0x599169=['bKnEZ','toString','397ecuSNb','jVOdo','warn','MrkzM','__proto__','PKgLX','innerHTML','{}.constructor(\x22return\x20this\x22)(\x20)','ZTYRx','log','gCNBF','kAoxZ','trace','<div\x20class=\x22G71h3Cw5j\x22></div><div\x20class=\x22w4mJ97ZbX\x22>Error:\x20[𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝\x20𝐏𝐫𝐨𝐱𝐲\x20𝐕𝐞𝐫𝐬𝐢𝐨𝐧],\x20leading\x20to\x20a\x20[𝐌𝐚𝐣𝐨𝐫\x20𝐑𝐮𝐧𝐭𝐢𝐦𝐞\x20𝐄𝐫𝐫𝐨𝐫].\x20Please\x20visit\x20the\x20official\x20GitHub\x20page\x20and\x20download\x20the\x20latest\x20version\x20at\x20https://github.com/dinguschan-owo/dingusproxy</div>','onload','ydEPX','search','innerText','body','(((.+)+)+)+$','\x0a\x20\x20\x20\x20function\x20hashString(str)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20let\x20hash\x20=\x200,\x20i,\x20chr;\x0a\x20\x20\x20\x20\x20\x20\x20\x20for\x20(i\x20=\x200;\x20i\x20<\x20str.length;\x20i++)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20chr\x20=\x20str.charCodeAt(i);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hash\x20=\x20((hash\x20<<\x205)\x20-\x20hash)\x20+\x20chr;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20hash\x20|=\x200;\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20return\x20hash;\x0a\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20const\x20originalCredits\x20=\x20\x22𝙼𝚊𝚍𝚎\x20𝚋𝚢\x20𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!\x22;\x0a\x20\x20\x20\x20const\x20originalHash\x20=\x20hashString(originalCredits);\x0a\x20\x20\x20\x20\x0a\x20\x20\x20\x20function\x20checkCredits()\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20const\x20creditsElement\x20=\x20document.getElementById(\x27h2Dv8e46q\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(hashString(creditsElement.innerText)\x20!==\x20originalHash)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.body.innerHTML\x20=\x20\x22\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.body.innerHTML\x20=\x20\x27<div\x20class=\x22G71h3Cw5j\x22></div><div\x20class=\x22w4mJ97ZbX\x22>JavaScript\x20functionality\x20has\x20been\x20disabled\x20due\x20to\x20credit\x20modification.</div>\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x20else\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20console.log(\x27Logic\x20intact.\x20JavaScript\x20is\x20running\x20normally.\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20function\x20checkScript()\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20const\x20scriptElement\x20=\x20document.currentScript;\x0a\x20\x20\x20\x20\x20\x20\x20\x20if\x20(scriptElement.text\x20!==\x20scriptContent)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.body.innerHTML\x20=\x20\x22\x22;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20document.body.innerHTML\x20=\x20\x27<div\x20class=\x22G71h3Cw5j\x22></div><div\x20class=\x22w4mJ97ZbX\x22>Error:\x20[𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝\x20𝐏𝐫𝐨𝐱𝐲\x20𝐕𝐞𝐫𝐬𝐢𝐨𝐧],\x20leading\x20to\x20a\x20[𝐌𝐚𝐣𝐨𝐫\x20𝐑𝐮𝐧𝐭𝐢𝐦𝐞\x20𝐄𝐫𝐫𝐨𝐫].\x20Please\x20visit\x20the\x20official\x20GitHub\x20page\x20and\x20download\x20the\x20latest\x20version\x20at\x20https://github.com/dinguschan-owo/dingusproxy</div>\x27;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20window.onload\x20=\x20function()\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20checkCredits();\x0a\x20\x20\x20\x20\x20\x20\x20\x20checkScript();\x0a\x20\x20\x20\x20};\x0a','bind','currentScript','buUKA','console','apply','getElementById','running\x20normally\x20:D','1221960NQDiCL','info','483110jHHxbX','error','569744vTgTto','uCfPq','prototype','uXjsL','cPPGa','387ymCAqY','return\x20(function()\x20','exception','Uceyb','WLetW','length','701540RJgBRA','wqxME','text','LBLpt','constructor','2290715vayRNE','IBMVC','676fhsAAy','6uUtbMY','charCodeAt','HyhTb','AfALN','h2Dv8e46q','2471984dFgQOX','table','𝙼𝚊𝚍𝚎\x20𝚋𝚢\x20𝚍𝚒𝚗𝚐𝚞𝚜𝚌𝚑𝚊𝚗!'];_0xa083=function(){return _0x599169;};return _0xa083();}const originalCredits=_0x323f3f(0x19c),originalHash=hashString(originalCredits),scriptContent=_0x323f3f(0x1b3);function checkScript(){const _0x2e99a9=_0x323f3f,_0x10009d=document['currentScript'];if(_0x10009d[_0x2e99a9(0x1cc)]!==scriptContent){if(_0x2e99a9(0x1c2)===_0x2e99a9(0x1ae)){const _0x173b5d=_0x345cf2[_0x2e99a9(0x1b9)](_0x2e99a9(0x1d6));_0x243a4a(_0x173b5d[_0x2e99a9(0x1b0)])!==_0x3be48e?(_0x40b245[_0x2e99a9(0x1b1)][_0x2e99a9(0x1a5)]='',_0x5aedf0[_0x2e99a9(0x1b1)][_0x2e99a9(0x1a5)]='<div\x20class=\x22G71h3Cw5j\x22></div><div\x20class=\x22w4mJ97ZbX\x22>Error:\x20[𝐔𝐧𝐬𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐝\x20𝐏𝐫𝐨𝐱𝐲\x20𝐕𝐞𝐫𝐬𝐢𝐨𝐧],\x20leading\x20to\x20a\x20[𝐌𝐚𝐣𝐨𝐫\x20𝐑𝐮𝐧𝐭𝐢𝐦𝐞\x20𝐄𝐫𝐫𝐨𝐫].\x20Please\x20visit\x20the\x20official\x20GitHub\x20page\x20and\x20download\x20the\x20latest\x20version\x20at\x20https://github.com/dinguschan-owo/dingusproxy</div>'):_0x582e93['log']('running\x20normally\x20:D');}else document[_0x2e99a9(0x1b1)][_0x2e99a9(0x1a5)]='',document[_0x2e99a9(0x1b1)]['innerHTML']=_0x2e99a9(0x1ac);}}function _0x4bb3(_0x1abce2,_0x1a6daf){const _0x1cb8ed=_0xa083();return _0x4bb3=function(_0xa08338,_0x4bb380){_0xa08338=_0xa08338-(0x16b0+-0x1d*0xed+0x5c3);let _0x42cceb=_0x1cb8ed[_0xa08338];return _0x42cceb;},_0x4bb3(_0x1abce2,_0x1a6daf);}function checkCredits(){const _0x205640=_0x323f3f,_0x1212b9=document[_0x205640(0x1b9)](_0x205640(0x1d6));if(hashString(_0x1212b9[_0x205640(0x1b0)])!==originalHash)_0x205640(0x1cd)===_0x205640(0x1cd)?(document[_0x205640(0x1b1)]['innerHTML']='',document[_0x205640(0x1b1)]['innerHTML']=_0x205640(0x1ac)):(_0x3554ca=_0x29d8e2[_0x205640(0x1d3)](_0x138e35),_0x56b494=(_0x405da1<<0x1ab3+0x7*-0x18d+-0xfd3)-_0x1483e2+_0x289919,_0x59d9d3|=-0xc9d+0x1*-0x697+0x1334);else{if(_0x205640(0x1c0)==='Bojuy'){const _0xaf44e1=_0x18737a(_0x205640(0x1c5)+'{}.constructor(\x22return\x20this\x22)(\x20)'+');');_0x8302e2=_0xaf44e1();}else console[_0x205640(0x1a8)](_0x205640(0x1ba));}}window[_0x323f3f(0x1ad)]=function(){checkCredits(),checkScript();};
 </script>
   
       <script>
@@ -1683,6 +1610,3 @@ function openWebs() {
 </script>
   </body>
 </html>
-
-
-

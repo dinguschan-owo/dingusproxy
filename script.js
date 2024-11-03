@@ -29,7 +29,13 @@
     "𝚘𝚗 𝚝𝚑𝚎 𝚎𝚍𝚐𝚎 𝚊𝚗𝚍 𝚊𝚕𝚕 𝚝𝚑𝚊𝚝",
     "𝙸 𝚗𝚎𝚎𝚍 𝚊𝚗 𝚎𝚡𝚝𝚎𝚛𝚖𝚒𝚗𝚊𝚝𝚘𝚛 𝚝𝚘 𝚏𝚒𝚡 𝚊𝚕𝚕 𝚝𝚑𝚎𝚜𝚎 𝙱𝚄𝙶𝚂",
     "ツ",
-    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳"
+    "𝚒 𝚊𝚖 𝚒𝚗 𝚢𝚘𝚞𝚛 𝚠𝚊𝚕𝚕𝚜 :𝙳",
+    "Also try Helios!",
+    "WIP!",
+    "better than rammerhead?",
+    "Yes, we know rammerhead doesn't work!",
+    "Star if you fork!",
+    "ERROR",
   ];
   const messageContainer = document.getElementById('message-container');
 
